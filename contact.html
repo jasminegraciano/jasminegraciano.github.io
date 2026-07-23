@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a free painting or power washing estimate from Connecticut House Painters LLC in Ledyard, Connecticut." />
+  <title>Request a Free Estimate | Connecticut House Painters LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f356d;
+      --deep: #071c3a;
+      --blue: #0456d0;
+      --sky: #33cfff;
+      --red: #de0703;
+      --paper: #ffffff;
+      --wash: #f3f7fb;
+      --line: #d9e3ec;
+      --ink: #183047;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--ink);
+      background: var(--wash);
+      font-family: "Manrope", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar {
+      color: var(--paper);
+      background: var(--deep);
+      border-bottom: 4px solid var(--sky);
+    }
+
+    .topbar-grid {
+      min-height: 48px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 900;
+    }
+
+    .topbar-brand::before {
+      content: "";
+      width: 42px;
+      height: 3px;
+      flex: 0 0 auto;
+      background: var(--red);
+    }
+
+    .topbar-contact {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .topbar-item {
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-grid {
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    .brand {
+      width: 230px;
+      height: 76px;
+      display: block;
+    }
+
+    .brand img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+      list-style: none;
+    }
+
+    nav a {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      color: var(--navy);
+      font-size: 0.84rem;
+      font-weight: 900;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--blue);
+    }
+
+    .contact-hero {
+      padding: 84px 0;
+      color: var(--paper);
+      background: var(--navy);
+      border-bottom: 8px solid var(--red);
+    }
+
+    .contact-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(360px, 0.55fr);
+      gap: 64px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      color: var(--sky);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin-top: 14px;
+      font-size: clamp(3rem, 6vw, 5.7rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      margin-top: 22px;
+      color: #dce9f7;
+      font-family: "Noto Naskh Arabic", serif;
+      font-size: 1.28rem;
+      line-height: 1.55;
+    }
+
+    .contact-facts {
+      display: grid;
+      gap: 1px;
+      margin-top: 34px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .contact-fact {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      padding: 15px 17px;
+      background: rgba(7, 28, 58, 0.52);
+    }
+
+    .contact-fact strong {
+      color: var(--sky);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .estimate-panel {
+      padding: 28px;
+      color: var(--ink);
+      background: var(--paper);
+      border-top: 5px solid var(--sky);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
+    }
+
+    .estimate-panel h2 {
+      color: var(--navy);
+      font-size: 1.8rem;
+    }
+
+    .estimate-panel p {
+      margin-top: 8px;
+      color: #607286;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 13px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid #cbd8e4;
+      border-radius: 0;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    button {
+      min-height: 50px;
+      color: var(--paper);
+      background: var(--red);
+      border: 0;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .contact-note {
+      padding: 32px 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-note-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .contact-note strong {
+      color: var(--navy);
+      font-size: 1.3rem;
+    }
+
+    .contact-note a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 18px;
+      color: var(--paper);
+      background: var(--blue);
+      font-weight: 900;
+    }
+
+    footer {
+      padding: 38px 0;
+      color: rgba(255, 255, 255, 0.76);
+      background: var(--deep);
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .contact-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-note-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="site-enhancements.css" />
+  <script src="site-enhancements.js" defer></script>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="topbar">
+      <div class="container topbar-grid">
+        <div class="topbar-brand">Connecticut House Painters LLC and Power Washing</div>
+        <div class="topbar-contact" aria-label="Contact information">
+          <a class="topbar-item" href="tel:8608798222">Office: (860) 879-8222</a>
+          <a class="topbar-item" href="tel:8605145335">Cell: (860)-514-5335</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container header-grid">
+        <a class="brand" href="index.html" aria-label="Connecticut House Painters home">
+          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing Logo" />
+        </a>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a class="active" href="contact.html">Contact Us</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="interior.html">Interior</a></li>
+            <li><a href="exterior.html">Exterior</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="powerwash.html">Power Washing</a></li>
+            <li><a href="service.html">Service Area</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="contact-hero" id="estimate-request">
+      <div class="container contact-hero-grid">
+        <div>
+          <span class="eyebrow">Request a free estimate</span>
+          <h1>Tell us about your next project.</h1>
+          <p class="hero-copy">Share the service, town, and a short description. The fastest option is to text Javier a photo of the area you want painted or washed.</p>
+          <div class="contact-facts">
+            <div class="contact-fact"><strong>Office</strong><a href="tel:8608798222">(860) 879-8222</a></div>
+            <div class="contact-fact"><strong>Cell</strong><a href="sms:8605145335">(860)-514-5335</a></div>
+            <div class="contact-fact"><strong>Address</strong><span>919 Colonel Ledyard Hwy, Ledyard, CT 06339</span></div>
+            <div class="contact-fact"><strong>Owner</strong><span>Javier Santos and Family</span></div>
+          </div>
+        </div>
+
+        <div class="estimate-panel">
+          <h2>Project details</h2>
+          <p>Completing this form prepares a text message to the company. You can review it before sending.</p>
+          <form id="contactEstimateForm">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Full Name" aria-label="Full name" required />
+              <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number" required />
+            </div>
+            <div class="form-row">
+              <input type="text" name="town" placeholder="Town / City" aria-label="Town or city" />
+              <select name="service" aria-label="Select a service" required>
+                <option value="">Select a Service</option>
+                <option>Interior Painting</option>
+                <option>Exterior Painting</option>
+                <option>Commercial Painting</option>
+                <option>Power Washing</option>
+                <option>Other Painting Service</option>
+              </select>
+            </div>
+            <textarea name="message" placeholder="Tell us about your project" aria-label="Project details" required></textarea>
+            <button type="submit">Prepare Estimate Text</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-note">
+      <div class="container contact-note-inner">
+        <div>
+          <strong>Prefer to speak directly?</strong>
+          <p>Call the office or text Javier a project photo for the fastest start.</p>
+        </div>
+        <a href="tel:8608798222">Call (860) 879-8222</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2026 Connecticut House Painters LLC. Family-owned painting and power washing in Connecticut.</div>
+  </footer>
+
+  <script>
+    document.querySelector("#contactEstimateForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const message = [
+        "Free estimate request",
+        `Name: ${data.get("name")}`,
+        `Phone: ${data.get("phone")}`,
+        `Town: ${data.get("town") || "Not provided"}`,
+        `Service: ${data.get("service")}`,
+        `Project: ${data.get("message")}`
+      ].join("\n");
+      window.location.href = `sms:8605145335?&body=${encodeURIComponent(message)}`;
+    });
+  </script>
+</body>
+
+</html>

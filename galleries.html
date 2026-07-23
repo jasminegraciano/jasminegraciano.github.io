@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Gallery | Connecticut House Painters LLC</title>
+  <meta name="description" content="Browse exterior painting, interior painting, commercial painting, deck restoration, and power washing projects completed by Connecticut House Painters LLC." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/WillieTheWhale.png" />
+  <link rel="stylesheet" href="gallery.css" />
+  <link rel="stylesheet" href="site-enhancements.css" />
+  <script src="site-enhancements.js" defer></script>
+  <script src="gallery.js" defer></script>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="topbar">
+      <div class="container topbar-grid">
+        <div class="topbar-brand">Connecticut House Painters LLC and Power Washing</div>
+        <div class="topbar-contact" aria-label="Contact information">
+          <span class="topbar-item"><span class="topbar-label">Office</span><a href="tel:8608798222">(860) 879-8222</a></span>
+          <span class="topbar-item"><span class="topbar-label">Cell</span><a href="tel:8605145335">(860) 514-5335</a></span>
+          <span class="topbar-item location"><span class="topbar-label">Ledyard</span><span>CT</span></span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header-grid">
+        <a href="index.html" class="brand" aria-label="Connecticut House Painters home">
+          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing logo" />
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu"><span></span></button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="galleries.html" class="active">Galleries</a></li>
+            <li><a href="interior.html">Interior Painting</a></li>
+            <li><a href="exterior.html">Exterior Painting</a></li>
+            <li><a href="commercial.html">Commercial Painting</a></li>
+            <li><a href="powerwash.html">Power Washing</a></li>
+            <li class="has-dropdown">
+              <a href="index.html#areas" class="dropdown-trigger">Service Area</a>
+              <ul class="service-area-menu" aria-label="Service area pages">
+                <li><a href="index.html#areas">Waterford CT House Painters</a></li>
+                <li><a href="index.html#areas">Mystic CT House Painters</a></li>
+                <li><a href="index.html#areas">Pawcatuck CT House Painters</a></li>
+                <li><a href="index.html#areas">Essex CT House Painters</a></li>
+                <li><a href="index.html#areas">Montville CT House Painters</a></li>
+                <li><a href="index.html#areas">Uncasville CT House Painters</a></li>
+                <li><a href="index.html#areas">Colchester CT House Painters</a></li>
+                <li><a href="index.html#areas">North Stonington CT House Painters</a></li>
+                <li><a href="index.html#areas">Ledyard CT House Painters</a></li>
+                <li><a href="index.html#areas">Groton CT House Painters</a></li>
+                <li><a href="index.html#areas">East Lyme CT House Painters</a></li>
+                <li><a href="index.html#areas">Old Saybrook CT House Painters</a></li>
+                <li><a href="index.html#areas">Old Lyme CT House Painters</a></li>
+                <li><a href="index.html#areas">Griswold CT House Painters</a></li>
+                <li><a href="index.html#areas">New London CT House Painters</a></li>
+                <li><a href="index.html#areas">Stonington CT House Painters</a></li>
+                <li><a href="index.html#areas">Salem CT House Painters</a></li>
+                <li><a href="index.html#areas">Bozrah CT House Painters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="gallery-hero" aria-labelledby="gallery-title">
+      <div class="container gallery-hero-inner">
+        <div class="gallery-hero-copy">
+          <span class="eyebrow">Completed across Connecticut</span>
+          <h1 id="gallery-title">The work should speak before we do.</h1>
+          <p>Explore real painting, restoration, and exterior cleaning projects completed for homes and businesses throughout Connecticut and nearby Rhode Island communities.</p>
+          <div class="gallery-hero-actions">
+            <a class="btn btn-primary" href="#transformations">See Transformations</a>
+            <a class="btn btn-light" href="contact.html#estimate-request">Plan Your Project</a>
+          </div>
+        </div>
+        <div class="gallery-hero-proof" aria-label="Gallery summary">
+          <strong>Real projects</strong>
+          <span>Exterior, interior, commercial, wood restoration, and power washing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-intro">
+      <div class="container gallery-intro-grid">
+        <div>
+          <span class="eyebrow">Project portfolio</span>
+          <h2>Careful preparation. Visible results.</h2>
+        </div>
+        <p>Every surface asks for a different approach. These projects show the preparation, finish quality, and property care that go into the work from the first wash to the final coat.</p>
+      </div>
+    </section>
+
+    <section class="transformations" id="transformations" aria-labelledby="transformations-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Before and after</span>
+          <h2 id="transformations-title">Drag across the transformation.</h2>
+          <p>Compare the starting condition with the completed finish on five recent projects.</p>
+        </div>
+        <div class="comparison-grid" id="comparisonGrid"></div>
+      </div>
+    </section>
+
+    <section class="project-archive" id="project-gallery" aria-labelledby="archive-title">
+      <div class="container">
+        <div class="archive-heading">
+          <div>
+            <span class="eyebrow">Browse the work</span>
+            <h2 id="archive-title">Projects by service.</h2>
+          </div>
+          <p id="galleryStatus" aria-live="polite">Showing all recent projects.</p>
+        </div>
+
+        <div class="gallery-controls" aria-label="Filter gallery by service">
+          <button type="button" class="gallery-filter active" data-filter="all">All Work</button>
+          <button type="button" class="gallery-filter" data-filter="exterior">Exterior</button>
+          <button type="button" class="gallery-filter" data-filter="interior">Interior</button>
+          <button type="button" class="gallery-filter" data-filter="powerwash">Power Washing</button>
+          <button type="button" class="gallery-filter" data-filter="wood">Decks &amp; Wood</button>
+          <button type="button" class="gallery-filter" data-filter="commercial">Commercial</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid"></div>
+        <div class="gallery-more-wrap">
+          <button type="button" class="btn btn-secondary" id="loadMore">Load More Projects</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-contact" aria-labelledby="gallery-contact-title">
+      <div class="container gallery-contact-inner">
+        <div>
+          <span class="eyebrow">Your property could be next</span>
+          <h2 id="gallery-contact-title">Show us what you want to transform.</h2>
+          <p>Send a photo of the space or surface for the fastest conversation about scope, preparation, and scheduling.</p>
+        </div>
+        <div class="gallery-contact-actions">
+          <a class="btn btn-primary" href="contact.html#estimate-request">Request a Free Estimate</a>
+          <a class="btn btn-light" href="tel:8605145335">Call or Text Javier</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-cta">
+      <div>
+        <strong>Ready for a cleaner, sharper finish?</strong>
+        <span>Call, text, or request a free estimate for painting and power washing in Southeastern Connecticut.</span>
+      </div>
+      <a href="contact.html#estimate-request" class="btn btn-primary">Request Free Estimate</a>
+    </div>
+
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo-frame">
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters logo" class="footer-logo" />
+        </span>
+        <p>Professional painting and power washing services throughout Southeastern Connecticut.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="interior.html">Interior Painting</a></li>
+          <li><a href="exterior.html">Exterior Painting</a></li>
+          <li><a href="powerwash.html">Power Washing</a></li>
+          <li><a href="commercial.html">Commercial Painting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="about.html">About the Family</a></li>
+          <li><a href="galleries.html">Project Gallery</a></li>
+          <li><a href="testimonials.html">Google Reviews</a></li>
+          <li><a href="contact.html#estimate-request">Request Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li>919 Colonel Ledyard Hwy</li>
+          <li>Ledyard, CT 06339</li>
+          <li><a href="tel:8608798222">Office: (860) 879-8222</a></li>
+          <li><a href="tel:8605145335">Cell: (860) 514-5335</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Connecticut House Painters LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <dialog class="gallery-lightbox" id="galleryLightbox" aria-labelledby="lightboxTitle">
+    <div class="lightbox-shell">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+      <figure>
+        <img id="lightboxImage" alt="" />
+        <figcaption>
+          <span id="lightboxCategory"></span>
+          <h2 id="lightboxTitle"></h2>
+          <p id="lightboxDescription"></p>
+        </figcaption>
+      </figure>
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+    </div>
+  </dialog>
+
+  <div class="mobile-cta">
+    <a href="tel:8605145335">Call Now</a>
+    <a href="contact.html#estimate-request">Free Estimate</a>
+  </div>
+</body>
+</html>

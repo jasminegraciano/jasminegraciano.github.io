@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Washing Connecticut | Connecticut House Painters LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800;900&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f356d;
+      --blue: #0456d0;
+      --sky: #33cfff;
+      --red: #de0703;
+      --silver: #bec4c6;
+      --muted: #87939b;
+      --ink: #102b54;
+      --paper: #ffffff;
+      --wash: #f1f8fc;
+      --line: rgba(15, 53, 109, 0.14);
+      --shadow: 0 24px 60px rgba(15, 53, 109, 0.16);
+      --accent-font: "Noto Naskh Arabic", Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      color: #16273d;
+      background: var(--paper);
+      font-family: "Manrope", Arial, sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 0;
+      background: var(--navy);
+      color: var(--paper);
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      box-shadow: 0 16px 32px rgba(15, 53, 109, 0.18);
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 42px rgba(15, 53, 109, 0.22);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--red), var(--blue));
+    }
+
+    .btn-light {
+      background: var(--paper);
+      color: var(--navy);
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, #071c3a 0%, var(--navy) 54%, #06182f 100%);
+      color: #e8f1fb;
+      font-size: 0.92rem;
+      border-bottom: 4px solid var(--sky);
+      box-shadow: 0 12px 24px rgba(7, 21, 37, 0.18);
+    }
+
+    .topbar-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+      padding: 12px 0;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      color: var(--paper);
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .topbar-brand::before {
+      content: "";
+      width: 42px;
+      height: 3px;
+      flex: 0 0 auto;
+      background: var(--red);
+      box-shadow: 52px 0 0 var(--sky);
+    }
+
+    .topbar-contact {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 7px;
+      padding-left: 18px;
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
+      font-weight: 800;
+      color: var(--paper);
+    }
+
+    .topbar-label {
+      color: var(--sky);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      box-shadow: 0 14px 38px rgba(15, 53, 109, 0.12);
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 247, 251, 0.96));
+      border-bottom: 1px solid rgba(15, 53, 109, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 108px;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      height: 88px;
+      padding: 8px 14px;
+      background: var(--paper);
+      border: 1px solid rgba(15, 53, 109, 0.13);
+      box-shadow: 0 16px 32px rgba(15, 53, 109, 0.11);
+      overflow: hidden;
+    }
+
+    .brand img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: scale(3.25);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 0 14px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--red);
+    }
+
+    .has-dropdown {
+      position: relative;
+    }
+
+    .dropdown-trigger {
+      gap: 8px;
+      background: transparent;
+      color: var(--navy);
+      padding: 0 14px !important;
+      font-weight: inherit;
+    }
+
+    .dropdown-trigger::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-right: 3px solid currentColor;
+      border-bottom: 3px solid currentColor;
+      transform: rotate(45deg) translateY(-2px);
+    }
+
+    .service-area-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      display: grid;
+      width: min(330px, calc(100vw - 32px));
+      max-height: 66vh;
+      overflow: auto;
+      padding: 10px;
+      margin: 0;
+      list-style: none;
+      background: #102b54;
+      border-top: 4px solid var(--sky);
+      box-shadow: 0 24px 54px rgba(7, 21, 37, 0.24);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 170ms ease, transform 170ms ease;
+      z-index: 10;
+    }
+
+    .service-area-menu a {
+      min-height: auto;
+      padding: 11px 12px;
+      color: var(--paper);
+      font-size: 0.92rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-area-menu a:hover {
+      color: var(--sky);
+      background: rgba(51, 207, 255, 0.1);
+    }
+
+    .has-dropdown:hover .service-area-menu,
+    .has-dropdown:focus-within .service-area-menu,
+    .has-dropdown.open .service-area-menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      background: var(--navy);
+      color: var(--paper);
+      position: relative;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .menu-toggle span {
+      position: absolute;
+    }
+
+    .menu-toggle::before {
+      transform: translateY(-7px);
+    }
+
+    .menu-toggle::after {
+      transform: translateY(7px);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 18%, rgba(51, 207, 255, 0.2), transparent 28%),
+        linear-gradient(120deg, #f5fbff 0%, #ffffff 45%, #edf7fc 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -8% -140px -8%;
+      height: 250px;
+      background: linear-gradient(90deg, var(--red), var(--blue));
+      transform: skewY(-4deg);
+      opacity: 0.95;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(400px, 0.84fr) minmax(0, 1.16fr);
+      align-items: center;
+      gap: 40px;
+      width: min(1260px, calc(100% - 40px));
+      min-height: 690px;
+      padding: 74px 0 96px;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 3px;
+      background: var(--red);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      margin: 18px 0 20px;
+      color: var(--navy);
+      font-size: clamp(3.1rem, 7vw, 6.9rem);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      color: #52606c;
+      font-family: var(--accent-font);
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.46;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .service-tags {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 34px;
+      max-width: 620px;
+    }
+
+    .service-tags span {
+      padding: 13px 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      color: var(--navy);
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(15, 53, 109, 0.08);
+    }
+
+    .before-after {
+      position: relative;
+      min-height: 500px;
+      border: 14px solid var(--paper);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 500px;
+    }
+
+    .wash-panel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wash-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .wash-panel.before img {
+      filter: saturate(0.7) sepia(0.25) brightness(0.7);
+    }
+
+    .wash-panel.before::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(110deg, rgba(72, 58, 31, 0.18) 0 7px, transparent 7px 18px),
+        rgba(50, 40, 24, 0.12);
+      mix-blend-mode: multiply;
+    }
+
+    .wash-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 2;
+      padding: 10px 14px;
+      background: rgba(7, 24, 47, 0.85);
+      color: var(--paper);
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .wash-panel.after .wash-label {
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+    }
+
+    .water-badge {
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      z-index: 3;
+      width: 132px;
+      height: 132px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: linear-gradient(135deg, var(--sky), var(--blue));
+      color: var(--paper);
+      border: 8px solid var(--paper);
+      border-radius: 50%;
+      text-align: center;
+      font-weight: 900;
+      box-shadow: 0 18px 34px rgba(15, 53, 109, 0.24);
+    }
+
+    .hero-image-card {
+      position: relative;
+      padding: 18px;
+      background: var(--paper);
+      border-top: 8px solid var(--sky);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-image-card::before {
+      content: "";
+      position: absolute;
+      inset: auto 18px 18px;
+      height: 8px;
+      background: linear-gradient(90deg, var(--red), var(--blue));
+      z-index: 2;
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      aspect-ratio: 1880 / 1576;
+      object-fit: contain;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(51, 207, 255, 0.18), transparent 34%),
+        #f7fbfd;
+    }
+
+    .hero-image-note {
+      position: absolute;
+      left: 34px;
+      bottom: 34px;
+      z-index: 3;
+      max-width: 250px;
+      padding: 14px 16px;
+      background: rgba(7, 24, 47, 0.88);
+      color: var(--paper);
+      font-weight: 900;
+      box-shadow: 0 16px 30px rgba(7, 24, 47, 0.2);
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-head h2 {
+      color: var(--navy);
+      font-size: clamp(2.3rem, 4vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      color: #5b6a78;
+      font-family: var(--accent-font);
+      font-size: 1.28rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.16fr) minmax(360px, 0.84fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .image-stack {
+      position: relative;
+      min-height: 540px;
+    }
+
+    .image-stack .main-img {
+      position: absolute;
+      inset: 0 24px 20px 0;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 10px solid var(--paper);
+      background: #eef5fb;
+    }
+
+    .image-stack .main-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .image-stack .mini-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 18px;
+      background: var(--paper);
+      transform: scale(1.2);
+    }
+
+    .image-stack .mini-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 160px;
+      height: 160px;
+      overflow: hidden;
+      border: 7px solid var(--paper);
+      box-shadow: 0 18px 38px rgba(15, 53, 109, 0.16);
+    }
+
+    .content-card {
+      padding: 44px;
+      background: linear-gradient(180deg, #ffffff, #f4fbff);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 50px rgba(15, 53, 109, 0.1);
+    }
+
+    .content-card h2 {
+      color: var(--navy);
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      line-height: 1.02;
+      margin-bottom: 22px;
+    }
+
+    .content-card p {
+      color: #2c3642;
+      font-size: 1.08rem;
+      line-height: 1.72;
+      margin-bottom: 24px;
+    }
+
+    .content-card a {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .video-showcase {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 20%, rgba(51, 207, 255, 0.16), transparent 30%),
+        linear-gradient(135deg, #071c3a, var(--navy));
+      color: var(--paper);
+    }
+
+    .video-showcase::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -160px;
+      width: 420px;
+      height: 420px;
+      border: 42px solid rgba(51, 207, 255, 0.18);
+      transform: rotate(12deg);
+    }
+
+    .video-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 42px;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .video-copy h2 {
+      color: var(--paper);
+      font-size: clamp(2.3rem, 4vw, 4.6rem);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .video-copy p {
+      color: rgba(255, 255, 255, 0.78);
+      font-family: var(--accent-font);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.52;
+    }
+
+    .video-frame {
+      position: relative;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-top: 8px solid var(--sky);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .video-frame iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      background: #000;
+      opacity: 0;
+      transition: opacity 220ms ease;
+    }
+
+    .video-frame.is-loaded iframe {
+      opacity: 1;
+    }
+
+    .video-fallback {
+      position: absolute;
+      inset: 16px;
+      display: grid;
+      place-items: center;
+      min-height: calc(100% - 32px);
+      padding: 28px;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(7, 24, 47, 0.2), rgba(7, 24, 47, 0.72)),
+        url("https://i.ytimg.com/vi/72IlkIfOmzc/maxresdefault.jpg") center/cover;
+      color: var(--paper);
+      text-align: center;
+      z-index: 2;
+      transition: opacity 220ms ease, visibility 220ms ease;
+    }
+
+    .video-frame.is-loaded .video-fallback {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .video-fallback::before {
+      content: "";
+      width: 78px;
+      height: 78px;
+      margin-bottom: 18px;
+      background: var(--red);
+      clip-path: polygon(28% 18%, 28% 82%, 82% 50%);
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28));
+    }
+
+    .video-fallback strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .video-fallback span {
+      display: block;
+      max-width: 420px;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.82);
+      font-family: var(--accent-font);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .video-popout {
+      position: absolute;
+      left: -24px;
+      bottom: -30px;
+      max-width: 290px;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, var(--red), var(--blue));
+      color: var(--paper);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
+      transform: rotate(-2deg);
+    }
+
+    .video-popout strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.12rem;
+    }
+
+    .video-popout span {
+      color: rgba(255, 255, 255, 0.82);
+      font-family: var(--accent-font);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+      min-height: 260px;
+      padding: 28px;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(15, 53, 109, 0.1);
+    }
+
+    .service-card::before {
+      content: attr(data-mark);
+      position: absolute;
+      right: -8px;
+      top: -12px;
+      color: rgba(51, 207, 255, 0.18);
+      font-size: 5.4rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .service-card h3 {
+      position: relative;
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      z-index: 1;
+    }
+
+    .service-card p,
+    .service-card li {
+      position: relative;
+      color: #5a6875;
+      line-height: 1.55;
+      z-index: 1;
+    }
+
+    .service-card ul {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-card li {
+      padding-left: 18px;
+    }
+
+    .service-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      transform: rotate(45deg);
+    }
+
+    .cleaning-band {
+      background:
+        linear-gradient(135deg, rgba(15, 53, 109, 0.96), rgba(4, 86, 208, 0.9)),
+        url("photos/House washing in East Lyme Connecticut. Before and after.png") center/cover;
+      color: var(--paper);
+    }
+
+    .cleaning-band .section-head h2,
+    .cleaning-band .section-head p,
+    .cleaning-band .eyebrow {
+      color: var(--paper);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .process-step {
+      padding: 26px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    .process-step span {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--sky);
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .process-step h3 {
+      margin-bottom: 10px;
+      font-size: 1.22rem;
+    }
+
+    .process-step p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.55;
+    }
+
+    .roof-grid,
+    .commercial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .photo-panel {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-panel img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+    }
+
+    .photo-panel.fit-contain img {
+      object-fit: contain;
+      padding: 14px;
+      background: var(--paper);
+    }
+
+    .photo-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 8px;
+      background: linear-gradient(90deg, var(--red), var(--sky), var(--blue));
+    }
+
+    .text-panel h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 3.5vw, 3.6rem);
+      line-height: 1.04;
+    }
+
+    .text-panel p {
+      color: #566574;
+      font-size: 1.08rem;
+      line-height: 1.72;
+    }
+
+    .list-panel {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 24px 0 0;
+      list-style: none;
+    }
+
+    .list-panel li {
+      padding: 14px 16px;
+      background: #f5fbff;
+      border-left: 5px solid var(--sky);
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .window-section {
+      background:
+        linear-gradient(180deg, #f6fbff, #ffffff),
+        var(--wash);
+    }
+
+    .window-grid {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .window-callout {
+      padding: 42px;
+      background: linear-gradient(135deg, var(--red), var(--blue));
+      color: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .window-callout h2 {
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1.02;
+      margin-bottom: 18px;
+    }
+
+    .window-callout p {
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.65;
+      font-size: 1.08rem;
+    }
+
+    .cta-band {
+      padding: 54px 0;
+      background: linear-gradient(90deg, #071c3a, var(--navy));
+      color: var(--paper);
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-grid strong {
+      display: block;
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+      line-height: 1.05;
+    }
+
+    .cta-grid span {
+      display: block;
+      margin-top: 9px;
+      color: rgba(255, 255, 255, 0.75);
+      font-family: var(--accent-font);
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #071c3a;
+      color: var(--paper);
+      padding: 64px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+      gap: 22px;
+    }
+
+    .footer-col {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-logo-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      height: 86px;
+      padding: 8px 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .footer-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: scale(3.25);
+    }
+
+    .footer-col h4 {
+      margin: 0 0 14px;
+      color: var(--sky);
+    }
+
+    .footer-col ul {
+      display: grid;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer-col p {
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      margin-top: 26px;
+      padding-top: 18px;
+      color: rgba(255, 255, 255, 0.58);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+    }
+
+    .mobile-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 70;
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: 0 -12px 28px rgba(7, 21, 37, 0.2);
+    }
+
+    .mobile-cta a {
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      color: var(--paper);
+      font-weight: 900;
+    }
+
+    .mobile-cta a:first-child {
+      background: var(--navy);
+    }
+
+    .mobile-cta a:last-child {
+      background: var(--red);
+    }
+
+    @media (max-width: 1060px) {
+      .header-grid,
+      .hero-grid,
+      .intro-grid,
+      .video-grid,
+      .roof-grid,
+      .commercial-grid,
+      .window-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        min-height: auto;
+      }
+
+      .service-grid,
+      .process-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 108px;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 16px 20px 24px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 20px 40px rgba(15, 53, 109, 0.12);
+      }
+
+      .nav-menu.open {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .nav-menu a {
+        justify-content: center;
+      }
+
+      .service-area-menu {
+        position: static;
+        width: 100%;
+        max-height: 270px;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding-bottom: 54px;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), 362px);
+      }
+
+      .topbar-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .topbar-brand {
+        display: none;
+      }
+
+      .topbar-brand::before {
+        width: 28px;
+        box-shadow: 36px 0 0 var(--sky);
+      }
+
+      .topbar-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: stretch;
+        gap: 8px;
+        width: 100%;
+      }
+
+      .topbar-item {
+        justify-content: center;
+        border-left: 0;
+        padding-left: 0;
+        font-size: 0.78rem;
+      }
+
+      .topbar-label {
+        font-size: 0.62rem;
+      }
+
+      .topbar-item.location {
+        display: none;
+      }
+
+      .header-grid {
+        min-height: 88px;
+      }
+
+      .brand {
+        width: 190px;
+        height: 70px;
+      }
+
+      .nav-menu {
+        top: 88px;
+      }
+
+      .hero-grid {
+        padding: 58px 0 74px;
+        gap: 34px;
+      }
+
+      .hero h1 {
+        font-size: 2.58rem;
+        overflow-wrap: break-word;
+      }
+
+      .hero-copy {
+        font-size: 1.12rem;
+        overflow-wrap: break-word;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .service-tags,
+      .service-grid,
+      .process-grid,
+      .footer-grid,
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .before-after,
+      .before-after-grid {
+        min-height: auto;
+      }
+
+      .before-after-grid {
+        height: 410px;
+      }
+
+      .water-badge {
+        width: 108px;
+        height: 108px;
+        right: 14px;
+        top: 14px;
+        font-size: 0.84rem;
+      }
+
+      .section {
+        padding: 66px 0;
+      }
+
+      .image-stack {
+        min-height: auto;
+      }
+
+      .image-stack .main-img,
+      .image-stack .mini-img {
+        position: relative;
+        inset: auto;
+        height: auto;
+        margin-bottom: 14px;
+      }
+
+      .image-stack .main-img {
+        width: 100%;
+        aspect-ratio: 1880 / 1576;
+      }
+
+      .image-stack .mini-img {
+        width: min(48%, 170px);
+        aspect-ratio: 1;
+        margin-left: auto;
+      }
+
+      .content-card,
+      .window-callout {
+        padding: 28px;
+      }
+
+      .hero-image-card {
+        padding: 12px;
+      }
+
+      .hero-image-note {
+        position: static;
+        max-width: none;
+        margin-top: 12px;
+      }
+
+      .video-frame {
+        padding: 10px;
+      }
+
+      .video-popout {
+        position: static;
+        max-width: none;
+        margin-top: 14px;
+        transform: none;
+      }
+
+      .photo-panel,
+      .photo-panel img {
+        min-height: 390px;
+      }
+
+      .mobile-cta {
+        display: grid;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="site-enhancements.css" />
+  <script src="site-enhancements.js" defer></script>
+  <script src="google-reviews-widget.js" defer></script>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="topbar">
+      <div class="container topbar-grid">
+        <div class="topbar-brand">Connecticut House Painters LLC and Power Washing</div>
+        <div class="topbar-contact" aria-label="Contact information">
+          <span class="topbar-item"><span class="topbar-label">Office</span><a href="tel:8608798222">(860) 879-8222</a></span>
+          <span class="topbar-item"><span class="topbar-label">Cell</span><a href="tel:8605145335">(860)-514-5335</a></span>
+          <span class="topbar-item location"><span class="topbar-label">Ledyard</span><span>CT</span></span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header-grid">
+        <a href="index.html" class="brand" aria-label="Connecticut House Painters home">
+          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing Logo" />
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu"><span></span></button>
+          <ul class="nav-menu" id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="galleries.html">Galleries</a></li>
+          <li><a href="interior.html">Interior Painting</a></li>
+          <li><a href="exterior.html">Exterior Painting</a></li>
+          <li><a href="commercial.html">Commercial Painting</a></li>
+          <li><a href="powerwash.html" class="active">Power Washing</a></li>
+          <li class="has-dropdown">
+            <a href="#service-areas" class="dropdown-trigger">Service Area</a>
+            <ul class="service-area-menu" aria-label="Service area pages">
+              <li><a href="#service-areas">Waterford CT House Painters</a></li>
+              <li><a href="#service-areas">Mystic CT House Painters</a></li>
+              <li><a href="#service-areas">Pawcatuck CT House Painters</a></li>
+              <li><a href="#service-areas">Essex CT House Painters</a></li>
+              <li><a href="#service-areas">Montville CT House Painters</a></li>
+              <li><a href="#service-areas">Uncasville CT House Painters</a></li>
+              <li><a href="#service-areas">Colchester CT House Painters</a></li>
+              <li><a href="#service-areas">North Stonington CT House Painters</a></li>
+              <li><a href="#service-areas">Ledyard CT House Painters</a></li>
+              <li><a href="#service-areas">Groton CT House Painters</a></li>
+              <li><a href="#service-areas">East Lyme CT House Painters</a></li>
+              <li><a href="#service-areas">Old Saybrook CT House Painters</a></li>
+              <li><a href="#service-areas">Old Lyme CT House Painters</a></li>
+              <li><a href="#service-areas">Griswold CT House Painters</a></li>
+              <li><a href="#service-areas">New London CT House Painters</a></li>
+              <li><a href="#service-areas">Stonington CT House Painters</a></li>
+              <li><a href="#service-areas">Salem CT House Painters</a></li>
+              <li><a href="#service-areas">Bozrah CT House Painters</a></li>
+            </ul>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Power washing Connecticut</span>
+          <h1>Restore curb appeal without repainting first.</h1>
+          <p class="hero-copy">
+            Connecticut House Painters LLC and Power Washing brings a clean, careful approach to siding,
+            roofs, decks, windows, storefronts, walkways, and commercial exteriors.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Request Free Estimate</a>
+            <a href="tel:8608798222" class="btn btn-light">Call (860) 879-8222</a>
+          </div>
+          <div class="service-tags" aria-label="Power washing specialties">
+            <span>House Washing</span>
+            <span>Soft Washing</span>
+            <span>Roof Cleaning</span>
+            <span>Decks</span>
+            <span>Windows</span>
+            <span>Commercial</span>
+          </div>
+        </div>
+        <div class="hero-image-card">
+          <img src="photos/Power washing in Ledyard CT. Before and after.png" alt="Before and after house washing service in Ledyard" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container intro-grid">
+        <div class="image-stack">
+          <div class="main-img">
+            <img src="photos/House washing in East Lyme Connecticut. Before and after.png" alt="Freshly cleaned Connecticut home exterior in East Lyme" />
+          </div>
+          <div class="mini-img">
+            <img src="images/WillieTheWhale.png" alt="Connecticut House Painters Power Washing brand mark" />
+          </div>
+        </div>
+
+        <div class="content-card">
+          <span class="eyebrow">Exterior cleaning</span>
+          <h2>Power washing service in Connecticut.</h2>
+          <p>
+            Connecticut House Painters LLC and Power Washing adds an extra cleaning power boost that
+            puts the sparkle and shine back into residential and commercial exteriors.
+          </p>
+          <p>
+            Our carefully developed pressure washing techniques, high-performance equipment, and
+            efficient cleaning crew help provide outstanding results while respecting the property
+            around the work area.
+          </p>
+          <a href="contact.html">Schedule a free estimate</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-showcase" id="power-washing-video">
+      <div class="container video-grid">
+        <div class="video-copy">
+          <span class="eyebrow">Watch the work</span>
+          <h2>See the process in action.</h2>
+          <p>
+            A short project video helps customers picture the difference before they call. This section
+            gives the page motion, proof, and a stronger reason to trust the service.
+          </p>
+          <a href="contact.html" class="btn btn-light">Book a Power Washing Estimate</a>
+        </div>
+        <div class="video-frame">
+          <iframe
+            data-video-id="72IlkIfOmzc"
+            title="Connecticut House Painters power washing video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="origin"
+            loading="eager"
+            allowfullscreen>
+          </iframe>
+          <a class="video-fallback" href="https://www.youtube.com/watch?v=72IlkIfOmzc" target="_blank" rel="noopener">
+          
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section window-section" id="soft-wash">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Soft wash service</span>
+          <h2>Built for delicate surfaces and everyday exterior buildup.</h2>
+          <p>
+            Soft washing is ideal for areas that need a careful touch, helping remove dirt, growth,
+            and stains without disturbing surrounding property.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card" data-mark="01">
+            <h3>Homes and Apartments</h3>
+            <p>Residential home exteriors and apartment complexes cleaned with a property-first approach.</p>
+          </article>
+          <article class="service-card" data-mark="02">
+            <h3>Outdoor Living Areas</h3>
+            <ul>
+              <li>Pools, fences, and hardscapes</li>
+              <li>Concrete, brick, and wood surfaces</li>
+              <li>Deck washing and sealing prep</li>
+            </ul>
+          </article>
+          <article class="service-card" data-mark="03">
+            <h3>Detailed Exterior Care</h3>
+            <ul>
+              <li>Window cleaning</li>
+              <li>Gutter cleaning</li>
+              <li>Walkways and entry areas</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cleaning-band">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">A cleaner process</span>
+          <h2>Strong results, handled with care.</h2>
+          <p>
+            With the skills and equipment to pressure wash a wide range of Connecticut properties,
+            the team uses cleaning methods designed for standout results without harming the environment
+            or disturbing surrounding property.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <span>Step 01</span>
+            <h3>Inspect</h3>
+            <p>Review surfaces, staining, landscaping, and sensitive areas before work begins.</p>
+          </article>
+          <article class="process-step">
+            <span>Step 02</span>
+            <h3>Protect</h3>
+            <p>Plan around plants, windows, trim, and outdoor fixtures for a careful setup.</p>
+          </article>
+          <article class="process-step">
+            <span>Step 03</span>
+            <h3>Wash</h3>
+            <p>Use the right pressure and cleaning method for the material being restored.</p>
+          </article>
+          <article class="process-step">
+            <span>Step 04</span>
+            <h3>Review</h3>
+            <p>Rinse, check the final result, and leave the exterior looking clean and refreshed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roof-cleaning">
+      <div class="container roof-grid">
+        <div class="photo-panel fit-contain">
+          <img src="photos/Roof treatment and soft washing, old Lyme, CT.png" alt="Connecticut roof treatment and soft washing service in Old Lyme" />
+        </div>
+        <div class="text-panel">
+          <span class="eyebrow">Roof cleaning</span>
+          <h2>Roof cleaning and washing Connecticut.</h2>
+          <p>
+            We also provide roof cleaning service in Connecticut. Our washing helps remove streaks,
+            moss, algae, and mildew from your roof so the final result looks clean, bright, and cared for.
+          </p>
+          <ul class="list-panel">
+            <li>Removes dark streaks and organic buildup</li>
+            <li>Helps refresh the look of the whole home</li>
+            <li>Handled with care around siding, gutters, and landscaping</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section window-section" id="commercial">
+      <div class="container commercial-grid">
+        <div class="text-panel">
+          <span class="eyebrow">Commercial cleaning</span>
+          <h2>Commercial power washing Connecticut.</h2>
+          <p>
+            A clean exterior helps customers, tenants, and visitors feel confident before they step
+            inside. Connecticut House Painters LLC and Power Washing supports commercial and industrial
+            properties with dependable exterior cleaning.
+          </p>
+          <ul class="list-panel">
+            <li>Commercial and industrial complexes</li>
+            <li>Business storefronts, entryways, and walkways</li>
+            <li>Signage and awnings</li>
+            <li>Gutters and downspouts</li>
+            <li>Truck and trailer fleets</li>
+            <li>Roadways and ramps</li>
+          </ul>
+        </div>
+        <div class="photo-panel">
+          <img src="photos/Commercial power washing in Uncasville CT.png" alt="Commercial property power washing in Uncasville, Connecticut" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="windows">
+      <div class="container window-grid">
+        <div class="window-callout">
+          <span class="eyebrow">Window cleaning</span>
+          <h2>Clear windows make the whole property feel brighter.</h2>
+          <p>
+            We also provide window cleaning for residential and commercial properties, helping homes
+            and businesses look polished from the curb.
+          </p>
+          <a href="contact.html" class="btn btn-light">Request Window Cleaning</a>
+        </div>
+        <div class="photo-panel">
+          <img src="photos/Complete exterior cleaning. Roof treatment and soft wash gutter brightening and complete house wash service in Charlestown RI.png" alt="Complete exterior cleaning, gutter brightening, and house washing project" />
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" id="service-areas">
+      <div class="container cta-grid">
+        <div>
+          <strong>Need a cleaner home exterior in Southeastern Connecticut?</strong>
+          <span>Serving Ledyard, Waterford, Mystic, Groton, East Lyme, Stonington, New London, Pawcatuck, Essex, Bozrah, and nearby towns.</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Sign Up for a Free Estimate</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="sitewide-review-section" id="reviews" aria-labelledby="powerwash-reviews-title">
+    <div class="sitewide-review-inner">
+      <div class="sitewide-review-head">
+        <div>
+          <span class="sitewide-review-kicker">Verified customer feedback</span>
+          <h2 id="powerwash-reviews-title">Recent reviews from the live Google profile.</h2>
+        </div>
+        <p>Public feedback helps customers see the communication, care, and refreshed results behind the power washing work.</p>
+      </div>
+
+      <div class="sitewide-review-summary">
+        <div class="sitewide-review-rating">
+          <strong data-google-rating>4.8</strong>
+          <span class="sitewide-review-stars" aria-label="Google star rating">★★★★★</span>
+          <span class="sitewide-review-count" data-google-review-count>Connecting to Google reviews...</span>
+        </div>
+        <a data-google-profile-link href="https://www.google.com/search?q=Connecticut+House+Painters+LLC+Ledyard+CT+Google+reviews" target="_blank" rel="noopener">View all on Google</a>
+      </div>
+
+      <div class="compact-google-review-grid" data-google-reviews data-review-category="powerwash" data-review-limit="3">
+        <div class="compact-google-review-loading">Connecting to the live Google review profile...</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo-frame">
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters Logo" class="footer-logo" />
+        </span>
+        <p>Family-owned painting and power washing services throughout Southeastern Connecticut.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="interior.html">Interior Painting</a></li>
+          <li><a href="exterior.html">Exterior Painting</a></li>
+          <li><a href="powerwash.html">Power Washing</a></li>
+          <li><a href="commercial.html">Commercial Painting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="galleries.html">Galleries</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Request Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>919 Colonel Ledyard Hwy</li>
+          <li>Ledyard, CT 06339</li>
+          <li><a href="tel:8608798222">Office: (860) 879-8222</a></li>
+          <li><a href="tel:8605145335">Cell: (860)-514-5335</a></li>
+          <li><a href="contact.html">Request Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Connecticut House Painters LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a href="tel:8608798222">Call Office</a>
+    <a href="contact.html">Free Estimate</a>
+  </div>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#primary-menu");
+    const dropdown = document.querySelector(".has-dropdown");
+    const dropdownTrigger = document.querySelector(".dropdown-trigger");
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    dropdownTrigger?.addEventListener("click", (event) => {
+      if (window.matchMedia("(max-width: 1060px)").matches) {
+        event.preventDefault();
+        dropdown.classList.toggle("open");
+      }
+    });
+
+    const videoFrame = document.querySelector(".video-frame");
+    const videoEmbed = videoFrame?.querySelector("iframe");
+
+    if (videoFrame && videoEmbed && window.location.protocol !== "file:") {
+      const videoId = videoEmbed.dataset.videoId;
+      const embedParams = new URLSearchParams({
+        autoplay: "1",
+        mute: "1",
+        playsinline: "1",
+        controls: "1",
+        rel: "0",
+        modestbranding: "1",
+        loop: "1",
+        playlist: videoId,
+        enablejsapi: "1",
+        origin: window.location.origin
+      });
+
+      videoEmbed.src = `https://www.youtube.com/embed/${videoId}?${embedParams.toString()}`;
+      videoEmbed.addEventListener("load", () => {
+        videoFrame.classList.add("is-loaded");
+      });
+    }
+  </script>
+</body>
+
+</html>

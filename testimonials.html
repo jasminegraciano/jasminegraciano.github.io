@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials | Connecticut House Painters LLC</title>
+  <meta name="description" content="Read customer reviews and project feedback for Connecticut House Painters LLC, a trusted family-owned painting and power washing company serving Connecticut." />
+  <link rel="icon" href="images/WillieTheWhale.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #ffffff;
+      --wash: #f4f8fb;
+      --navy: #0f356d;
+      --blue: #0456d0;
+      --sky: #33cfff;
+      --red: #de0703;
+      --silver: #bec4c6;
+      --muted: #87939b;
+      --ink: #102b54;
+      --line: rgba(15, 53, 109, 0.14);
+      --shadow: 0 24px 64px rgba(15, 53, 109, 0.18);
+      --accent-font: "Noto Naskh Arabic", Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    body {
+      color: #17283d;
+      background: var(--paper);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 0;
+      color: var(--paper);
+      background: var(--navy);
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      box-shadow: 0 18px 34px rgba(15, 53, 109, 0.18);
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 44px rgba(15, 53, 109, 0.24);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--red), var(--blue));
+    }
+
+    .btn-light {
+      color: var(--navy);
+      background: var(--paper);
+    }
+
+    .btn-outline {
+      color: var(--navy);
+      background: transparent;
+      border: 2px solid rgba(15, 53, 109, 0.24);
+      box-shadow: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      box-shadow: 0 14px 42px rgba(15, 53, 109, 0.12);
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, #071c3a 0%, var(--navy) 54%, #06182f 100%);
+      color: #e7f0fa;
+      font-size: 0.92rem;
+      border-bottom: 4px solid var(--sky);
+    }
+
+    .topbar-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+      padding: 12px 0;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      color: var(--paper);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .topbar-brand::before {
+      content: "";
+      width: 42px;
+      height: 3px;
+      flex: 0 0 auto;
+      background: var(--red);
+      box-shadow: 52px 0 0 var(--sky);
+    }
+
+    .topbar-contact {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 7px;
+      padding-left: 18px;
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--paper);
+      font-weight: 800;
+    }
+
+    .topbar-label {
+      color: var(--sky);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 247, 251, 0.96));
+      border-bottom: 1px solid rgba(15, 53, 109, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 108px;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      padding: 8px;
+      background: var(--paper);
+      border: 1px solid rgba(15, 53, 109, 0.12);
+      box-shadow: 0 18px 42px rgba(15, 53, 109, 0.1);
+    }
+
+    .brand img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    nav {
+      flex: 1;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .nav-menu a,
+    .dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 16px;
+      color: var(--navy);
+      font-size: 0.98rem;
+      font-weight: 800;
+      transition: color 160ms ease, background 160ms ease;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active,
+    .dropdown-trigger:hover {
+      color: var(--red);
+      background: rgba(51, 207, 255, 0.08);
+    }
+
+    .has-dropdown {
+      position: relative;
+    }
+
+    .dropdown-trigger {
+      gap: 8px;
+      background: transparent;
+      padding: 0 14px !important;
+      font-weight: 800;
+    }
+
+    .dropdown-trigger::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-right: 3px solid currentColor;
+      border-bottom: 3px solid currentColor;
+      transform: rotate(45deg) translateY(-2px);
+    }
+
+    .service-area-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      display: grid;
+      width: min(330px, calc(100vw - 32px));
+      max-height: 66vh;
+      overflow: auto;
+      padding: 10px;
+      margin: 0;
+      list-style: none;
+      background: #102b54;
+      border-top: 4px solid var(--sky);
+      box-shadow: 0 24px 54px rgba(7, 21, 37, 0.24);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+    }
+
+    .service-area-menu a {
+      justify-content: flex-start;
+      width: 100%;
+      min-height: 42px;
+      padding: 10px 12px;
+      color: var(--paper);
+      font-weight: 700;
+    }
+
+    .service-area-menu a:hover {
+      color: var(--sky);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .has-dropdown:hover .service-area-menu,
+    .has-dropdown:focus-within .service-area-menu,
+    .has-dropdown.open .service-area-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      background: var(--navy);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 3px;
+      margin: 5px auto;
+      background: var(--paper);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--sky);
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 3px;
+      background: var(--red);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 720px;
+      display: grid;
+      align-items: center;
+      padding: 86px 0;
+      color: var(--paper);
+      background:
+        linear-gradient(90deg, rgba(6, 24, 47, 0.94) 0%, rgba(15, 53, 109, 0.9) 47%, rgba(4, 86, 208, 0.52) 100%),
+        url("photos/Exterior painting services in Mystic, CT. We restored this historic home in Mystic Connecticut.png") center / cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 10px;
+      background: linear-gradient(90deg, var(--red), var(--sky), var(--blue));
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.98fr) minmax(340px, 0.72fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.02;
+      color: var(--navy);
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 18px 0 22px;
+      color: var(--paper);
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      font-weight: 900;
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      color: rgba(255, 255, 255, 0.86);
+      font-family: var(--accent-font);
+      font-size: clamp(1.35rem, 2.4vw, 2.08rem);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .trust-panel {
+      position: relative;
+      padding: 26px;
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--ink);
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      box-shadow: 0 28px 80px rgba(2, 9, 18, 0.32);
+    }
+
+    .trust-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--red), var(--sky), var(--blue));
+    }
+
+    .trust-logo {
+      width: 176px;
+      margin-bottom: 20px;
+    }
+
+    .rating-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .rating-number {
+      display: grid;
+      place-items: center;
+      width: 108px;
+      aspect-ratio: 1;
+      color: var(--paper);
+      background: linear-gradient(135deg, var(--red), var(--blue));
+      font-size: 2.2rem;
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(15, 53, 109, 0.2);
+    }
+
+    .stars {
+      color: #ffc928;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    .google-word {
+      display: inline-flex;
+      gap: 0;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .google-word span:nth-child(1) {
+      color: #4285f4;
+    }
+
+    .google-word span:nth-child(2) {
+      color: #ea4335;
+    }
+
+    .google-word span:nth-child(3) {
+      color: #fbbc05;
+    }
+
+    .google-word span:nth-child(4) {
+      color: #4285f4;
+    }
+
+    .google-word span:nth-child(5) {
+      color: #34a853;
+    }
+
+    .google-word span:nth-child(6) {
+      color: #ea4335;
+    }
+
+    .trust-panel h2 {
+      margin: 18px 0 8px;
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+    }
+
+    .trust-panel p {
+      color: #526170;
+      font-weight: 700;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .metric {
+      padding: 16px;
+      background: linear-gradient(180deg, #f7fbff, #eef5fb);
+      border: 1px solid rgba(15, 53, 109, 0.1);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.45rem;
+      font-weight: 900;
+    }
+
+    .metric span {
+      color: #526170;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section.alt {
+      background:
+        linear-gradient(180deg, #ffffff, #f2f8fc),
+        linear-gradient(90deg, rgba(51, 207, 255, 0.12), transparent);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.52fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      margin-top: 14px;
+      font-size: clamp(2.4rem, 5vw, 5.2rem);
+      font-weight: 900;
+    }
+
+    .section-head p {
+      color: #526170;
+      font-family: var(--accent-font);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .review-console {
+      background: var(--paper);
+    }
+
+    .console-shell {
+      overflow: hidden;
+      border: 1px solid rgba(15, 53, 109, 0.12);
+      box-shadow: var(--shadow);
+      background: var(--paper);
+    }
+
+    .console-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 22px;
+      background: linear-gradient(90deg, #071c3a, var(--navy));
+      color: var(--paper);
+    }
+
+    .console-top h3 {
+      color: var(--paper);
+      font-size: 1.45rem;
+    }
+
+    .live-note {
+      max-width: 480px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .google-review-status {
+      display: inline-flex;
+      align-items: center;
+      width: auto;
+      max-width: 640px;
+      margin-top: 12px;
+      padding: 9px 12px;
+      color: #d8f6ff;
+      background: rgba(51, 207, 255, 0.12);
+      border-left: 4px solid var(--sky);
+      font-size: 0.86rem;
+      font-weight: 900;
+    }
+
+    .google-review-status.error {
+      color: #fff0f0;
+      background: rgba(222, 7, 3, 0.18);
+      border-left-color: var(--red);
+    }
+
+    .google-review-status.success {
+      color: #e9fff7;
+      background: rgba(46, 160, 96, 0.18);
+      border-left-color: #33cfff;
+    }
+
+    .review-controls {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      padding: 18px 22px;
+      background: #f7fbff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 18px;
+      color: var(--navy);
+      background: var(--paper);
+      border: 1px solid rgba(15, 53, 109, 0.14);
+      outline: 0;
+      font-weight: 800;
+    }
+
+    .filter-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      min-height: 44px;
+      padding: 0 15px;
+      color: var(--navy);
+      background: var(--paper);
+      border: 1px solid rgba(15, 53, 109, 0.16);
+      font-weight: 900;
+      cursor: pointer;
+      transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: var(--paper);
+      background: var(--navy);
+      transform: translateY(-1px);
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      padding: 22px;
+    }
+
+    .review-card {
+      position: relative;
+      display: grid;
+      min-height: 356px;
+      padding: 24px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 248, 251, 0.95)),
+        var(--paper);
+      border: 1px solid rgba(15, 53, 109, 0.12);
+      box-shadow: 0 18px 42px rgba(15, 53, 109, 0.08);
+      transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transform-style: preserve-3d;
+      transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+    }
+
+    .review-card:hover {
+      box-shadow: 0 26px 54px rgba(15, 53, 109, 0.16);
+    }
+
+    .review-card.featured {
+      background: linear-gradient(145deg, var(--navy), #071c3a 70%);
+      color: var(--paper);
+      border-color: rgba(51, 207, 255, 0.4);
+    }
+
+    .review-card.featured h3,
+    .review-card.featured .review-name,
+    .review-card.featured .review-text {
+      color: var(--paper);
+    }
+
+    .review-card[hidden] {
+      display: none;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      aspect-ratio: 1;
+      color: var(--paper);
+      background: linear-gradient(135deg, var(--red), var(--blue));
+      font-weight: 900;
+      box-shadow: 0 10px 22px rgba(15, 53, 109, 0.16);
+    }
+
+    .review-name {
+      color: var(--navy);
+      font-size: 1.08rem;
+      font-weight: 900;
+    }
+
+    .review-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #70808d;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .review-text {
+      color: #223246;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    .review-card.featured .review-meta {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .review-footer {
+      align-self: end;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(15, 53, 109, 0.1);
+    }
+
+    .review-card.featured .review-footer {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .review-service {
+      color: var(--sky);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .read-more {
+      border: 0;
+      color: var(--blue);
+      background: transparent;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .review-card.featured .read-more {
+      color: var(--sky);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.78fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .story-photo {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--navy);
+    }
+
+    .story-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      object-fit: cover;
+    }
+
+    .story-badge {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      max-width: 360px;
+      padding: 20px 22px;
+      color: var(--paper);
+      background: linear-gradient(135deg, var(--red), var(--blue));
+      box-shadow: 0 22px 42px rgba(7, 21, 37, 0.26);
+      transform: rotate(-2deg);
+    }
+
+    .story-badge strong {
+      display: block;
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .story-content {
+      display: grid;
+      gap: 22px;
+    }
+
+    .story-card {
+      padding: 28px;
+      background: var(--paper);
+      border: 1px solid rgba(15, 53, 109, 0.12);
+      box-shadow: 0 18px 48px rgba(15, 53, 109, 0.1);
+    }
+
+    .story-card h2 {
+      margin: 12px 0 16px;
+      font-size: clamp(2.2rem, 4vw, 4.3rem);
+    }
+
+    .owner-reply {
+      padding: 24px;
+      color: var(--paper);
+      background: linear-gradient(135deg, #071c3a, var(--navy));
+      border-left: 6px solid var(--sky);
+    }
+
+    .owner-reply h3 {
+      color: var(--paper);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .owner-reply p {
+      color: rgba(255, 255, 255, 0.84);
+      font-family: var(--accent-font);
+      font-size: 1.18rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr 1fr;
+      gap: 16px;
+    }
+
+    .photo-tile {
+      position: relative;
+      min-height: 250px;
+      overflow: hidden;
+      background: var(--navy);
+      box-shadow: 0 18px 44px rgba(15, 53, 109, 0.12);
+    }
+
+    .photo-tile:nth-child(1) {
+      min-height: 380px;
+      grid-row: span 2;
+      background:
+        linear-gradient(145deg, rgba(51, 207, 255, 0.1), rgba(4, 86, 208, 0.06)),
+        var(--paper);
+    }
+
+    .photo-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 420ms ease;
+    }
+
+    .photo-tile:nth-child(1) img {
+      padding: 26px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .photo-tile:hover img {
+      transform: scale(1.06);
+    }
+
+    .photo-tile span {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      padding: 8px 12px;
+      color: var(--paper);
+      background: rgba(7, 21, 37, 0.78);
+      font-weight: 900;
+    }
+
+    .proof-band {
+      color: var(--paper);
+      background:
+        linear-gradient(135deg, rgba(15, 53, 109, 0.98), rgba(4, 86, 208, 0.92)),
+        url("images/Mainlogo.png") right 6% center / min(560px, 70vw) no-repeat;
+    }
+
+    .proof-band h2 {
+      max-width: 820px;
+      color: var(--paper);
+      font-size: clamp(2.4rem, 5vw, 5.4rem);
+    }
+
+    .proof-band p {
+      max-width: 720px;
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.82);
+      font-family: var(--accent-font);
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .proof-item {
+      min-height: 190px;
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .proof-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--sky);
+      font-size: 2.4rem;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .proof-item h3 {
+      color: var(--paper);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .proof-item span {
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 700;
+    }
+
+    .cta-band {
+      color: var(--paper);
+      background: linear-gradient(90deg, var(--red), var(--navy));
+      padding: 46px 0;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .cta-band h2 {
+      color: var(--paper);
+      font-size: clamp(2rem, 4vw, 4rem);
+    }
+
+    .cta-band p {
+      max-width: 700px;
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 700;
+    }
+
+    footer {
+      color: var(--paper);
+      background: #0f356d;
+      padding: 64px 0 28px;
+      border-top: 10px solid rgba(51, 207, 255, 0.28);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.75fr 0.75fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .footer-logo-frame {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 210px;
+      padding: 10px;
+      background: var(--paper);
+      margin-bottom: 18px;
+    }
+
+    .footer-logo {
+      width: 100%;
+    }
+
+    .footer-col p,
+    .footer-col li,
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.86);
+      font-weight: 700;
+    }
+
+    .footer-col h4 {
+      color: var(--sky);
+      margin-bottom: 14px;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-col ul {
+      display: grid;
+      gap: 9px;
+      list-style: none;
+    }
+
+    .footer-bottom {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+    }
+
+    .mobile-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 90;
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: 0 -12px 28px rgba(7, 21, 37, 0.18);
+    }
+
+    .mobile-cta a {
+      display: grid;
+      min-height: 54px;
+      place-items: center;
+      color: var(--paper);
+      background: var(--navy);
+      font-weight: 900;
+    }
+
+    .mobile-cta a:last-child {
+      background: var(--red);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 620ms ease, transform 620ms ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .story-grid,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-grid,
+      .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 1060px) {
+      .header-grid {
+        min-height: 92px;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        padding: 14px 20px 22px;
+        background: var(--paper);
+        box-shadow: 0 22px 42px rgba(15, 53, 109, 0.16);
+      }
+
+      .nav-menu.open {
+        display: grid;
+      }
+
+      .nav-menu a,
+      .dropdown-trigger {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .service-area-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        max-height: 320px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      .has-dropdown.open .service-area-menu {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .topbar-grid,
+      .review-controls,
+      .cta-grid,
+      .console-top {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-contact,
+      .filter-buttons {
+        justify-content: flex-start;
+      }
+
+      .topbar-brand {
+        white-space: normal;
+      }
+
+      .review-grid,
+      .proof-grid,
+      .photo-strip,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-tile:nth-child(1) {
+        min-height: 300px;
+        grid-row: auto;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 12vw, 3.35rem);
+      }
+
+      .hero-copy {
+        font-size: 1.2rem;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .rating-row {
+        display: grid;
+        justify-items: start;
+      }
+
+      .rating-number {
+        width: 86px;
+        font-size: 1.8rem;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding-bottom: 54px;
+      }
+
+      .container {
+        width: min(330px, calc(100vw - 56px));
+        margin-left: 14px;
+        margin-right: auto;
+      }
+
+      .hero-grid,
+      .hero-grid > *,
+      .section-head,
+      .section-head > *,
+      .trust-panel,
+      .console-shell,
+      .story-grid,
+      .story-grid > * {
+        width: min(330px, calc(100vw - 56px));
+        max-width: min(330px, calc(100vw - 56px));
+        min-width: 0;
+      }
+
+      .topbar {
+        display: none;
+      }
+
+      .brand {
+        width: 188px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero {
+        padding: 62px 0;
+      }
+
+      .hero h1 {
+        width: min(330px, calc(100vw - 56px));
+        max-width: min(330px, calc(100vw - 56px));
+        font-size: 1.9rem;
+        line-height: 1.08;
+      }
+
+      .hero-copy {
+        width: min(330px, calc(100vw - 56px));
+        max-width: min(330px, calc(100vw - 56px));
+        font-size: 1rem;
+      }
+
+      .section-head h2,
+      .trust-panel h2,
+      .story-card h2,
+      .proof-band h2,
+      .cta-band h2 {
+        font-size: 1.55rem;
+        line-height: 1.08;
+      }
+
+      .section-head p,
+      .proof-band p {
+        font-size: 1rem;
+      }
+
+      .trust-panel,
+      .story-card,
+      .owner-reply,
+      .review-card {
+        padding: 20px;
+      }
+
+      .review-card {
+        min-height: 320px;
+      }
+
+      .story-photo,
+      .story-photo img {
+        min-height: 380px;
+      }
+
+      .mobile-cta {
+        display: grid;
+      }
+
+      .mobile-cta a {
+        font-size: 0.78rem;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="site-enhancements.css" />
+  <script src="site-enhancements.js" defer></script>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="topbar">
+      <div class="container topbar-grid">
+        <div class="topbar-brand">Connecticut House Painters LLC and Power Washing</div>
+        <div class="topbar-contact" aria-label="Contact information">
+          <span class="topbar-item"><span class="topbar-label">Office</span><a href="tel:8608798222">(860) 879-8222</a></span>
+          <span class="topbar-item"><span class="topbar-label">Cell</span><a href="tel:8605145335">(860)-514-5335</a></span>
+          <span class="topbar-item location"><span class="topbar-label">Ledyard</span><span>CT</span></span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header-grid">
+        <a href="index.html" class="brand" aria-label="Connecticut House Painters home">
+          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing Logo" />
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu"><span></span></button>
+          <ul class="nav-menu" id="primary-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="testimonials.html" class="active">Testimonials</a></li>
+            <li><a href="galleries.html">Galleries</a></li>
+            <li><a href="interior.html">Interior Painting</a></li>
+            <li><a href="exterior.html">Exterior Painting</a></li>
+            <li><a href="commercial.html">Commercial Painting</a></li>
+            <li><a href="powerwash.html">Power Washing</a></li>
+            <li class="has-dropdown">
+              <a href="#service-areas" class="dropdown-trigger">Service Area</a>
+              <ul class="service-area-menu" aria-label="Service area pages">
+                <li><a href="#service-areas">Waterford CT House Painters</a></li>
+                <li><a href="#service-areas">Mystic CT House Painters</a></li>
+                <li><a href="#service-areas">Pawcatuck CT House Painters</a></li>
+                <li><a href="#service-areas">Essex CT House Painters</a></li>
+                <li><a href="#service-areas">Montville CT House Painters</a></li>
+                <li><a href="#service-areas">Uncasville CT House Painters</a></li>
+                <li><a href="#service-areas">Colchester CT House Painters</a></li>
+                <li><a href="#service-areas">North Stonington CT House Painters</a></li>
+                <li><a href="#service-areas">Ledyard CT House Painters</a></li>
+                <li><a href="#service-areas">Groton CT House Painters</a></li>
+                <li><a href="#service-areas">East Lyme CT House Painters</a></li>
+                <li><a href="#service-areas">Old Saybrook CT House Painters</a></li>
+                <li><a href="#service-areas">Old Lyme CT House Painters</a></li>
+                <li><a href="#service-areas">Griswold CT House Painters</a></li>
+                <li><a href="#service-areas">New London CT House Painters</a></li>
+                <li><a href="#service-areas">Stonington CT House Painters</a></li>
+                <li><a href="#service-areas">Salem CT House Painters</a></li>
+                <li><a href="#service-areas">Bozrah CT House Painters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Customer Proof</span>
+          <h1>Reviews that help new customers feel ready to call.</h1>
+          <p class="hero-copy">Real project feedback, clear service proof, and quick access to the live Google profile make trust easy to see before anyone requests an estimate.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:8608798222">Call (860) 879-8222</a>
+            <a class="btn btn-light" href="https://www.google.com/search?q=Connecticut+House+Painters+LLC+Ledyard+CT+Google+reviews" target="_blank" rel="noopener">See Live Google Reviews</a>
+          </div>
+        </div>
+
+        <aside class="trust-panel reveal" aria-label="Google review summary">
+          <img class="trust-logo" src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters LLC" />
+          <div class="rating-row">
+            <div>
+              <div class="stars" aria-label="Five star rating">★★★★★</div>
+              <p><span class="google-word" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span> review profile</p>
+            </div>
+            <div class="rating-number" data-count="4.8">4.8</div>
+          </div>
+          <h2>Trusted by Connecticut homeowners and businesses.</h2>
+          <p>The Google profile gives visitors a live place to confirm the latest public reviews before they request an estimate.</p>
+          <div class="metric-grid">
+            <div class="metric">
+              <strong data-count="81">81</strong>
+              <span>Google reviews</span>
+            </div>
+            <div class="metric">
+              <strong>15+</strong>
+              <span>Years in business shown on Google</span>
+            </div>
+            <div class="metric">
+              <strong>24/7</strong>
+              <span>Contact visibility for leads</span>
+            </div>
+            <div class="metric">
+              <strong>Family</strong>
+              <span>Local, hands-on operation</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section review-console" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">What Customers Say</span>
+            <h2>Organized reviews customers can actually use.</h2>
+          </div>
+          <p>Filter by service, search by keyword, and expand the longer feedback. The goal is simple: make the proof feel easy, credible, and current.</p>
+        </div>
+
+        <div class="console-shell reveal">
+          <div class="console-top">
+            <div>
+              <h3>Connecticut House Painters LLC reviews</h3>
+              <p class="live-note">Selected review highlights and project feedback, with a direct path to the newest posts on the live Google profile.</p>
+              <p class="google-review-status" id="google-review-status">Loading live Google reviews...</p>
+            </div>
+            <a class="btn btn-light" id="google-reviews-link" href="https://www.google.com/search?q=Connecticut+House+Painters+LLC+Ledyard+CT+Google+reviews" target="_blank" rel="noopener">Open Google Reviews</a>
+          </div>
+
+          <div class="review-controls" aria-label="Review controls">
+            <label class="search-box">
+              <span class="sr-only">Search reviews</span>
+              <input id="review-search" type="search" placeholder="Search reviews by service" />
+            </label>
+            <div class="filter-buttons" aria-label="Filter reviews">
+              <button class="filter-btn active" type="button" data-filter="all">Most Relevant</button>
+              <button class="filter-btn" type="button" data-filter="exterior">Exterior</button>
+              <button class="filter-btn" type="button" data-filter="interior">Interior</button>
+              <button class="filter-btn" type="button" data-filter="commercial">Commercial</button>
+              <button class="filter-btn" type="button" data-filter="responsive">Quick Response</button>
+            </div>
+          </div>
+
+          <div class="review-grid" id="review-grid">
+            <article class="review-card featured tilt-card" data-category="exterior responsive google" data-rating="5">
+              <div>
+                <div class="review-header">
+                  <span class="avatar" aria-hidden="true">JL</span>
+                  <div>
+                    <div class="review-name">Jason Lovell</div>
+                    <div class="review-meta"><span>Google review excerpt</span><span>A year ago</span></div>
+                  </div>
+                </div>
+                <div class="stars" aria-label="Five star rating">★★★★★</div>
+                <p class="review-text" data-short="CT House Painters did an amazing job! Brought our custom modern home back to life. Everything in our neighborhood is monochrome..." data-full="CT House Painters did an amazing job! Brought our custom modern home back to life. Everything in our neighborhood is monochrome (grey on grey, brown on brown), yuck! Javier was great to work with. The process was easy and the quality was clear from the finished result.">
+                  CT House Painters did an amazing job! Brought our custom modern home back to life. Everything in our neighborhood is monochrome...
+                </p>
+              </div>
+              <div class="review-footer">
+                <span class="review-service">Exterior Transformation</span>
+                <button class="read-more" type="button">Read more</button>
+              </div>
+            </article>
+
+            <article class="review-card tilt-card" data-category="responsive google" data-rating="5">
+              <div>
+                <div class="review-header">
+                  <span class="avatar" aria-hidden="true">G</span>
+                  <div>
+                    <div class="review-name">Google customer snippet</div>
+                    <div class="review-meta"><span>Google profile preview</span><span>Local review</span></div>
+                  </div>
+                </div>
+                <div class="stars" aria-label="Five star rating">★★★★★</div>
+                <p class="review-text" data-short="Excellent job, quick and responsive, fair price." data-full="Excellent job, quick and responsive, fair price.">
+                  Excellent job, quick and responsive, fair price.
+                </p>
+              </div>
+              <div class="review-footer">
+                <span class="review-service">Responsive Service</span>
+                <button class="read-more" type="button">Read more</button>
+              </div>
+            </article>
+
+            <article class="review-card tilt-card" data-category="interior responsive" data-rating="5">
+              <div>
+                <div class="review-header">
+                  <span class="avatar" aria-hidden="true">JW</span>
+                  <div>
+                    <div class="review-name">Jason Walsh</div>
+                    <div class="review-meta"><span>Customer review</span><span>Interior work</span></div>
+                  </div>
+                </div>
+                <div class="stars" aria-label="Five star rating">★★★★★</div>
+                <p class="review-text" data-short="Javier is everything you are looking for in a professional painter. He is responsive, timely, courteous..." data-full="Javier is everything you are looking for in a professional painter. He is responsive, timely, courteous, and maintains a high level of quality with each stage of the project.">
+                  Javier is everything you are looking for in a professional painter. He is responsive, timely, courteous...
+                </p>
+              </div>
+              <div class="review-footer">
+                <span class="review-service">Professional Painting</span>
+                <button class="read-more" type="button">Read more</button>
+              </div>
+            </article>
+
+            <article class="review-card tilt-card" data-category="interior exterior" data-rating="5">
+              <div>
+                <div class="review-header">
+                  <span class="avatar" aria-hidden="true">CH</span>
+                  <div>
+                    <div class="review-name">Connecticut homeowner</div>
+                    <div class="review-meta"><span>Project feedback</span><span>Home painting</span></div>
+                  </div>
+                </div>
+                <div class="stars" aria-label="Five star rating">★★★★★</div>
+                <p class="review-text" data-short="The team did a beautiful job and communicated throughout the process. The result was clean, professional..." data-full="The team did a beautiful job and communicated throughout the process. The result was clean, professional, and exactly what we hoped for.">
+                  The team did a beautiful job and communicated throughout the process. The result was clean, professional...
+                </p>
+              </div>
+              <div class="review-footer">
+                <span class="review-service">Clear Communication</span>
+                <button class="read-more" type="button">Read more</button>
+              </div>
+            </article>
+
+            <article class="review-card tilt-card" data-category="commercial exterior" data-rating="5">
+              <div>
+                <div class="review-header">
+                  <span class="avatar" aria-hidden="true">LC</span>
+                  <div>
+                    <div class="review-name">Local customer</div>
+                    <div class="review-meta"><span>Customer review</span><span>Commercial and residential</span></div>
+                  </div>
+                </div>
+                <div class="stars" aria-label="Five star rating">★★★★★</div>
+                <p class="review-text" data-short="Highly recommend Connecticut House Painters for quality work, professionalism, and attention to detail from start..." data-full="Highly recommend Connecticut House Painters for quality work, professionalism, and attention to detail from start to finish.">
+                  Highly recommend Connecticut House Painters for quality work, professionalism, and attention to detail from start...
+                </p>
+              </div>
+              <div class="review-footer">
+                <span class="review-service">Quality Finish</span>
+                <button class="read-more" type="button">Read more</button>
+              </div>
+            </article>
+
+            <article class="review-card tilt-card" data-category="powerwash exterior responsive" data-rating="5">
+              <div>
+                <div class="review-header">
+                  <span class="avatar" aria-hidden="true">PW</span>
+                  <div>
+                    <div class="review-name">Power washing customer</div>
+                    <div class="review-meta"><span>Service feedback</span><span>Exterior cleaning</span></div>
+                  </div>
+                </div>
+                <div class="stars" aria-label="Five star rating">★★★★★</div>
+                <p class="review-text" data-short="The crew protected the property, cleaned the exterior carefully, and left the home looking brighter..." data-full="The crew protected the property, cleaned the exterior carefully, and left the home looking brighter. The project felt organized from the first call to the finished walkthrough.">
+                  The crew protected the property, cleaned the exterior carefully, and left the home looking brighter...
+                </p>
+              </div>
+              <div class="review-footer">
+                <span class="review-service">Power Washing</span>
+                <button class="read-more" type="button">Read more</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container story-grid">
+        <div class="story-photo reveal">
+          <img src="photos/Exterior Painting service. Before and after of a house we painted in Stonington CT.png" alt="Before and after exterior painting project by Connecticut House Painters in Stonington" />
+          <div class="story-badge">
+            <strong>Project proof people can picture.</strong>
+            <span>Reviews land better when customers can see the kind of work behind the words.</span>
+          </div>
+        </div>
+        <div class="story-content">
+          <article class="story-card reveal">
+            <span class="eyebrow">Featured Review</span>
+            <h2>A custom modern home brought back to life.</h2>
+            <div class="stars" aria-label="Five star rating">★★★★★</div>
+            <p class="review-text">Jason's Google review highlights what customers care about most: an easy process, a strong finished result, and a painter they felt comfortable working with.</p>
+          </article>
+          <article class="owner-reply reveal">
+            <h3>Owner response preview</h3>
+            <p>Thank you, Jason, for such an incredible review. It was truly a pleasure working with you and helping bring your custom modern home back to life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Project Gallery</span>
+            <h2>Pair every review with visible work.</h2>
+          </div>
+          <p>Photos keep the page from feeling like a wall of text, and they give visitors a faster reason to trust the team.</p>
+        </div>
+        <div class="photo-strip reveal">
+          <a class="photo-tile" href="galleries.html">
+            <img src="images/Mainlogo.png" alt="Historic New London exterior restoration project gallery" />
+            <span>Gallery</span>
+          </a>
+          <a class="photo-tile" href="exterior.html">
+            <img src="photos/Exterior House Painting Service, Mystic, CT.png" alt="Exterior house painting project in Mystic" />
+            <span>Exterior</span>
+          </a>
+          <a class="photo-tile" href="interior.html">
+            <img src="photos/Interior painting services in Salem CT. We prepped and painted the foyer of this interior in Salem.png" alt="Interior foyer painting project in Salem" />
+            <span>Interior</span>
+          </a>
+          <a class="photo-tile" href="commercial.html">
+            <img src="ServicePhotos/Commercial painting services in Connecticut. After..png" alt="Completed commercial painting project" />
+            <span>Commercial</span>
+          </a>
+          <a class="photo-tile" href="powerwash.html">
+            <img src="photos/Power washing in Ledyard CT. Before and after.png" alt="Before and after power washing project in Ledyard" />
+            <span>Power Washing</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof-band">
+      <div class="container reveal">
+        <span class="eyebrow">Why Reviews Matter</span>
+        <h2>Trust is built before the first estimate.</h2>
+        <p>Customers want proof that the painter will answer, protect the property, communicate clearly, and finish with care. This page turns those trust signals into a clean experience.</p>
+        <div class="proof-grid">
+          <div class="proof-item">
+            <strong>1</strong>
+            <h3>Easy to Contact</h3>
+            <span>Sticky phone numbers and estimate buttons stay visible while customers read.</span>
+          </div>
+          <div class="proof-item">
+            <strong>2</strong>
+            <h3>Local Reputation</h3>
+            <span>The live Google profile link lets visitors check the newest public reviews.</span>
+          </div>
+          <div class="proof-item">
+            <strong>3</strong>
+            <h3>Service Clarity</h3>
+            <span>Filters help homeowners find interior, exterior, commercial, or washing feedback.</span>
+          </div>
+          <div class="proof-item">
+            <strong>4</strong>
+            <h3>Project Confidence</h3>
+            <span>Review cards, owner response, and project photos work together.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-grid">
+        <div>
+          <h2>Ready to become the next five-star story?</h2>
+          <p>Call Connecticut House Painters LLC or request a free estimate today. The contact options stay easy to find because the goal is to help serious customers reach the team fast.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="tel:8608798222">Call Office</a>
+          <a class="btn btn-light" href="contact.html">Request Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo-frame">
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters Logo" class="footer-logo" />
+        </span>
+        <p>Family-owned painting and power washing services throughout Southeastern Connecticut.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="interior.html">Interior Painting</a></li>
+          <li><a href="exterior.html">Exterior Painting</a></li>
+          <li><a href="commercial.html">Commercial Painting</a></li>
+          <li><a href="powerwash.html">Power Washing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="galleries.html">Galleries</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Request Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>919 Colonel Ledyard Hwy</li>
+          <li>Ledyard, CT 06339</li>
+          <li><a href="tel:8608798222">Office: (860) 879-8222</a></li>
+          <li><a href="tel:8605145335">Cell: (860)-514-5335</a></li>
+          <li><a href="contact.html">Request Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Connecticut House Painters LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a href="tel:8608798222">Call Office</a>
+    <a href="contact.html">Free Estimate</a>
+  </div>
+
+ <script>
+    /************************************************************
+     * GOOGLE REVIEWS SETTINGS
+     * 1) Replace PASTE_YOUR_REAL_PLACE_ID_HERE with the business Place ID.
+     * 2) Replace PASTE_YOUR_REAL_API_KEY_HERE in the Google script below.
+     ************************************************************/
+    const GOOGLE_PLACE_ID = "ChIJKcG8KU0O5okRas4I9Pr2oW4";
+    const LOCAL_GOOGLE_API_KEY = "AIzaSyDmnWqnxznCgIAgdAyKKdgXeo5ZzFc3gG0";
+    const NETLIFY_REVIEWS_ENDPOINT = "/api/google-reviews";
+    const isLocalReviewPreview = ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+    const googleReviewStatus = document.querySelector("#google-review-status");
+
+    if (window.location.hostname === "127.0.0.1") {
+      const localhostUrl = new URL(window.location.href);
+      localhostUrl.hostname = "localhost";
+      window.location.replace(localhostUrl.toString());
+    }
+
+    function setGoogleReviewStatus(message, type = "") {
+      if (!googleReviewStatus) return;
+      googleReviewStatus.textContent = message;
+      googleReviewStatus.classList.toggle("error", type === "error");
+      googleReviewStatus.classList.toggle("success", type === "success");
+    }
+
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#primary-menu");
+    const dropdown = document.querySelector(".has-dropdown");
+    const dropdownTrigger = document.querySelector(".dropdown-trigger");
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    dropdownTrigger?.addEventListener("click", (event) => {
+      if (window.matchMedia("(max-width: 1060px)").matches) {
+        event.preventDefault();
+        dropdown.classList.toggle("open");
+      }
+    });
+
+    function setupTiltCards() {
+      document.querySelectorAll(".tilt-card").forEach((card) => {
+        card.onpointermove = (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - 0.5;
+          const y = (event.clientY - rect.top) / rect.height - 0.5;
+          card.style.setProperty("--ry", `${x * 6}deg`);
+          card.style.setProperty("--rx", `${y * -6}deg`);
+        };
+
+        card.onpointerleave = () => {
+          card.style.setProperty("--ry", "0deg");
+          card.style.setProperty("--rx", "0deg");
+        };
+      });
+    }
+
+    function setupReviewFilters() {
+      const searchInput = document.querySelector("#review-search");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      let activeFilter = "all";
+
+      function applyReviewFilters() {
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+        const reviewCards = Array.from(document.querySelectorAll("#review-grid .review-card"));
+
+        reviewCards.forEach((card) => {
+          const categories = card.dataset.category || "";
+          const categoryMatch = activeFilter === "all" || categories.includes(activeFilter);
+          const textMatch = !query || card.textContent.toLowerCase().includes(query);
+          card.hidden = !(categoryMatch && textMatch);
+        });
+      }
+
+      filterButtons.forEach((button) => {
+        button.onclick = () => {
+          activeFilter = button.dataset.filter || "all";
+          filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+          applyReviewFilters();
+        };
+      });
+
+      if (searchInput) {
+        searchInput.oninput = applyReviewFilters;
+      }
+    }
+
+    function setupReadMoreButtons() {
+      document.querySelectorAll(".read-more").forEach((button) => {
+        button.onclick = () => {
+          const text = button.closest(".review-card").querySelector(".review-text");
+          const expanded = button.getAttribute("aria-expanded") === "true";
+
+          button.setAttribute("aria-expanded", String(!expanded));
+          text.textContent = expanded ? text.dataset.short : text.dataset.full;
+          button.textContent = expanded ? "Read more" : "Show less";
+        };
+      });
+    }
+
+    function setupRevealAnimation() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function getInitials(name) {
+      if (!name) return "G";
+      return name
+        .split(" ")
+        .map((part) => part.charAt(0))
+        .join("")
+        .slice(0, 2)
+        .toUpperCase();
+    }
+
+    function buildStars(rating) {
+      const rounded = Math.round(Number(rating || 5));
+      return "★".repeat(rounded) + "☆".repeat(5 - rounded);
+    }
+
+    function getReviewText(review) {
+      const reviewText = typeof review.text === "object" ? review.text?.text : review.text;
+      const originalText = typeof review.originalText === "object" ? review.originalText?.text : review.originalText;
+      return String(reviewText || originalText || "No review text provided.");
+    }
+
+    function classifyReview(reviewText) {
+      const text = String(reviewText || "").toLowerCase();
+      const categories = new Set(["google"]);
+      const labels = [];
+
+      if (/(exterior|outside|outdoor|siding|deck|fence|porch|garage|trim|shutter|front door|house paint|home back to life|power wash|pressure wash|roof|gutter)/.test(text)) {
+        categories.add("exterior");
+        labels.push("Exterior");
+      }
+
+      if (/(interior|inside|indoor|room|rooms|wall|walls|ceiling|cabinet|kitchen|bedroom|living room|stair|stairs|hallway|bathroom)/.test(text)) {
+        categories.add("interior");
+        labels.push("Interior");
+      }
+
+      if (/(commercial|business|office|restaurant|warehouse|storefront|industrial|building|facility|property manager|condo|apartment|complex)/.test(text)) {
+        categories.add("commercial");
+        labels.push("Commercial");
+      }
+
+      if (/(quick|responsive|response|respond|answered|call|called|communication|communicated|timely|on time|schedule|estimate|professional|courteous|fair price|easy process|great to work)/.test(text)) {
+        categories.add("responsive");
+        labels.push("Quick Response");
+      }
+
+      if (!labels.length) {
+        categories.add("responsive");
+        labels.push("Google Review");
+      }
+
+      return {
+        categories: Array.from(categories).join(" "),
+        label: labels.slice(0, 2).join(" + ")
+      };
+    }
+
+    function renderGoogleReviews(place) {
+      const reviewGrid = document.querySelector("#review-grid");
+
+      if (!reviewGrid) {
+        console.error("Could not find #review-grid in testimonials.html.");
+        return;
+      }
+
+      const reviews = place.reviews || [];
+
+      if (!reviews.length) {
+        console.warn("Google returned no reviews. Keeping the static review cards.");
+        setGoogleReviewStatus("Google connected, but it did not return review text. Showing selected review highlights.", "error");
+        return;
+      }
+
+      const selectedReviewHighlights = reviewGrid.innerHTML;
+
+      const liveReviewCards = reviews.map((review, index) => {
+        const name = escapeHtml(review.authorAttribution?.displayName || review.author_name || "Google Reviewer");
+        const rawText = getReviewText(review);
+        const reviewMatch = classifyReview(rawText);
+        const fullText = escapeHtml(rawText);
+        const shortText = escapeHtml(rawText.length > 150 ? `${rawText.slice(0, 150).trim()}...` : rawText);
+        const rating = Number(review.rating || 5);
+        const stars = buildStars(rating);
+        const time = escapeHtml(review.relativePublishTimeDescription || review.relative_time_description || "Google review");
+        const initials = getInitials(name);
+        const featuredClass = index === 0 ? " featured" : "";
+        const serviceLabel = escapeHtml(reviewMatch.label);
+        const readMoreButton = rawText.length > 150
+          ? '<button class="read-more" type="button">Read more</button>'
+          : "";
+
+        return `
+          <article class="review-card${featuredClass} tilt-card" data-category="${reviewMatch.categories}" data-rating="${rating}">
+            <div>
+              <div class="review-header">
+                <span class="avatar" aria-hidden="true">${initials}</span>
+                <div>
+                  <div class="review-name">${name}</div>
+                  <div class="review-meta"><span>Google Review</span><span>${time}</span></div>
+                </div>
+              </div>
+
+              <div class="stars" aria-label="${rating} star rating">${stars}</div>
+
+              <p class="review-text" data-short="${shortText}" data-full="${fullText}">
+                ${shortText}
+              </p>
+            </div>
+
+            <div class="review-footer">
+              <span class="review-service">${serviceLabel}</span>
+              ${readMoreButton}
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      reviewGrid.innerHTML = liveReviewCards + selectedReviewHighlights;
+
+      const ratingBox = document.querySelector(".rating-number");
+      if (ratingBox && place.rating) {
+        ratingBox.textContent = Number(place.rating).toFixed(1);
+      }
+
+      const reviewCountBox = document.querySelector(".metric strong[data-count]");
+      if (reviewCountBox && (place.userRatingCount || place.user_ratings_total)) {
+        const reviewCount = place.userRatingCount || place.user_ratings_total;
+        reviewCountBox.textContent = reviewCount;
+        reviewCountBox.dataset.count = reviewCount;
+      }
+
+      const googleReviewLink = document.querySelector("#google-reviews-link");
+      const googleMapsUrl = place.googleMapsURI || place.googleMapsUri || place.url;
+
+      if (googleReviewLink && googleMapsUrl) {
+        googleReviewLink.href = googleMapsUrl;
+      }
+
+      document.querySelectorAll("a[href*='Google+reviews'], a[href*='google.com/search']").forEach((link) => {
+        if (googleMapsUrl) {
+          link.href = googleMapsUrl;
+        }
+      });
+
+      setupTiltCards();
+      setupReviewFilters();
+      setupReadMoreButtons();
+
+      console.log("Google reviews loaded successfully:", place);
+      setGoogleReviewStatus("Live Google profile connected. Selected review highlights are shown below.", "success");
+    }
+
+    function loadBrowserGoogleReviews() {
+      if (document.querySelector("script[data-google-reviews-browser]")) return;
+
+      setGoogleReviewStatus("Connecting to Google reviews...");
+
+      const googleScript = document.createElement("script");
+      googleScript.async = true;
+      googleScript.dataset.googleReviewsBrowser = "true";
+      googleScript.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(LOCAL_GOOGLE_API_KEY)}&loading=async&libraries=places&callback=initGoogleReviews`;
+      googleScript.onerror = () => {
+        setGoogleReviewStatus("Live Google reviews could not load. Showing selected review highlights.", "error");
+      };
+      document.head.append(googleScript);
+    }
+
+    window.initGoogleReviews = async function initGoogleReviews() {
+      console.log("initGoogleReviews callback is running.");
+      setGoogleReviewStatus("Connecting to Google reviews...");
+
+      if (!GOOGLE_PLACE_ID || GOOGLE_PLACE_ID === "PASTE_YOUR_REAL_PLACE_ID_HERE") {
+        console.error("Missing Google Place ID. Replace PASTE_YOUR_REAL_PLACE_ID_HERE in testimonials.html.");
+        setGoogleReviewStatus("Missing Google Place ID. Showing selected review highlights.", "error");
+        return;
+      }
+
+      if (!isLocalReviewPreview && !window.google?.maps?.importLibrary) {
+        try {
+          const response = await fetch(NETLIFY_REVIEWS_ENDPOINT, {
+            headers: { Accept: "application/json" }
+          });
+
+          if (!response.ok) {
+            throw new Error(`Hosted Google reviews request failed with status ${response.status}.`);
+          }
+
+          renderGoogleReviews(await response.json());
+        } catch (error) {
+          console.warn("Hosted Google Reviews request failed; trying the browser connection:", error);
+          loadBrowserGoogleReviews();
+        }
+        return;
+      }
+
+      if (!window.google || !google.maps || !google.maps.importLibrary) {
+        console.error("Google Maps JavaScript API did not load. Check the API key, callback, and website restrictions.");
+        setGoogleReviewStatus("Google Maps JavaScript did not load. Showing selected review highlights.", "error");
+        return;
+      }
+
+      try {
+        const { Place } = await google.maps.importLibrary("places");
+        const placeRequest = new Place({ id: GOOGLE_PLACE_ID });
+        const { place } = await placeRequest.fetchFields({
+          fields: ["displayName", "rating", "userRatingCount", "reviews", "googleMapsURI"]
+        });
+
+        renderGoogleReviews(place || placeRequest);
+      } catch (error) {
+        console.error("Google Places request failed:", error);
+        if (String(error).includes("referer") || String(error).includes("PERMISSION_DENIED")) {
+          console.info("Google API key restriction tip: add these exact HTTP referrers in Google Cloud Console while using Live Server: http://127.0.0.1:5500/*, http://127.0.0.1:5500/, http://localhost:5500/*, and http://localhost:5500/. Also keep Maps JavaScript API and Places API (New) enabled.");
+          setGoogleReviewStatus("Google blocked the local Live Server address. Open this page at localhost:5500 or update the API key HTTP referrers. Showing selected review highlights.", "error");
+        } else {
+          setGoogleReviewStatus("Google reviews could not load. Showing selected review highlights.", "error");
+        }
+      }
+    };
+
+    window.gm_authFailure = function() {
+      console.error("Google Maps authentication failed. Check your API key, billing, enabled APIs, and website restrictions.");
+    };
+
+    setupTiltCards();
+    setupReviewFilters();
+    setupReadMoreButtons();
+    setupRevealAnimation();
+
+    if (isLocalReviewPreview) {
+      loadBrowserGoogleReviews();
+    } else {
+      window.initGoogleReviews();
+    }
+  </script>
+</body>
+
+</html>

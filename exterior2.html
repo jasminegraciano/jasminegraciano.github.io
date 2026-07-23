@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Professional exterior house painting, surface preparation, and property protection for Connecticut homes and businesses." />
+  <title>Exterior House Painters Connecticut | Connecticut House Painters LLC</title>
+  <link rel="icon" href="images/WillieTheWhale.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f356d;
+      --deep: #071c3a;
+      --blue: #0456d0;
+      --sky: #33cfff;
+      --red: #de0703;
+      --silver: #bec4c6;
+      --gray: #87939b;
+      --paper: #ffffff;
+      --wash: #f1f6fa;
+      --ink: #142b46;
+      --green: #2f8c65;
+      --line: rgba(15, 53, 109, 0.15);
+      --shadow: 0 24px 66px rgba(7, 28, 58, 0.18);
+      --accent-font: "Noto Naskh Arabic", Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    body {
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--blue);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 44px;
+      height: 3px;
+      background: var(--red);
+    }
+
+    .btn {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 0;
+      border-radius: 4px;
+      color: var(--paper);
+      background: var(--navy);
+      cursor: pointer;
+      font-weight: 900;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(7, 28, 58, 0.24);
+    }
+
+    .btn-primary {
+      background: var(--red);
+    }
+
+    .btn-light {
+      color: var(--navy);
+      background: var(--paper);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.48);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 14px 38px rgba(7, 28, 58, 0.14);
+    }
+
+    .contact-rail {
+      color: var(--paper);
+      background: var(--deep);
+      border-bottom: 4px solid var(--sky);
+    }
+
+    .contact-rail-inner {
+      min-height: 48px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto auto;
+      align-items: center;
+    }
+
+    .contact-rail strong {
+      font-size: 0.88rem;
+    }
+
+    .contact-link,
+    .contact-place {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 22px;
+      border-left: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .contact-link span {
+      margin-right: 7px;
+      color: var(--sky);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-link:hover {
+      background: var(--blue);
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-grid {
+      min-height: 102px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      width: 236px;
+      height: 84px;
+      overflow: hidden;
+    }
+
+    .brand img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: scale(3.15);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      color: var(--navy);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--red);
+    }
+
+    .has-dropdown {
+      position: relative;
+    }
+
+    .dropdown-trigger {
+      gap: 8px;
+      font-weight: 800 !important;
+    }
+
+    .dropdown-trigger::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg) translateY(-2px);
+    }
+
+    .service-area-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      width: min(330px, calc(100vw - 32px));
+      max-height: 62vh;
+      overflow: auto;
+      padding: 10px;
+      background: var(--deep);
+      border-top: 4px solid var(--sky);
+      box-shadow: var(--shadow);
+      list-style: none;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 170ms ease, transform 170ms ease;
+    }
+
+    .service-area-menu a {
+      min-height: auto;
+      padding: 10px 12px;
+      color: var(--paper);
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-area-menu a:hover {
+      color: var(--sky);
+      background: rgba(51, 207, 255, 0.1);
+    }
+
+    .has-dropdown:hover .service-area-menu,
+    .has-dropdown:focus-within .service-area-menu,
+    .has-dropdown.open .service-area-menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      background: var(--navy);
+      color: var(--paper);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .menu-toggle span {
+      top: 22px;
+    }
+
+    .menu-toggle::before {
+      top: 15px;
+    }
+
+    .menu-toggle::after {
+      top: 29px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: min(680px, calc(100svh - 190px));
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: var(--paper);
+      background: var(--deep);
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 52%;
+    }
+
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(7, 28, 58, 0.97) 0%, rgba(7, 28, 58, 0.78) 42%, rgba(7, 28, 58, 0.12) 77%),
+        linear-gradient(0deg, rgba(7, 28, 58, 0.64), transparent 48%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      min-height: min(680px, calc(100svh - 190px));
+      display: grid;
+      grid-template-columns: minmax(0, 740px) 1fr;
+      align-items: end;
+      gap: 44px;
+      padding: 42px 0 29px;
+    }
+
+    .hero .eyebrow {
+      color: var(--sky);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin-top: 17px;
+      font-size: clamp(3.1rem, 5.1vw, 4.9rem);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+      margin-top: 22px;
+      color: #e8f3ff;
+      font-family: var(--accent-font);
+      font-size: clamp(1.16rem, 1.8vw, 1.45rem);
+      line-height: 1.5;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-weather {
+      justify-self: end;
+      width: min(275px, 100%);
+      padding: 24px;
+      border-left: 4px solid var(--sky);
+      background: rgba(7, 28, 58, 0.78);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-weather strong {
+      display: block;
+      font-size: 1.22rem;
+    }
+
+    .hero-weather span {
+      display: block;
+      margin-top: 8px;
+      color: #dbe8f6;
+      font-size: 0.91rem;
+    }
+
+    .service-routes {
+      color: var(--paper);
+      background: var(--deep);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .service-route-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .route-widget {
+      position: relative;
+      min-height: 116px;
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 26px;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      transition: background 180ms ease;
+    }
+
+    .route-widget:first-child {
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .route-widget-no {
+      color: var(--sky);
+      font-size: 0.74rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .route-widget small {
+      display: block;
+      color: #9fb3ca;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .route-widget strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 1.16rem;
+    }
+
+    .route-widget-arrow {
+      color: var(--sky);
+      font-size: 1.4rem;
+      transition: transform 180ms ease;
+    }
+
+    .route-widget:hover,
+    .route-widget.current {
+      background: var(--blue);
+    }
+
+    .route-widget:hover .route-widget-arrow {
+      transform: translateX(6px);
+    }
+
+    .route-widget.current::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      background: var(--red);
+    }
+
+    .exterior-motion {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 86px;
+      background:
+        linear-gradient(135deg, rgba(51, 207, 255, 0.16), transparent 44%),
+        var(--wash);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .exterior-motion::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -150px;
+      width: 360px;
+      height: 360px;
+      border: 46px solid rgba(4, 86, 208, 0.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .exterior-motion-head {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+      gap: 62px;
+      align-items: end;
+    }
+
+    .exterior-motion-head h2 {
+      margin-top: 12px;
+      color: var(--navy);
+      font-size: clamp(2.3rem, 4.5vw, 4.4rem);
+      line-height: 0.98;
+    }
+
+    .exterior-motion-head p {
+      color: #52667c;
+      font-family: var(--accent-font);
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .exterior-motion-stage {
+      position: relative;
+      z-index: 2;
+      min-height: 470px;
+      margin-top: 42px;
+    }
+
+    .exterior-float {
+      position: absolute;
+      overflow: hidden;
+      margin: 0;
+      padding: 9px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 65px rgba(15, 53, 109, 0.2);
+      animation: exterior-breeze 8s ease-in-out infinite;
+      transition: box-shadow 220ms ease;
+    }
+
+    .exterior-float img {
+      width: 100%;
+      height: calc(100% - 38px);
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+
+    .exterior-float figcaption {
+      display: flex;
+      align-items: center;
+      min-height: 38px;
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .exterior-float:hover {
+      z-index: 4;
+      box-shadow: 0 34px 82px rgba(15, 53, 109, 0.3);
+    }
+
+    .exterior-float:hover img {
+      transform: scale(1.06);
+    }
+
+    .exterior-float--one {
+      top: 20px;
+      left: 0;
+      width: 48%;
+      height: 390px;
+      transform: rotate(-1.8deg);
+    }
+
+    .exterior-float--two {
+      top: 0;
+      left: 43%;
+      width: 31%;
+      height: 280px;
+      animation-delay: -2.75s;
+      transform: rotate(2.2deg);
+    }
+
+    .exterior-float--three {
+      right: 0;
+      bottom: 0;
+      width: 35%;
+      height: 315px;
+      animation-delay: -5.25s;
+      transform: rotate(-1.2deg);
+    }
+
+    @keyframes exterior-breeze {
+      0%,
+      100% {
+        translate: 0 0;
+      }
+      50% {
+        translate: 0 -14px;
+      }
+    }
+
+    .section {
+      padding: 108px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.65fr);
+      align-items: end;
+      gap: 72px;
+      margin-bottom: 54px;
+    }
+
+    .section-heading h2,
+    .scanner-copy h2,
+    .prep-copy h2,
+    .video-copy h2,
+    .weather-copy h2,
+    .faq-intro h2,
+    .coverage-copy h2,
+    .cta-inner h2 {
+      margin-top: 15px;
+      color: var(--navy);
+      font-size: clamp(2.35rem, 5vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .section-heading p,
+    .scanner-copy > p,
+    .prep-copy > p,
+    .video-copy > p,
+    .weather-copy > p,
+    .faq-intro p,
+    .coverage-copy p {
+      color: #53667b;
+      font-family: var(--accent-font);
+      font-size: 1.24rem;
+      line-height: 1.62;
+    }
+
+    .exterior-systems {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .system {
+      min-height: 245px;
+      padding: 30px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .system span {
+      color: var(--red);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+    }
+
+    .system h3 {
+      margin-top: 28px;
+      color: var(--navy);
+      font-size: 1.25rem;
+    }
+
+    .system p {
+      margin-top: 10px;
+      color: #5a6d81;
+      font-size: 0.92rem;
+    }
+
+    .system:hover {
+      color: var(--paper);
+      background: var(--navy);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(7, 28, 58, 0.15);
+    }
+
+    .system:hover h3,
+    .system:hover p,
+    .system:hover span {
+      color: var(--paper);
+    }
+
+    .scanner {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .scanner-grid {
+      display: grid;
+      grid-template-columns: minmax(290px, 0.58fr) minmax(0, 1.2fr);
+      gap: 64px;
+      align-items: start;
+    }
+
+    .scanner-copy {
+      position: sticky;
+      top: 190px;
+    }
+
+    .scanner-copy .eyebrow {
+      color: var(--sky);
+    }
+
+    .scanner-copy h2 {
+      color: var(--paper);
+    }
+
+    .scanner-copy > p {
+      margin-top: 22px;
+      color: #dbe8f6;
+    }
+
+    .scanner-widget {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: #0a2854;
+      box-shadow: var(--shadow);
+    }
+
+    .scanner-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .scanner-tab {
+      min-height: 66px;
+      padding: 12px;
+      border: 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.16);
+      color: #dbe8f6;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .scanner-tab:last-child {
+      border-right: 0;
+    }
+
+    .scanner-tab:hover,
+    .scanner-tab.active {
+      color: var(--navy);
+      background: var(--sky);
+    }
+
+    .scanner-output {
+      display: grid;
+      grid-template-columns: 0.92fr 1fr;
+      min-height: 430px;
+    }
+
+    .scanner-image {
+      min-height: 430px;
+      overflow: hidden;
+    }
+
+    .scanner-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .scanner-details {
+      padding: 38px;
+    }
+
+    .scanner-details small {
+      color: var(--sky);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .scanner-details h3 {
+      margin-top: 8px;
+      font-size: 1.8rem;
+      line-height: 1.08;
+    }
+
+    .scanner-details p {
+      margin-top: 15px;
+      color: #dbe8f6;
+    }
+
+    .scanner-list {
+      display: grid;
+      gap: 11px;
+      margin-top: 20px;
+      list-style: none;
+    }
+
+    .scanner-list li {
+      padding-left: 14px;
+      border-left: 3px solid var(--sky);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .prep {
+      background: var(--wash);
+    }
+
+    .prep-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 78px;
+      align-items: center;
+    }
+
+    .prep-media {
+      position: relative;
+      min-height: 660px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .prep-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% center;
+    }
+
+    .prep-badge {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(300px, 78%);
+      padding: 24px;
+      color: var(--paper);
+      background: var(--red);
+    }
+
+    .prep-badge strong {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    .prep-badge span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.88rem;
+    }
+
+    .prep-copy > p {
+      margin-top: 22px;
+    }
+
+    .prep-steps {
+      margin-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .prep-step {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .prep-step span {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .prep-step h3 {
+      color: var(--navy);
+      font-size: 1.14rem;
+    }
+
+    .prep-step p {
+      margin-top: 5px;
+      color: #5a6d81;
+      font-size: 0.92rem;
+    }
+
+    .video-section {
+      color: var(--paper);
+      background: var(--deep);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.53fr) minmax(0, 1fr);
+      gap: 70px;
+      align-items: center;
+    }
+
+    .video-copy .eyebrow {
+      color: var(--sky);
+    }
+
+    .video-copy h2 {
+      color: var(--paper);
+    }
+
+    .video-copy > p {
+      margin-top: 22px;
+      color: #dbe8f6;
+    }
+
+    .video-proof {
+      display: grid;
+      gap: 1px;
+      margin-top: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      background: rgba(255, 255, 255, 0.17);
+    }
+
+    .video-proof span {
+      padding: 14px 18px;
+      background: var(--deep);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .video-frame {
+      aspect-ratio: 16 / 9;
+      border: 12px solid rgba(255, 255, 255, 0.1);
+      border-top-color: var(--sky);
+      background: #000;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .weather-section {
+      background: var(--paper);
+    }
+
+    .weather-grid {
+      display: grid;
+      grid-template-columns: minmax(290px, 0.58fr) 1fr;
+      gap: 78px;
+      align-items: start;
+    }
+
+    .weather-copy {
+      position: sticky;
+      top: 190px;
+    }
+
+    .weather-copy > p {
+      margin-top: 22px;
+    }
+
+    .weather-ledger {
+      border-top: 1px solid var(--line);
+    }
+
+    .weather-row {
+      display: grid;
+      grid-template-columns: 0.38fr 1fr;
+      gap: 28px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .weather-row h3 {
+      color: var(--navy);
+      font-size: 1.14rem;
+    }
+
+    .weather-row p {
+      color: #5a6d81;
+    }
+
+    .safety-note {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 26px;
+      color: var(--paper);
+      background: var(--blue);
+    }
+
+    .safety-note img {
+      width: 120px;
+      height: 82px;
+      object-fit: contain;
+      background: var(--paper);
+    }
+
+    .safety-note strong {
+      display: block;
+    }
+
+    .safety-note span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.88rem;
+    }
+
+    .faq-section {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.55fr 1fr;
+      gap: 78px;
+      align-items: start;
+    }
+
+    .faq-intro .eyebrow {
+      color: var(--sky);
+    }
+
+    .faq-intro h2 {
+      color: var(--paper);
+    }
+
+    .faq-intro p {
+      margin-top: 22px;
+      color: #dbe8f6;
+    }
+
+    .faq-list {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .faq-list details {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .faq-list summary {
+      position: relative;
+      padding: 25px 52px 25px 0;
+      cursor: pointer;
+      font-size: 1.12rem;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      color: var(--sky);
+      font-size: 1.65rem;
+      transform: translateY(-50%);
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      padding: 0 52px 27px 0;
+      color: #dbe8f6;
+    }
+
+    .coverage {
+      background: var(--wash);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.58fr) 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .coverage-copy p {
+      margin-top: 20px;
+    }
+
+    .county-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .county-list span {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      padding: 14px 22px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--navy);
+      background: var(--paper);
+      font-weight: 800;
+    }
+
+    .cta {
+      position: relative;
+      min-height: 540px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      color: var(--paper);
+      background: var(--deep);
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(7, 28, 58, 0.97), rgba(7, 28, 58, 0.74), rgba(7, 28, 58, 0.18)),
+        url("photos/Exterior painting and restoration services in New London CT. We completely restored the exterior of this historic home in New London CT.png") center/cover;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      padding: 86px 0;
+    }
+
+    .cta .eyebrow {
+      color: var(--sky);
+    }
+
+    .cta-inner h2 {
+      color: var(--paper);
+    }
+
+    .cta-inner p {
+      max-width: 630px;
+      margin-top: 22px;
+      color: #e8f3ff;
+      font-family: var(--accent-font);
+      font-size: 1.28rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 29px;
+    }
+
+    footer {
+      padding: 74px 0 22px;
+      color: #dbe8f6;
+      background: #06162d;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr repeat(3, 0.75fr);
+      gap: 48px;
+    }
+
+    .footer-brand {
+      width: 220px;
+      height: 88px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .footer-brand img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: scale(3.1);
+    }
+
+    .footer-col p {
+      max-width: 330px;
+      margin-top: 20px;
+      color: #aebed1;
+    }
+
+    .footer-col h3 {
+      color: var(--paper);
+      font-size: 0.8rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .footer-col ul {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      list-style: none;
+    }
+
+    .footer-col a:hover {
+      color: var(--sky);
+    }
+
+    .footer-bottom {
+      margin-top: 58px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #91a4bb;
+      font-size: 0.84rem;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 70;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      color: var(--paper);
+      background: var(--red);
+      font-size: 1.2rem;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(7, 28, 58, 0.24);
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1120px) {
+      .contact-rail strong {
+        display: none;
+      }
+
+      .contact-rail-inner {
+        grid-template-columns: repeat(3, auto);
+        justify-content: end;
+      }
+
+      .header-grid {
+        min-height: 92px;
+      }
+
+      .brand {
+        width: 210px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: relative;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 58px;
+        right: 0;
+        display: none;
+        width: min(390px, calc(100vw - 40px));
+        max-height: calc(100vh - 170px);
+        overflow: auto;
+        padding: 14px;
+        background: var(--paper);
+        border-top: 4px solid var(--sky);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-menu.open {
+        display: grid;
+      }
+
+      .nav-menu a {
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .service-area-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        max-height: none;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .has-dropdown.open .service-area-menu {
+        display: grid;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-weather {
+        justify-self: start;
+      }
+
+      .scanner-grid,
+      .weather-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scanner-copy,
+      .weather-copy {
+        position: static;
+      }
+
+      .exterior-systems {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .contact-rail-inner {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+      }
+
+      .contact-place {
+        display: none;
+      }
+
+      .contact-link {
+        justify-content: center;
+        padding: 0 10px;
+      }
+
+      .contact-link:first-of-type {
+        border-left: 0;
+      }
+
+      .hero,
+      .hero-inner {
+        min-height: min(650px, calc(100svh - 133px));
+      }
+
+      .hero-inner {
+        padding: 70px 0 42px;
+      }
+
+      .hero-media::after {
+        background:
+          linear-gradient(90deg, rgba(7, 28, 58, 0.96), rgba(7, 28, 58, 0.69)),
+          linear-gradient(0deg, rgba(7, 28, 58, 0.65), transparent);
+      }
+
+      .service-route-grid,
+      .section-heading,
+      .prep-grid,
+      .video-grid,
+      .coverage-grid,
+      .exterior-motion-head {
+        grid-template-columns: 1fr;
+      }
+
+      .exterior-motion-head {
+        gap: 24px;
+      }
+
+      .route-widget {
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .section {
+        padding: 82px 0;
+      }
+
+      .section-heading {
+        gap: 24px;
+      }
+
+      .scanner-output {
+        grid-template-columns: 1fr;
+      }
+
+      .scanner-image {
+        min-height: 310px;
+      }
+
+      .prep-media {
+        min-height: 520px;
+      }
+
+      .video-grid {
+        gap: 42px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .contact-link span {
+        display: none;
+      }
+
+      .contact-link {
+        font-size: 0.78rem;
+      }
+
+      .header-grid {
+        min-height: 80px;
+      }
+
+      .brand {
+        width: 170px;
+        height: 67px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.75rem, 14vw, 4.2rem);
+      }
+
+      .hero-copy {
+        font-size: 1.08rem;
+        line-height: 1.45;
+      }
+
+      .hero-weather,
+      .hero-actions .btn-outline {
+        display: none;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .route-widget {
+        grid-template-columns: 44px 1fr auto;
+        min-height: 100px;
+        padding: 18px;
+      }
+
+      .exterior-motion {
+        padding: 58px 0;
+      }
+
+      .exterior-motion-stage {
+        display: grid;
+        min-height: 0;
+        gap: 16px;
+      }
+
+      .exterior-float,
+      .exterior-float--one,
+      .exterior-float--two,
+      .exterior-float--three {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 230px;
+        animation: none;
+        transform: none;
+      }
+
+      .exterior-systems {
+        grid-template-columns: 1fr;
+      }
+
+      .system {
+        min-height: 205px;
+      }
+
+      .scanner-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .scanner-tab {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .scanner-details {
+        padding: 28px 22px;
+      }
+
+      .prep-media {
+        min-height: 430px;
+      }
+
+      .weather-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .safety-note {
+        grid-template-columns: 1fr;
+      }
+
+      .county-list,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .mobile-cta {
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 90;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0 -10px 28px rgba(7, 28, 58, 0.24);
+      }
+
+      .mobile-cta a {
+        min-height: 54px;
+        display: grid;
+        place-items: center;
+        color: var(--paper);
+        background: var(--navy);
+        font-weight: 900;
+      }
+
+      .mobile-cta a:last-child {
+        background: var(--red);
+      }
+
+      .back-top {
+        bottom: 72px;
+      }
+
+      footer {
+        padding-bottom: 82px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="site-enhancements.css" />
+  <script src="site-enhancements.js" defer></script>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="contact-rail">
+      <div class="container contact-rail-inner">
+        <strong>Connecticut House Painters LLC and Power Washing</strong>
+        <a class="contact-link" href="tel:8608798222"><span>Office</span>(860) 879-8222</a>
+        <a class="contact-link" href="tel:8605145335"><span>Cell</span>(860)-514-5335</a>
+        <span class="contact-place">Ledyard, CT</span>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header-grid">
+        <a href="index.html" class="brand" aria-label="Connecticut House Painters home">
+          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing logo" />
+        </a>
+        <nav aria-label="Primary navigation">
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+            aria-controls="primary-menu"><span></span></button>
+          <ul class="nav-menu" id="primary-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="galleries.html">Galleries</a></li>
+            <li><a href="interior.html">Interior Painting</a></li>
+            <li><a href="exterior.html" class="active">Exterior Painting</a></li>
+            <li><a href="commercial.html">Commercial Painting</a></li>
+            <li><a href="powerwash.html">Power Washing</a></li>
+            <li class="has-dropdown">
+              <a href="#coverage" class="dropdown-trigger">Service Area</a>
+              <ul class="service-area-menu" aria-label="Service areas">
+                <li><a href="#coverage">Waterford CT House Painters</a></li>
+                <li><a href="#coverage">Mystic CT House Painters</a></li>
+                <li><a href="#coverage">Pawcatuck CT House Painters</a></li>
+                <li><a href="#coverage">Essex CT House Painters</a></li>
+                <li><a href="#coverage">Montville CT House Painters</a></li>
+                <li><a href="#coverage">Uncasville CT House Painters</a></li>
+                <li><a href="#coverage">Colchester CT House Painters</a></li>
+                <li><a href="#coverage">North Stonington CT House Painters</a></li>
+                <li><a href="#coverage">Ledyard CT House Painters</a></li>
+                <li><a href="#coverage">Groton CT House Painters</a></li>
+                <li><a href="#coverage">East Lyme CT House Painters</a></li>
+                <li><a href="#coverage">Old Saybrook CT House Painters</a></li>
+                <li><a href="#coverage">Old Lyme CT House Painters</a></li>
+                <li><a href="#coverage">Griswold CT House Painters</a></li>
+                <li><a href="#coverage">New London CT House Painters</a></li>
+                <li><a href="#coverage">Stonington CT House Painters</a></li>
+                <li><a href="#coverage">Salem CT House Painters</a></li>
+                <li><a href="#coverage">Bozrah CT House Painters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-media">
+        <img src="photos/Exterior house prepping get in this House ready for painting and Noank CT.png" alt="Connecticut House Painters carefully preparing a Noank home for exterior painting" />
+      </div>
+      <div class="container hero-inner">
+        <div class="reveal">
+          <span class="eyebrow">Exterior house painting Connecticut</span>
+          <h1>Exterior painting that protects more than curb appeal.</h1>
+          <p class="hero-copy">
+            A durable exterior finish starts with honest surface evaluation, careful preparation, weather-aware
+            scheduling, and a coating system matched to the property.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Request an Exterior Estimate</a>
+            <a href="tel:8608798222" class="btn btn-outline">Call (860) 879-8222</a>
+          </div>
+        </div>
+        <aside class="hero-weather reveal">
+          <strong>Connecticut weather is part of the project plan.</strong>
+          <span>Temperature, moisture, exposure, shade, and drying conditions influence scheduling and product selection.</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="service-routes" aria-label="Detailed painting services">
+      <div class="container service-route-grid">
+        <a class="route-widget current" href="exterior2.html" aria-current="page">
+          <span class="route-widget-no">01</span>
+          <span><small>Current field guide</small><strong>Exterior Painting</strong></span>
+          <span class="route-widget-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="route-widget" href="interior2.html">
+          <span class="route-widget-no">02</span>
+          <span><small>Explore detail page</small><strong>Interior Painting</strong></span>
+          <span class="route-widget-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="route-widget" href="commercial2.html">
+          <span class="route-widget-no">03</span>
+          <span><small>Explore detail page</small><strong>Commercial Painting</strong></span>
+          <span class="route-widget-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="exterior-motion" aria-labelledby="exterior-motion-title">
+      <div class="container">
+        <div class="exterior-motion-head reveal">
+          <div>
+            <span class="eyebrow">Exterior project views</span>
+            <h2 id="exterior-motion-title">Protection starts before the first coat.</h2>
+          </div>
+          <p>These snapshots connect the finished curb appeal to the washing, roof-line care, and preparation that support a lasting exterior result.</p>
+        </div>
+        <div class="exterior-motion-stage" aria-label="Exterior painting and preparation photographs">
+          <figure class="exterior-float exterior-float--one">
+            <img src="photos/Exterior painting services in Mystic, CT. We restored this historic home in Mystic Connecticut.png" alt="Connecticut historic exterior house painting project in Mystic" />
+            <figcaption>Complete exterior finish</figcaption>
+          </figure>
+          <figure class="exterior-float exterior-float--two">
+            <img src="photos/Roof treatment and soft washing, old Lyme, CT.png" alt="Roof treatment and soft washing project in Old Lyme" />
+            <figcaption>Roof-line care</figcaption>
+          </figure>
+          <figure class="exterior-float exterior-float--three">
+            <img src="photos/Washing a house in Jewett City before we start any painting.png" alt="House washing used during exterior painting preparation" />
+            <figcaption>Surface preparation</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">A complete exterior scope</span>
+            <h2>One property can contain many different paint systems.</h2>
+          </div>
+          <p>
+            Siding, trim, doors, porches, masonry, metal, and high-exposure areas do not always need the same
+            preparation or product. The estimate should identify those differences before work begins.
+          </p>
+        </div>
+        <div class="exterior-systems">
+          <article class="system reveal">
+            <span>01</span>
+            <h3>Siding and Main Surfaces</h3>
+            <p>Painted wood, composite, fiber-cement, or other suitable siding is evaluated for adhesion, weathering, moisture, and prior coating condition.</p>
+          </article>
+          <article class="system reveal">
+            <span>02</span>
+            <h3>Trim, Doors, and Details</h3>
+            <p>Fascia, soffits, corner boards, window trim, doors, shutters, and detailed millwork often require more focused repair and brushwork.</p>
+          </article>
+          <article class="system reveal">
+            <span>03</span>
+            <h3>Porches and Railings</h3>
+            <p>Handrails, columns, porch elements, and other frequently touched or weather-exposed surfaces need preparation matched to daily wear.</p>
+          </article>
+          <article class="system reveal">
+            <span>04</span>
+            <h3>Garages and Outbuildings</h3>
+            <p>Detached structures, additions, garages, and selected commercial exteriors can be coordinated into one organized property plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scanner" id="project-scanner">
+      <div class="container scanner-grid">
+        <div class="scanner-copy reveal">
+          <span class="eyebrow">Interactive exterior scanner</span>
+          <h2>Start with the surface, not the color chip.</h2>
+          <p>
+            Select an exterior area to preview the questions that guide preparation, access, and coating choices
+            during a site evaluation.
+          </p>
+        </div>
+        <div class="scanner-widget reveal">
+          <div class="scanner-tabs" role="tablist" aria-label="Exterior surface types">
+            <button class="scanner-tab active" type="button" role="tab" aria-selected="true"
+              data-surface="siding">Siding</button>
+            <button class="scanner-tab" type="button" role="tab" aria-selected="false"
+              data-surface="trim">Trim</button>
+            <button class="scanner-tab" type="button" role="tab" aria-selected="false"
+              data-surface="porch">Porches</button>
+            <button class="scanner-tab" type="button" role="tab" aria-selected="false"
+              data-surface="large">Large Properties</button>
+          </div>
+          <div class="scanner-output" aria-live="polite">
+            <div class="scanner-image">
+              <img id="scanner-image" src="photos/Exterior painting service in Old Lyme CT.png" alt="Exterior siding painting project in Old Lyme" />
+            </div>
+            <div class="scanner-details">
+              <small id="scanner-kicker">Main exterior surfaces</small>
+              <h3 id="scanner-title">Check adhesion, moisture, and exposure before repainting.</h3>
+              <p id="scanner-description">Existing coating condition and substrate determine how much cleaning, scraping, repair, and priming the siding needs.</p>
+              <ul class="scanner-list" id="scanner-list">
+                <li>Identify peeling, chalking, and failed areas</li>
+                <li>Review moisture sources and weather exposure</li>
+                <li>Match primer and finish coats to the substrate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prep">
+      <div class="container prep-grid">
+        <div class="prep-media reveal">
+          <img src="photos/Exterior house prepping get in this House ready for painting and Noank CT.png" alt="Exterior painting crew preparing a Connecticut home in Noank" />
+          <div class="prep-badge">
+            <strong>Preparation is the durability plan.</strong>
+            <span>Cleaning, repairs, adhesion, primer, and dry conditions matter before finish coats begin.</span>
+          </div>
+        </div>
+        <div class="prep-copy reveal">
+          <span class="eyebrow">From inspection to final walk-through</span>
+          <h2>A sequence designed for outdoor conditions.</h2>
+          <p>
+            Exterior painting combines building condition, access, landscaping protection, weather, and cure time.
+            A clear sequence keeps those pieces from becoming surprises.
+          </p>
+          <div class="prep-steps">
+            <article class="prep-step">
+              <span>01</span>
+              <div>
+                <h3>Inspect and define the scope</h3>
+                <p>Surfaces, previous coatings, access, repairs, color goals, and sensitive property areas are reviewed before pricing.</p>
+              </div>
+            </article>
+            <article class="prep-step">
+              <span>02</span>
+              <div>
+                <h3>Clean and protect</h3>
+                <p>Exterior cleaning removes dirt and organic buildup as appropriate, while plants, fixtures, roofs, windows, and adjacent areas are protected.</p>
+              </div>
+            </article>
+            <article class="prep-step">
+              <span>03</span>
+              <div>
+                <h3>Scrape, sand, repair, and prime</h3>
+                <p>Failed coating is removed, rough transitions are addressed, open joints or minor defects are corrected, and bare or repaired areas receive the required primer.</p>
+              </div>
+            </article>
+            <article class="prep-step">
+              <span>04</span>
+              <div>
+                <h3>Apply finish coats in suitable conditions</h3>
+                <p>Application method, coverage, temperature, surface moisture, wind, shade, and forecast are considered throughout the work.</p>
+              </div>
+            </article>
+            <article class="prep-step">
+              <span>05</span>
+              <div>
+                <h3>Inspect details and restore the site</h3>
+                <p>Coverage, edges, touch-ups, protection removal, clean-up, and the final property walk-through complete the project.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialty-service-section" aria-labelledby="deck-staining-detail-title">
+      <div class="specialty-service-inner">
+        <div class="specialty-service-copy reveal">
+          <span class="eyebrow">Deck staining</span>
+          <h2 id="deck-staining-detail-title">Bring the grain back while protecting the wood.</h2>
+          <p>Ipe and other exterior wood surfaces need cleaning, drying, and finish preparation matched to their condition. A carefully applied stain revives the natural tone and helps the deck stand up to Connecticut weather.</p>
+          <a href="contact.html#estimate-request">Request a Deck Estimate</a>
+        </div>
+        <div class="specialty-photo-pair reveal" aria-label="Ipe deck staining before and after">
+          <figure class="specialty-photo-card">
+            <img src="ServicePhotos/Ipe Deck Staining, Connecticut. Before.png" alt="Ipe deck before cleaning and staining" />
+            <figcaption><span>Before</span><span>Weathered Ipe boards</span></figcaption>
+          </figure>
+          <figure class="specialty-photo-card">
+            <img src="ServicePhotos/Ipe deck Staining Staining, Connecticut. After.png" alt="Ipe deck after professional staining" />
+            <figcaption><span>After</span><span>Restored wood tone</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section">
+      <div class="container video-grid">
+        <div class="video-copy reveal">
+          <span class="eyebrow">Exterior work in motion</span>
+          <h2>See access, scale, and field preparation.</h2>
+          <p>
+            Project footage helps homeowners understand how ladders, work zones, crew movement, and detailed exterior
+            painting come together on an active property.
+          </p>
+          <div class="video-proof">
+            <span>Real Connecticut project footage</span>
+            <span>Exterior access and application</span>
+            <span>Direct path to request an estimate</span>
+          </div>
+        </div>
+        <div class="video-frame reveal">
+          <iframe src="https://www.youtube.com/embed/zK-DSQ8uocE?rel=0"
+            title="Connecticut House Painters exterior painting project video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section weather-section">
+      <div class="container weather-grid">
+        <div class="weather-copy reveal">
+          <span class="eyebrow">Durability decisions</span>
+          <h2>What belongs in a serious exterior proposal.</h2>
+          <p>
+            The most useful estimate explains what will be painted, how it will be prepared, what is excluded, and how
+            the property will be protected.
+          </p>
+        </div>
+        <div class="weather-ledger reveal">
+          <article class="weather-row">
+            <h3>Surface condition</h3>
+            <p>The proposal should distinguish sound areas from peeling, bare, stained, repaired, or moisture-affected surfaces.</p>
+          </article>
+          <article class="weather-row">
+            <h3>Access and protection</h3>
+            <p>Ladders, lifts, rooflines, landscaping, windows, fixtures, vehicles, walkways, and neighboring areas can all affect the work plan.</p>
+          </article>
+          <article class="weather-row">
+            <h3>Product system</h3>
+            <p>Primer and finish selections should reflect the substrate, prior coating, exposure, desired appearance, and manufacturer requirements.</p>
+          </article>
+          <article class="weather-row">
+            <h3>Schedule and weather</h3>
+            <p>Exterior schedules need room for surface drying, cure time, changing forecasts, shade, temperature swings, and rain delays.</p>
+          </article>
+          <article class="weather-row">
+            <h3>Closeout</h3>
+            <p>Touch-ups, clean-up, protection removal, remaining repairs, and final review should be addressed before the project is considered complete.</p>
+          </article>
+          <div class="safety-note">
+            <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters logo" />
+            <div>
+              <strong>Older properties may require lead-safe planning.</strong>
+              <span>The property age, existing coatings, project scope, and applicable requirements should be reviewed before disturbing painted surfaces.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <span class="eyebrow">Exterior painting questions</span>
+          <h2>Clear answers before ladders arrive.</h2>
+          <p>These questions help owners compare proposals based on preparation and project control, not price alone.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details open>
+            <summary>How much does exterior house painting cost?</summary>
+            <p>Price depends on surface area, stories and access, substrate, coating condition, repairs, trim complexity, preparation, primer, color change, product system, and protection requirements. A site visit is the most reliable way to define the scope.</p>
+          </details>
+          <details>
+            <summary>How do I know whether the exterior is ready for paint?</summary>
+            <p>Peeling, chalking, exposed wood, open joints, staining, mildew, failed caulk, soft areas, or recurring moisture can signal that cleaning or repair is needed before finish coats. The cause of failure matters as much as the visible symptom.</p>
+          </details>
+          <details>
+            <summary>Can you paint while the home is occupied?</summary>
+            <p>Most exterior projects allow the home to remain occupied. Access, entrances, windows, vehicles, pets, landscaping, noise, and daily work zones should be discussed so the property stays usable and safe.</p>
+          </details>
+          <details>
+            <summary>What happens if weather interrupts the schedule?</summary>
+            <p>Exterior schedules should remain flexible enough to protect quality. Surfaces need suitable temperature and moisture conditions, and work may pause or shift when rain, wind, heat, cold, or drying conditions are unfavorable.</p>
+          </details>
+          <details>
+            <summary>How should exterior colors be selected?</summary>
+            <p>Consider roofing, masonry, windows, neighboring finishes, landscape, architectural style, sunlight, and any association or historic requirements. Large exterior samples provide better information than small color chips.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section coverage" id="coverage">
+      <div class="container coverage-grid">
+        <div class="coverage-copy reveal">
+          <span class="eyebrow">Connecticut service coverage</span>
+          <h2>Exterior project planning across the state.</h2>
+          <p>Call to confirm scheduling for your town, property, surface type, and desired project window.</p>
+        </div>
+        <div class="county-list reveal">
+          <span>New London County</span>
+          <span>Middlesex County</span>
+          <span>Windham County</span>
+          <span>Litchfield County</span>
+          <span>Hartford County</span>
+          <span>New Haven County</span>
+          <span>Tolland County</span>
+          <span>Fairfield County</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="eyebrow">Begin with the condition of the property</span>
+          <h2>Get a scope built around your exterior.</h2>
+          <p>
+            Show us the surfaces, concerns, access, timing, and finish goals. We will help turn them into a practical
+            preparation and painting plan.
+          </p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary">Request Free Estimate</a>
+            <a href="galleries.html" class="btn btn-light">View Exterior Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters logo" />
+        </div>
+        <p>Family-owned painting and power washing services for homes and businesses throughout Connecticut.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="interior.html">Interior Painting</a></li>
+          <li><a href="exterior.html">Exterior Painting</a></li>
+          <li><a href="commercial.html">Commercial Painting</a></li>
+          <li><a href="powerwash.html">Power Washing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="galleries.html">Galleries</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Request Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li>919 Colonel Ledyard Hwy</li>
+          <li>Ledyard, CT 06339</li>
+          <li><a href="tel:8608798222">Office: (860) 879-8222</a></li>
+          <li><a href="tel:8605145335">Cell: (860)-514-5335</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Connecticut House Painters LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <a class="back-top" href="#top" aria-label="Back to top">↑</a>
+  <div class="mobile-cta">
+    <a href="tel:8608798222">Call Office</a>
+    <a href="contact.html">Free Estimate</a>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#primary-menu");
+    const dropdown = document.querySelector(".has-dropdown");
+    const dropdownTrigger = document.querySelector(".dropdown-trigger");
+
+    menuToggle?.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    dropdownTrigger?.addEventListener("click", (event) => {
+      if (window.matchMedia("(max-width: 1120px)").matches) {
+        event.preventDefault();
+        dropdown.classList.toggle("open");
+      }
+    });
+
+    const scannerContent = {
+      siding: {
+        kicker: "Main exterior surfaces",
+        title: "Check adhesion, moisture, and exposure before repainting.",
+        description: "Existing coating condition and substrate determine how much cleaning, scraping, repair, and priming the siding needs.",
+        items: [
+          "Identify peeling, chalking, and failed areas",
+          "Review moisture sources and weather exposure",
+          "Match primer and finish coats to the substrate"
+        ],
+        image: "photos/Exterior painting service in Old Lyme CT.png",
+        alt: "Exterior siding painting project"
+      },
+      trim: {
+        kicker: "Detailed exterior elements",
+        title: "Treat trim as a collection of high-detail surfaces.",
+        description: "Fascia, soffits, doors, windows, corner boards, and decorative millwork often reveal open joints and coating failure before broad siding areas.",
+        items: [
+          "Review joints, caulk, and edge condition",
+          "Prepare bare and repaired detail areas",
+          "Coordinate brushwork, masking, and sheen"
+        ],
+        image: "photos/Exterior painting services in Mystic, CT. We restored this historic home in Mystic Connecticut.png",
+        alt: "Exterior trim and detail painting project"
+      },
+      porch: {
+        kicker: "High-contact exterior areas",
+        title: "Balance appearance with wear, moisture, and daily use.",
+        description: "Columns, railings, doors, porch elements, and selected walking surfaces need a plan that accounts for touch, traffic, drying, and reopening the area.",
+        items: [
+          "Separate vertical and walking surfaces",
+          "Plan access and cure time",
+          "Protect nearby masonry, plants, and fixtures"
+        ],
+        image: "photos/Exterior House Painting Service, in Old Saybrook, CT.png",
+        alt: "Porch, columns, and railing painting project"
+      },
+      large: {
+        kicker: "Multi-unit and commercial exteriors",
+        title: "Build access, staging, and communication into the scope.",
+        description: "Larger properties add lifts, tenant or customer access, work zones, phased completion, and broader protection requirements.",
+        items: [
+          "Coordinate lifts, ladders, and controlled areas",
+          "Phase work around occupants and operations",
+          "Define daily handoff and site organization"
+        ],
+        image: "photos/Exterior Commercial Painting Services. Apartment Complex Painting Services in Connecticut.png",
+        alt: "Large commercial exterior painting project with lift access"
+      }
+    };
+
+    const scannerTabs = document.querySelectorAll(".scanner-tab");
+    const scannerKicker = document.querySelector("#scanner-kicker");
+    const scannerTitle = document.querySelector("#scanner-title");
+    const scannerDescription = document.querySelector("#scanner-description");
+    const scannerList = document.querySelector("#scanner-list");
+    const scannerImage = document.querySelector("#scanner-image");
+
+    scannerTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const selected = scannerContent[tab.dataset.surface];
+        scannerTabs.forEach((item) => {
+          const active = item === tab;
+          item.classList.toggle("active", active);
+          item.setAttribute("aria-selected", String(active));
+        });
+        scannerKicker.textContent = selected.kicker;
+        scannerTitle.textContent = selected.title;
+        scannerDescription.textContent = selected.description;
+        scannerList.innerHTML = selected.items.map((item) => `<li>${item}</li>`).join("");
+        scannerImage.src = selected.image;
+        scannerImage.alt = selected.alt;
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+  </script>
+</body>
+
+</html>
