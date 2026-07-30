@@ -6127,34 +6127,6 @@ body.home-page {
       }
     }
   </style>
-  <style>
-/* FINAL FIX: MOVE LOGO AWAY FROM WHALE */
-
-/* Desktop */
-.home-page .home-brand-logo {
-  margin-left: 30px !important;
-  width: calc(100% - 22px) !important;
-  transform: none !important;
-}
-
-/* Tablets and smaller screens */
-@media (max-width: 1100px) {
-  .home-page .home-brand-logo {
-    margin-left: 16px !important;
-    width: 194px !important;
-    max-width: 194px !important;
-  }
-}
-
-/* Phones */
-@media (max-width: 560px) {
-  .home-page .home-brand-logo {
-    margin-left: 12px !important;
-    width: 154px !important;
-    max-width: 154px !important;
-  }
-}
-</style>
 </head>
 <body class="home-page">
   <header class="site-header home-header sitewide-unified-header" id="top">
@@ -6523,7 +6495,7 @@ body.home-page {
 
   <button class="home-scroll-top" type="button" aria-label="Back to top"></button>
 
-  <script src="site-enhancements.js?v=20260730i" defer></script>
+  <script src="site-enhancements.js?v=20260730n" defer></script>
   <script src="google-reviews-widget.js?v=20260729o" defer></script>
   <script>
     (function () {
@@ -6810,5 +6782,159 @@ body.home-page {
     });
   });
 </script>
+
+<!-- INDEX-ONLY DESKTOP HEADER FIX: keep immediately above </body> -->
+<script>
+(function () {
+  const desktopMinimum = 961;
+  const touched = new Map();
+  function remember(element, property) {
+    if (!element) return;
+    if (!touched.has(element)) touched.set(element, new Set());
+    touched.get(element).add(property);
+  }
+  function important(element, property, value) {
+    if (!element) return;
+    remember(element, property);
+    element.style.setProperty(property, value, 'important');
+  }
+  function clearFix() {
+    touched.forEach((properties, element) => {
+      properties.forEach((property) => element.style.removeProperty(property));
+    });
+    touched.clear();
+  }
+  function applyFix() {
+    clearFix();
+    if (window.innerWidth < desktopMinimum) return;
+    const header = document.querySelector('body.home-page header.sitewide-unified-header');
+    if (!header) return;
+    const inner = header.querySelector('.home-header-inner');
+    const brand = header.querySelector('.home-brand');
+    const mascot = header.querySelector('.home-brand-mascot');
+    const logo = header.querySelector('.home-brand-logo');
+    const nav = header.querySelector('.home-nav');
+    const menu = header.querySelector('.home-nav-menu');
+    const toggle = header.querySelector('.home-menu-toggle');
+    const cta = header.querySelector('.home-header-cta');
+    const wide = window.innerWidth >= 1200;
+
+    important(
+      inner,
+      'width',
+      wide ? 'calc(100% - 40px)' : 'calc(100% - 28px)'
+    );
+
+    important(
+      inner,
+      'max-width',
+      wide ? 'none' : '1360px'
+    );
+    important(inner, 'height', wide ? '98px' : '88px');
+    important(inner, 'min-height', wide ? '98px' : '88px');
+    important(inner, 'margin', '0 auto');
+    important(inner, 'padding', '0');
+    important(inner, 'display', 'grid');
+    important(inner, 'grid-template-columns', wide ? '300px minmax(0, 1fr) 180px' : '250px minmax(0, 1fr)');
+    important(inner, 'gap', wide ? '14px' : '10px');
+    important(inner, 'align-items', 'center');
+    important(inner, 'overflow', 'visible');
+
+    important(brand, 'width', wide ? '300px' : '250px');
+    important(brand, 'max-width', wide ? '300px' : '250px');
+    important(brand, 'min-width', '0');
+    important(brand, 'display', 'flex');
+    important(brand, 'align-items', 'center');
+    important(brand, 'justify-content', 'flex-start');
+    important(brand, 'gap', '0');
+    important(brand, 'column-gap', '0');
+    important(brand, 'margin', '0');
+    important(brand, 'padding', '0');
+    important(brand, 'overflow', 'visible');
+    important(brand, 'transform', 'none');
+
+    important(mascot, 'flex', wide ? '0 0 70px' : '0 0 58px');
+    important(mascot, 'width', wide ? '70px' : '58px');
+    important(mascot, 'height', wide ? '80px' : '68px');
+    important(mascot, 'max-width', 'none');
+    important(mascot, 'margin', wide ? '0 -8px 0 0' : '0 -6px 0 0');
+    important(mascot, 'transform', 'none');
+    important(mascot, 'object-fit', 'contain');
+
+    important(logo, 'flex', wide ? '0 0 238px' : '0 0 198px');
+    important(logo, 'width', wide ? '238px' : '198px');
+    important(logo, 'max-width', wide ? '238px' : '198px');
+    important(logo, 'height', 'auto');
+    important(logo, 'max-height', wide ? '84px' : '74px');
+    important(logo, 'margin', '0');
+    important(logo, 'transform', 'none');
+    important(logo, 'object-fit', 'contain');
+    important(logo, 'object-position', 'left center');
+
+    important(nav, 'width', '100%');
+    important(nav, 'min-width', '0');
+    important(nav, 'justify-self', 'stretch');
+    important(nav, 'overflow', 'visible');
+
+    important(menu, 'position', 'static');
+    important(menu, 'inset', 'auto');
+    important(menu, 'width', '100%');
+    important(menu, 'max-width', '100%');
+    important(menu, 'height', 'auto');
+    important(menu, 'display', 'flex');
+    important(menu, 'flex-direction', 'row');
+    important(menu, 'flex-wrap', 'nowrap');
+    important(menu, 'align-items', 'center');
+    important(menu, 'justify-content', 'space-between');
+    important(menu, 'gap', wide ? '10px' : '6px');
+    important(menu, 'margin', '0');
+    important(menu, 'padding', '0');
+    important(menu, 'overflow', 'visible');
+    important(menu, 'background', 'transparent');
+    important(menu, 'border', '0');
+    important(menu, 'box-shadow', 'none');
+
+    menu.querySelectorAll(':scope > li').forEach((item) => {
+      important(item, 'width', 'auto');
+      important(item, 'min-width', '0');
+      important(item, 'margin', '0');
+      important(item, 'padding', '0');
+      important(item, 'display', 'list-item');
+    });
+    menu.querySelectorAll(':scope > li > a, :scope > li > button').forEach((item) => {
+      important(item, 'width', 'auto');
+      important(item, 'min-width', '0');
+      important(item, 'min-height', '0');
+      important(item, 'display', 'inline-flex');
+      important(item, 'padding', '10px 0');
+      important(item, 'font-size', wide ? '0.82rem' : '0.70rem');
+      important(item, 'white-space', 'nowrap');
+    });
+
+    important(toggle, 'display', 'none');
+
+    if (wide) {
+      important(cta, 'display', 'inline-flex');
+      important(cta, 'width', '180px');
+      important(cta, 'min-width', '180px');
+      important(cta, 'max-width', '180px');
+      important(cta, 'min-height', '48px');
+      important(cta, 'justify-self', 'end');
+      important(cta, 'margin', '0');
+      important(cta, 'padding', '0 14px');
+      important(cta, 'font-size', '0.78rem');
+    } else {
+      important(cta, 'display', 'none');
+    }
+  }
+  window.addEventListener('DOMContentLoaded', applyFix);
+  window.addEventListener('load', applyFix);
+  window.addEventListener('resize', applyFix, { passive: true });
+  setTimeout(applyFix, 0);
+  setTimeout(applyFix, 300);
+})();
+
+</script>
+
 </body>
 </html>

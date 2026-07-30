@@ -135,6 +135,116 @@
     </section>
   </main>
 
-  <footer></footer>
+<footer></footer>
+
+<script>
+/* Make the shared service-area section specific to deck staining */
+document.addEventListener("DOMContentLoaded", function () {
+
+  function updateDeckServiceArea() {
+    const headings = Array.from(
+      document.querySelectorAll("h1, h2, h3, h4")
+    );
+
+    const serviceAreaHeading = headings.find(function (heading) {
+      return heading.textContent
+        .replace(/\s+/g, " ")
+        .trim()
+        .includes("Painting and power washing across Connecticut");
+    });
+
+    /* Wait until site-enhancements.js creates the section */
+    if (!serviceAreaHeading) {
+      return false;
+    }
+
+    const serviceAreaSection =
+      serviceAreaHeading.closest("section") ||
+      serviceAreaHeading.parentElement;
+
+    if (!serviceAreaSection) {
+      return false;
+    }
+
+    const replacements = [
+      {
+        oldText: "Painting and power washing across Connecticut.",
+        newText: "Deck staining and wood restoration across Connecticut."
+      },
+      {
+        oldText: "Service-area content is grouped so it stays searchable without overwhelming the page.",
+        newText: "Explore our deck staining and wood restoration service areas throughout Connecticut."
+      },
+      {
+        oldText: "Do you see your town listed?",
+        newText: "Need deck staining in your town?"
+      },
+      {
+        oldText: "Connecticut House Painters helps homeowners and businesses across Connecticut. Call to confirm scheduling in your area.",
+        newText: "Connecticut House Painters provides professional deck staining and wood restoration across Connecticut. Call to confirm availability in your area."
+      },
+      {
+        oldText: "Popular Connecticut service towns",
+        newText: "Popular Connecticut service towns"
+      },
+      {
+        oldText: "Painting and power washing services are available for these Connecticut locations.",
+        newText: "Professional deck staining and wood restoration services are available in these Connecticut communities."
+      }
+    ];
+
+    const walker = document.createTreeWalker(
+      serviceAreaSection,
+      NodeFilter.SHOW_TEXT
+    );
+
+    const textNodes = [];
+    let currentNode;
+
+    while ((currentNode = walker.nextNode())) {
+      textNodes.push(currentNode);
+    }
+
+    textNodes.forEach(function (textNode) {
+      let updatedText = textNode.nodeValue;
+
+      replacements.forEach(function (replacement) {
+        updatedText = updatedText.replace(
+          replacement.oldText,
+          replacement.newText
+        );
+      });
+
+      /* Change every county card */
+      updatedText = updatedText.replace(
+        /Painting Services\s+/g,
+        "Deck Staining Services in "
+      );
+
+      textNode.nodeValue = updatedText;
+    });
+
+    return true;
+  }
+
+  /* Try immediately */
+  if (updateDeckServiceArea()) {
+    return;
+  }
+
+  /* Watch for the shared JavaScript to create the section */
+  const serviceAreaObserver = new MutationObserver(function () {
+    if (updateDeckServiceArea()) {
+      serviceAreaObserver.disconnect();
+    }
+  });
+
+  serviceAreaObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+});
+</script>
+
 </body>
 </html>

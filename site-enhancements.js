@@ -799,8 +799,8 @@
       <div class="sitewide-markate-shell">
         <aside class="sitewide-markate-details">
           <span class="sitewide-markate-kicker">Free project estimate</span>
-          <h2 id="markate-estimate-title">Tell us how we can help.</h2>
-          <p>Send your project details securely to Connecticut House Painters. Your request goes directly to the client’s Markate account for follow-up.</p>
+          <h2 id="markate-estimate-title">Start Your Project Today.</h2>
+          <p>Send your project details securely to Connecticut House Painters, and our team will follow up as soon as possible.</p>
           <div class="sitewide-markate-contact-list">
             <a href="tel:8608798222"><span>Office</span><strong>(860) 879-8222</strong></a>
             <a href="mailto:connecticuthousepainters@gmail.com"><span>Email</span><strong>connecticuthousepainters@gmail.com</strong></a>
@@ -1533,4 +1533,564 @@
   addSocialLinks();
   addBackToTopButton();
   addMotionEnhancements();
+})();
+/* =====================================================
+   GLOBAL HEADER — MATCH ABOUT.HTML ON EVERY PAGE
+   Keep this at the very bottom of site-enhancements.js
+===================================================== */
+
+(function applyUnifiedAboutHeader() {
+  /* Load the same header fonts on every page */
+  if (!document.getElementById("unified-header-fonts")) {
+    const fontLink = document.createElement("link");
+
+    fontLink.id = "unified-header-fonts";
+    fontLink.rel = "stylesheet";
+    fontLink.href =
+      "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap";
+
+    document.head.appendChild(fontLink);
+  }
+
+  /* Prevent the style from being inserted more than once */
+  if (document.getElementById("unified-about-header-style")) {
+    return;
+  }
+
+  const headerStyle = document.createElement("style");
+
+  headerStyle.id = "unified-about-header-style";
+
+  headerStyle.textContent = `
+    /* =================================================
+       DESKTOP HEADER
+    ================================================= */
+
+    body .sitewide-unified-header.home-header,
+    body header.sitewide-unified-header {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 5000 !important;
+      min-height: 0 !important;
+      background: #001126 !important;
+      border-bottom: 3px solid #33cfff !important;
+      box-shadow: 0 16px 32px rgba(0, 17, 38, 0.28) !important;
+      overflow: visible !important;
+    }
+
+    body .sitewide-unified-header .home-header-inner {
+      width: min(1360px, calc(100% - 28px)) !important;
+      height: 98px !important;
+      min-height: 98px !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+
+      display: grid !important;
+      grid-template-columns: 364px minmax(0, 1fr) 190px !important;
+      align-items: center !important;
+      gap: 20px !important;
+
+      overflow: visible !important;
+    }
+
+    /* Company whale and logo */
+    body .sitewide-unified-header .home-brand {
+      width: 364px !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 0 !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      text-decoration: none !important;
+      overflow: visible !important;
+      transform: none !important;
+    }
+
+    body .sitewide-unified-header .home-brand img {
+      display: block !important;
+      object-fit: contain !important;
+    }
+
+    body .sitewide-unified-header .home-brand-mascot {
+      flex: 0 0 74px !important;
+
+      width: 74px !important;
+      height: 82px !important;
+      max-width: none !important;
+
+      /* Pulls the company name closer to the whale */
+      margin-right: -18px !important;
+
+      position: relative !important;
+      z-index: 2 !important;
+      transform: none !important;
+    }
+
+    body .sitewide-unified-header .home-brand-logo {
+      flex: 0 0 282px !important;
+
+      width: 282px !important;
+      max-width: 282px !important;
+      max-height: 88px !important;
+      height: auto !important;
+
+      margin: 0 !important;
+      position: relative !important;
+      z-index: 1 !important;
+      transform: none !important;
+    }
+
+    /* Main navigation */
+    body .sitewide-unified-header .home-nav {
+      position: relative !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      justify-self: stretch !important;
+      overflow: visible !important;
+    }
+
+    body .sitewide-unified-header .home-nav-menu {
+      width: 100% !important;
+
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+
+      gap: clamp(13px, 1vw, 20px) !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      list-style: none !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      overflow: visible !important;
+    }
+
+    body .sitewide-unified-header .home-nav-menu > li {
+      position: relative !important;
+      width: auto !important;
+      min-width: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    body .sitewide-unified-header .home-nav-menu > li > a,
+    body .sitewide-unified-header .home-services-toggle {
+      width: auto !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+
+      padding: 10px 0 !important;
+
+      color: #ffffff !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+
+      font-family: "Bebas Neue", "Arial Narrow", Arial, sans-serif !important;
+      font-size: clamp(0.72rem, 0.69vw, 0.84rem) !important;
+      font-weight: 400 !important;
+      line-height: 1 !important;
+      letter-spacing: 0.035em !important;
+
+      text-decoration: none !important;
+      text-transform: none !important;
+      white-space: nowrap !important;
+      cursor: pointer !important;
+    }
+
+    body .sitewide-unified-header .home-nav-menu > li > a:hover,
+    body .sitewide-unified-header .home-nav-menu > li > a.active,
+    body .sitewide-unified-header .home-nav-menu > li > a[aria-current="page"],
+    body .sitewide-unified-header .home-services-toggle:hover {
+      color: #33cfff !important;
+      background: transparent !important;
+    }
+
+    /* Services arrow */
+    body .sitewide-unified-header .home-services-toggle::after {
+      content: "" !important;
+
+      width: 7px !important;
+      height: 7px !important;
+
+      display: inline-block !important;
+      margin: -4px 0 0 8px !important;
+
+      border-top: 0 !important;
+      border-left: 0 !important;
+      border-right: 2px solid currentColor !important;
+      border-bottom: 2px solid currentColor !important;
+
+      transform: rotate(45deg) !important;
+    }
+
+    /* Services dropdown */
+    body .sitewide-unified-header .home-dropdown-menu {
+      position: absolute !important;
+      z-index: 6000 !important;
+
+      top: calc(100% + 12px) !important;
+      left: 50% !important;
+      right: auto !important;
+
+      width: 245px !important;
+      max-width: none !important;
+
+      display: block !important;
+
+      margin: 0 !important;
+      padding: 10px !important;
+
+      list-style: none !important;
+      background: #031126 !important;
+      border: 1px solid rgba(51, 207, 255, 0.3) !important;
+      border-top: 4px solid #33cfff !important;
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.28) !important;
+
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+
+      transform: translateX(-50%) translateY(8px) !important;
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease !important;
+    }
+
+    body .sitewide-unified-header .home-nav-dropdown:hover > .home-dropdown-menu,
+    body .sitewide-unified-header .home-nav-dropdown:focus-within > .home-dropdown-menu,
+    body .sitewide-unified-header .home-nav-dropdown.open > .home-dropdown-menu,
+    body .sitewide-unified-header .home-nav-dropdown.is-open > .home-dropdown-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      transform: translateX(-50%) translateY(0) !important;
+    }
+
+    body .sitewide-unified-header .home-dropdown-menu li {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    body .sitewide-unified-header .home-dropdown-menu a {
+      width: 100% !important;
+      min-height: 42px !important;
+
+      display: flex !important;
+      align-items: center !important;
+
+      padding: 10px 12px !important;
+
+      color: #ffffff !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-left: 3px solid transparent !important;
+      border-radius: 0 !important;
+
+      font-family: "Inter", Arial, sans-serif !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      line-height: 1.25 !important;
+
+      text-decoration: none !important;
+    }
+
+    body .sitewide-unified-header .home-dropdown-menu a:hover {
+      color: #ffffff !important;
+      background: rgba(51, 207, 255, 0.12) !important;
+      border-left-color: #33cfff !important;
+    }
+
+    /* Free-estimate button */
+    body .sitewide-unified-header .home-header-cta {
+      width: 190px !important;
+      min-width: 190px !important;
+      min-height: 48px !important;
+
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      justify-self: end !important;
+
+      padding: 0 18px !important;
+
+      color: #ffffff !important;
+      background: #de0703 !important;
+      border: 0 !important;
+      border-radius: 4px !important;
+      box-shadow: 0 13px 24px rgba(222, 7, 3, 0.28) !important;
+
+      font-family: "Bebas Neue", "Arial Narrow", Arial, sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 400 !important;
+      line-height: 1 !important;
+      letter-spacing: 0.035em !important;
+
+      text-align: center !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      transform: none !important;
+    }
+
+    body .sitewide-unified-header .home-header-cta:hover {
+      color: #ffffff !important;
+      background: #f00b08 !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* Hide mobile button on desktop */
+    body .sitewide-unified-header .home-menu-toggle {
+      display: none !important;
+    }
+
+    /* =================================================
+       SMALLER DESKTOPS
+    ================================================= */
+
+    @media (max-width: 1200px) {
+      body .sitewide-unified-header .home-header-inner {
+        height: 88px !important;
+        min-height: 88px !important;
+        grid-template-columns: 300px minmax(0, 1fr) 168px !important;
+        gap: 14px !important;
+      }
+
+      body .sitewide-unified-header .home-brand {
+        width: 300px !important;
+      }
+
+      body .sitewide-unified-header .home-brand-mascot {
+        flex: 0 0 60px !important;
+        width: 60px !important;
+        height: 68px !important;
+        margin-right: -14px !important;
+      }
+
+      body .sitewide-unified-header .home-brand-logo {
+        flex: 0 0 232px !important;
+        width: 232px !important;
+        max-width: 232px !important;
+        max-height: 78px !important;
+        margin: 0 !important;
+        transform: none !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu {
+        gap: 10px !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu > li > a,
+      body .sitewide-unified-header .home-services-toggle {
+        font-size: 0.66rem !important;
+      }
+
+      body .sitewide-unified-header .home-header-cta {
+        width: 168px !important;
+        min-width: 168px !important;
+        padding: 0 12px !important;
+        font-size: 0.74rem !important;
+      }
+    }
+
+    /* =================================================
+       TABLETS AND MOBILE MENU
+    ================================================= */
+
+    @media (max-width: 1040px) {
+      body .sitewide-unified-header .home-header-inner {
+        width: min(760px, calc(100% - 28px)) !important;
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        gap: 16px !important;
+      }
+
+      body .sitewide-unified-header .home-brand {
+        width: 300px !important;
+      }
+
+      body .sitewide-unified-header .home-header-cta {
+        display: none !important;
+      }
+
+      body .sitewide-unified-header .home-nav {
+        width: auto !important;
+        justify-self: end !important;
+      }
+
+      body .sitewide-unified-header .home-menu-toggle {
+        position: relative !important;
+        z-index: 6002 !important;
+
+        width: 44px !important;
+        height: 44px !important;
+
+        display: grid !important;
+        place-items: center !important;
+
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.28) !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu {
+        position: fixed !important;
+        z-index: 6001 !important;
+
+        top: 88px !important;
+        right: 14px !important;
+        left: 14px !important;
+
+        width: auto !important;
+        max-width: none !important;
+        max-height: calc(100dvh - 104px) !important;
+
+        display: none !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+
+        gap: 4px !important;
+
+        padding: 14px !important;
+        overflow-y: auto !important;
+
+        background: #001126 !important;
+        border: 1px solid rgba(51, 207, 255, 0.4) !important;
+        border-top: 4px solid #33cfff !important;
+        box-shadow: 0 24px 46px rgba(0, 0, 0, 0.4) !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu.active,
+      body .sitewide-unified-header .home-nav-menu.open,
+      body .sitewide-unified-header .home-nav-menu.is-open {
+        display: flex !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu > li {
+        width: 100% !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu > li > a,
+      body .sitewide-unified-header .home-services-toggle {
+        width: 100% !important;
+        min-height: 48px !important;
+
+        justify-content: flex-start !important;
+
+        padding: 12px 13px !important;
+
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+        font-size: 0.92rem !important;
+        text-align: left !important;
+      }
+
+      body .sitewide-unified-header .home-dropdown-menu {
+        position: static !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        display: none !important;
+
+        margin: 4px 0 0 !important;
+        padding: 6px !important;
+
+        background: #092d62 !important;
+        border: 0 !important;
+        border-left: 3px solid #33cfff !important;
+        box-shadow: none !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+      }
+
+      body .sitewide-unified-header .home-nav-dropdown.open > .home-dropdown-menu,
+      body .sitewide-unified-header .home-nav-dropdown.is-open > .home-dropdown-menu {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+      }
+
+      body .sitewide-unified-header .home-dropdown-menu a {
+        min-height: 44px !important;
+        padding: 10px 12px !important;
+      }
+    }
+
+    /* =================================================
+       PHONES
+    ================================================= */
+
+    @media (max-width: 560px) {
+      body .sitewide-unified-header .home-header-inner {
+        width: calc(100% - 18px) !important;
+        height: 72px !important;
+        min-height: 72px !important;
+        gap: 8px !important;
+      }
+
+      body .sitewide-unified-header .home-brand {
+        width: 220px !important;
+        gap: 0 !important;
+      }
+
+      body .sitewide-unified-header .home-brand-mascot {
+        flex: 0 0 48px !important;
+        width: 48px !important;
+        height: 58px !important;
+
+        /* Phone-only spacing between whale and company name */
+        margin-left: 0 !important;
+        margin-right: 6px !important;
+
+        transform: none !important;
+      }
+
+      body .sitewide-unified-header .home-brand-logo {
+        flex: 0 0 166px !important;
+        width: 166px !important;
+        max-width: 166px !important;
+        max-height: 62px !important;
+
+        margin: 0 !important;
+        transform: none !important;
+      }
+
+      body .sitewide-unified-header .home-nav-menu {
+        top: 72px !important;
+        right: 9px !important;
+        left: 9px !important;
+        max-height: calc(100dvh - 86px) !important;
+      }
+    }
+  `;
+
+  document.head.appendChild(headerStyle);
 })();
