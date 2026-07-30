@@ -1335,8 +1335,8 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css" />
-  <script src="site-enhancements.js" defer></script>
+  <link rel="stylesheet" href="site-enhancements.css?v=20260730i" />
+  <script src="site-enhancements.js?v=20260730i" defer></script>
 </head>
 
 <body>
@@ -1424,8 +1424,8 @@
           <h2>Trusted by Connecticut homeowners and businesses.</h2>
           <p>The Google profile gives visitors a live place to confirm the latest public reviews before they request an estimate.</p>
           <div class="metric-grid">
-            <div class="metric">
-              <strong data-count="81">81</strong>
+              <div class="metric">
+              <strong data-count="83">83</strong>
               <span>Google reviews</span>
             </div>
             <div class="metric">
@@ -1452,7 +1452,7 @@
             <span class="eyebrow">What Customers Say</span>
             <h2>Organized reviews customers can actually use.</h2>
           </div>
-          <p>Filter by service, search by keyword, and expand the longer feedback. The goal is simple: make the proof feel easy, credible, and current.</p>
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters LLC" />
         </div>
 
         <div class="console-shell reveal">
@@ -2007,6 +2007,15 @@
         const reviewCount = place.userRatingCount || place.user_ratings_total;
         reviewCountBox.textContent = reviewCount;
         reviewCountBox.dataset.count = reviewCount;
+      }
+      const liveReviewCount = place.userRatingCount || place.user_ratings_total;
+      if (liveReviewCount) {
+        document.querySelectorAll("[data-testimonial-review-count]").forEach((element) => {
+          element.textContent = liveReviewCount;
+        });
+        document.querySelectorAll("[data-testimonial-review-link]").forEach((element) => {
+          element.textContent = `View all ${liveReviewCount} reviews on Google`;
+        });
       }
 
       const googleReviewLink = document.querySelector("#google-reviews-link");

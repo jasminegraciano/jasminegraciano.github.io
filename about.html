@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="images/WillieTheWhale.png" />
 
   <style>
@@ -387,8 +387,8 @@
       overflow: hidden;
       color: var(--paper);
       background:
-        linear-gradient(90deg, rgba(15, 53, 109, 0.96), rgba(4, 86, 208, 0.76), rgba(222, 7, 3, 0.48)),
-        url("photos/Exterior painting services in Mystic, CT. We restored this historic home in Mystic Connecticut.png") center/cover no-repeat;
+        radial-gradient(circle at 82% 18%, rgba(51, 207, 255, 0.2), transparent 28%),
+        linear-gradient(110deg, #031126 0%, #082456 48%, #0456d0 100%);
     }
 
     .about-hero-grid {
@@ -566,25 +566,29 @@
 
     .timeline {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 32px;
+      margin-top: 18px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 18px;
-      align-items: start;
-      padding: 20px;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      align-items: center;
+      min-height: 190px;
+      padding: 28px;
       background: var(--paper);
       border: 1px solid var(--line);
-      box-shadow: 0 14px 30px rgba(15, 53, 109, 0.08);
+      border-top: 5px solid var(--blue);
+      box-shadow: 0 18px 38px rgba(15, 53, 109, 0.1);
     }
 
     .timeline-year {
       display: inline-grid;
       place-items: center;
       min-height: 64px;
+      height: 88px;
       background: linear-gradient(135deg, var(--red), var(--blue));
       color: var(--paper);
       font-weight: 900;
@@ -594,6 +598,27 @@
     .timeline-item h3 {
       color: var(--navy);
       margin-bottom: 6px;
+      font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+      line-height: 1.08;
+    }
+
+    .timeline-item p {
+      color: #657383;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .story-milestones {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+    }
+
+    .story-milestones .quote-strip {
+      margin: 0;
+      padding: clamp(24px, 3vw, 34px);
+      border-left-width: 8px;
+      font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+      line-height: 1.55;
     }
 
     .values {
@@ -818,6 +843,392 @@
       background: var(--red);
     }
 
+    .about-service-areas {
+      background: linear-gradient(180deg, #ffffff, #f3f8fc);
+    }
+
+    .about-service-areas .section-head {
+      max-width: 820px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .about-service-areas .section-head h2 {
+      margin: 8px 0 12px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.05;
+    }
+
+    .about-service-areas .section-head p {
+      color: #5f6d7b;
+      font-weight: 700;
+    }
+
+    .about-county-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .about-county-grid span {
+      display: block;
+      padding: 16px;
+      color: var(--navy);
+      background: var(--paper);
+      border-left: 5px solid var(--sky);
+      box-shadow: 0 14px 34px rgba(15, 53, 109, 0.08);
+      font-weight: 900;
+    }
+
+    .about-area-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 18px;
+      padding: 24px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      box-shadow: 0 18px 46px rgba(15, 53, 109, 0.14);
+    }
+
+    .about-area-cta strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.45rem;
+    }
+
+    .about-area-cta p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+    }
+
+    .about-area-cta .btn {
+      color: var(--navy);
+      background: #ffffff;
+      white-space: nowrap;
+    }
+
+    .about-service-areas details {
+      background: #ffffff;
+      border: 1px solid rgba(15, 53, 109, 0.15);
+      box-shadow: 0 14px 34px rgba(15, 53, 109, 0.07);
+    }
+
+    .about-service-areas details + details {
+      margin-top: 12px;
+    }
+
+    .about-service-areas summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 22px;
+      color: var(--navy);
+      cursor: pointer;
+      font-size: 1.08rem;
+      font-weight: 900;
+      list-style: none;
+    }
+
+    .about-service-areas summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .about-service-areas summary::after {
+      content: "+";
+      width: 28px;
+      height: 28px;
+      display: grid;
+      flex: 0 0 28px;
+      place-items: center;
+      color: #ffffff;
+      background: var(--navy);
+      line-height: 1;
+    }
+
+    .about-service-areas details[open] summary::after {
+      content: "-";
+      background: var(--red);
+    }
+
+    .about-town-note {
+      margin: 0;
+      padding: 0 22px 14px;
+      color: #5f6d7b;
+      font-weight: 700;
+    }
+
+    .about-town-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 0 22px 22px;
+    }
+
+    .about-town-cloud span {
+      padding: 8px 11px;
+      color: var(--navy);
+      background: #f5fbff;
+      border: 1px solid rgba(15, 53, 109, 0.14);
+      font-weight: 800;
+    }
+
+    .about-bottom-cta {
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(51, 207, 255, 0.16), transparent 30%),
+        linear-gradient(90deg, #031126, #062760 58%, #0456d0);
+      overflow: hidden;
+    }
+
+    .about-bottom-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.72fr) minmax(560px, 1.28fr);
+      min-height: 360px;
+    }
+
+    .about-bottom-copy {
+      position: relative;
+      padding: 54px 36px 42px 0;
+      overflow: hidden;
+    }
+
+    .about-bottom-copy h2 {
+      max-width: 350px;
+      margin: 0 0 14px;
+      color: #ffffff;
+      font-size: clamp(2.4rem, 4vw, 3.7rem);
+      line-height: 0.96;
+      text-transform: uppercase;
+    }
+
+    .about-bottom-copy p {
+      max-width: 330px;
+      margin: 0 0 24px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .about-bottom-copy .btn::after {
+      display: none;
+    }
+
+    .about-bottom-logo {
+      position: absolute;
+      right: 14px;
+      bottom: 10px;
+      width: 190px;
+      filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.28));
+    }
+
+    .about-map {
+      position: relative;
+      min-height: 360px;
+      overflow: hidden;
+      border-left: 1px solid rgba(51, 207, 255, 0.34);
+    }
+
+    .about-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+      filter: saturate(0.72) hue-rotate(178deg) brightness(1.07) contrast(0.95);
+    }
+
+    .about-serving-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(250px, 38%);
+      z-index: 2;
+      padding: 32px 24px;
+      color: #ffffff;
+      background: linear-gradient(180deg, rgba(4, 86, 208, 0.96), rgba(0, 112, 255, 0.94));
+    }
+
+    .about-serving-panel h3 {
+      margin: 0 0 14px;
+      color: #ffffff;
+      font-size: 2rem;
+      line-height: 0.98;
+      text-transform: uppercase;
+    }
+
+    .about-serving-panel ul {
+      margin: 0 0 18px;
+      padding: 0;
+      list-style: none;
+      font-weight: 800;
+    }
+
+    .about-serving-panel a {
+      display: inline-flex;
+      padding: 9px 12px;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .about-home-footer {
+      padding: 0;
+      color: #ffffff;
+      background: #031126;
+      border-top: 1px solid rgba(51, 207, 255, 0.22);
+    }
+
+    .about-footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.65fr 0.78fr 0.9fr 0.7fr;
+      gap: 30px;
+      padding: 42px 0 30px;
+    }
+
+    .about-footer-brand {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .about-footer-brand img:first-child {
+      width: 76px;
+    }
+
+    .about-footer-brand img:last-child {
+      width: 170px;
+    }
+
+    .about-footer-about p {
+      margin: 0 0 17px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .about-footer-social {
+      display: flex;
+      gap: 9px;
+    }
+
+    .about-footer-social a {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      background: var(--blue);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .about-footer-social a:nth-child(2),
+    .about-footer-social a:nth-child(4) {
+      background: var(--red);
+    }
+
+    .about-footer-social a:nth-child(3) {
+      background: #111111;
+    }
+
+    .about-footer-social a:nth-child(5) {
+      color: var(--blue);
+      background: #ffffff;
+    }
+
+    .about-footer-col h3 {
+      margin: 0 0 15px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .about-footer-col ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .about-footer-col a,
+    .about-footer-col li {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .about-footer-badge {
+      display: grid;
+      min-height: 142px;
+      place-items: center;
+      padding: 18px;
+      color: var(--sky);
+      border: 1px solid rgba(51, 207, 255, 0.5);
+      border-radius: 7px;
+      font-size: 1.7rem;
+      font-weight: 900;
+      line-height: 1.05;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .about-footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 0 26px;
+      color: rgba(255, 255, 255, 0.72);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 980px) {
+      .about-county-grid,
+      .about-footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-bottom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-bottom-copy {
+        min-height: 320px;
+        padding-left: 28px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .about-county-grid,
+      .about-footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-area-cta {
+        grid-template-columns: 1fr;
+      }
+
+      .about-serving-panel {
+        position: relative;
+        width: 100%;
+      }
+
+      .about-footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
     .mobile-cta a:last-child {
       background: var(--navy);
     }
@@ -980,9 +1391,22 @@
       .proof-row,
       .value-grid,
       .summary-grid,
-      .timeline-item,
       .footer-grid {
         grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 92px minmax(0, 1fr);
+        min-height: 0;
+        padding: 22px;
+      }
+
+      .timeline-year {
+        height: 72px;
       }
 
       .mobile-cta {
@@ -990,69 +1414,452 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css" />
-  <script src="site-enhancements.js" defer></script>
+  <link rel="stylesheet" href="site-enhancements.css?v=20260730i" />
+  <style>
+    /* Keep this final so the About page's closing section matches the homepage. */
+    .about-bottom-cta > .about-bottom-grid,
+    .about-home-footer > .container {
+      width: min(1390px, calc(100% - 64px));
+      max-width: none;
+      margin-inline: auto;
+    }
+
+    .about-hero {
+      background: #183363;
+    }
+
+    .about-page .site-header.home-header {
+      position: sticky !important;
+      top: 0;
+      z-index: 5000;
+      min-height: 0 !important;
+      background: #001126 !important;
+      border-bottom: 3px solid #33cfff;
+      box-shadow: 0 16px 32px rgba(0, 17, 38, 0.28);
+    }
+
+    .about-page .home-header-inner {
+      width: min(1360px, calc(100% - 28px));
+      height: 98px;
+      min-height: 98px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 364px minmax(0, 1fr) 190px;
+      align-items: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    .about-page .home-brand {
+      width: 364px;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 74px 282px;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .about-page .home-brand img {
+      display: block;
+      object-fit: contain;
+      transform: none;
+    }
+
+    .about-page .home-brand-mascot {
+      width: 74px;
+      height: 82px;
+    }
+
+    .about-page .home-brand-logo {
+      width: 282px;
+      max-height: 88px;
+      transform: translateX(-28px) !important;
+    }
+
+    .about-page .home-nav {
+      position: relative;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .about-page .home-nav-menu {
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: clamp(13px, 1vw, 20px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: transparent;
+      border: 0;
+    }
+
+    .about-page .home-nav-menu > li {
+      width: auto;
+      min-width: auto;
+      position: relative;
+    }
+
+    .about-page .home-nav-menu > li > a,
+    .about-page .home-services-toggle {
+      width: auto;
+      min-height: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      color: #ffffff;
+      background: transparent;
+      border: 0;
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: clamp(0.72rem, 0.69vw, 0.84rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.035em;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .about-page .home-nav-menu > li > a:hover,
+    .about-page .home-nav-menu > li > a.active,
+    .about-page .home-services-toggle:hover {
+      color: #33cfff;
+    }
+
+    .about-page .home-services-toggle::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      margin: -4px 0 0 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    .about-page .home-header-cta {
+      width: 190px;
+      min-height: 48px;
+      padding: 0 18px;
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.035em;
+    }
+
+    .about-page .home-dropdown-menu {
+      top: calc(100% + 12px);
+      left: 50%;
+      right: auto;
+      width: 245px;
+      transform: translateX(-50%) translateY(8px);
+    }
+
+    .about-page .home-nav-dropdown:hover .home-dropdown-menu,
+    .about-page .home-nav-dropdown.open .home-dropdown-menu {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .about-page .family-card {
+      padding: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .about-page .family-card img {
+      inset: auto 0 0;
+    }
+
+    @media (max-width: 1200px) {
+      .about-page .home-header-inner {
+        height: 88px;
+        min-height: 88px;
+        grid-template-columns: 300px minmax(0, 1fr) 168px;
+        gap: 14px;
+      }
+
+      .about-page .home-brand {
+        width: 300px;
+        grid-template-columns: 60px 232px;
+      }
+
+      .about-page .home-brand-mascot {
+        width: 60px;
+        height: 68px;
+      }
+
+      .about-page .home-brand-logo {
+        width: 232px;
+      }
+
+      .about-page .home-nav-menu {
+        gap: 10px;
+      }
+
+      .about-page .home-nav-menu > li > a,
+      .about-page .home-services-toggle {
+        font-size: 0.66rem;
+      }
+
+      .about-page .home-header-cta {
+        width: 168px;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .about-page .home-header-inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .about-page .home-header-cta {
+        display: none;
+      }
+
+      .about-page .home-nav {
+        justify-self: end;
+        width: auto;
+      }
+
+      .about-page .home-menu-toggle {
+        display: block;
+      }
+
+      .about-page .home-nav-menu {
+        position: absolute;
+        top: calc(100% + 18px);
+        right: 0;
+        width: min(360px, calc(100vw - 28px));
+        display: none;
+        padding: 14px;
+        background: #001126;
+        border: 1px solid rgba(51, 207, 255, 0.35);
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .about-page .home-nav-menu.active,
+      .about-page .home-nav-menu.open {
+        display: flex;
+      }
+
+      .about-page .home-nav-menu > li > a,
+      .about-page .home-services-toggle {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 12px;
+        font-size: 0.92rem;
+      }
+    }
+
+    .about-bottom-cta > .about-bottom-grid {
+      grid-template-columns: minmax(320px, 0.72fr) minmax(580px, 1.28fr);
+      min-height: 430px;
+    }
+
+    .about-bottom-cta .about-bottom-copy {
+      min-width: 0;
+      padding: 52px 34px 48px 0;
+      font-family: "Inter", sans-serif;
+    }
+
+    .about-bottom-cta .about-bottom-copy h2 {
+      max-width: 390px;
+      margin-bottom: 18px;
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: clamp(2.6rem, 4vw, 3.65rem);
+      font-weight: 400;
+      line-height: 0.96;
+      letter-spacing: 0.03em;
+    }
+
+    .about-bottom-cta .about-bottom-copy p {
+      max-width: 365px;
+      margin-bottom: 25px;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    .about-bottom-cta .about-bottom-copy .btn {
+      min-height: 58px;
+      padding-inline: 26px;
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.055em;
+    }
+
+    .about-bottom-cta .about-bottom-logo {
+      right: 18px;
+      bottom: 10px;
+      width: 218px;
+      max-width: 46%;
+    }
+
+    .about-bottom-cta .about-map,
+    .about-bottom-cta .about-map iframe {
+      min-height: 430px;
+    }
+
+    .about-bottom-cta .about-serving-panel {
+      width: 285px;
+      padding: 28px 26px;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-bottom-cta .about-serving-panel h3 {
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: clamp(2rem, 2.4vw, 2.7rem);
+      font-weight: 400;
+      line-height: 0.96;
+      letter-spacing: 0.02em;
+    }
+
+    .about-bottom-cta .about-serving-panel ul {
+      margin-bottom: 15px;
+    }
+
+    .about-bottom-cta .about-serving-panel li {
+      margin-block: 5px;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .about-bottom-cta .about-serving-panel a {
+      width: 100%;
+      justify-content: center;
+      padding: 10px 8px;
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    .about-home-footer > .container {
+      font-family: "Inter", sans-serif;
+    }
+
+    .about-home-footer .about-footer-grid {
+      grid-template-columns: 1.25fr 0.65fr 0.78fr 0.9fr 0.7fr;
+      gap: 34px;
+      padding: 42px 0 30px;
+    }
+
+    .about-home-footer .about-footer-col h3,
+    .about-home-footer .about-footer-badge {
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.035em;
+    }
+
+    @media (max-width: 1100px) {
+      .about-bottom-cta > .about-bottom-grid,
+      .about-home-footer > .container {
+        width: min(920px, calc(100% - 40px));
+      }
+
+      .about-bottom-cta > .about-bottom-grid {
+        grid-template-columns: minmax(300px, 0.8fr) minmax(500px, 1.2fr);
+      }
+
+      .about-bottom-cta .about-serving-panel {
+        width: 235px;
+        padding-inline: 20px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .about-bottom-cta > .about-bottom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-bottom-cta .about-bottom-copy {
+        min-height: 330px;
+        padding: 44px 28px;
+      }
+
+      .about-home-footer .about-footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .about-bottom-cta > .about-bottom-grid,
+      .about-home-footer > .container {
+        width: min(100% - 28px, 520px);
+      }
+
+      .about-bottom-cta .about-bottom-copy {
+        min-height: 390px;
+        padding: 38px 22px;
+      }
+
+      .about-bottom-cta .about-bottom-logo {
+        right: 10px;
+        width: 190px;
+      }
+
+      .about-bottom-cta .about-serving-panel {
+        width: 100%;
+      }
+
+      .about-home-footer .about-footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script src="site-enhancements.js?v=20260730i" defer></script>
 </head>
 
-<body>
-  <div class="site-header">
-    <div class="topbar">
-      <div class="container topbar-grid">
-        <div class="topbar-brand">Connecticut House Painters LLC and Power Washing</div>
-        <div class="topbar-contact" aria-label="Contact information">
-          <span class="topbar-item"><span class="topbar-label">Office</span><a href="tel:8608798222">(860) 879-8222</a></span>
-          <span class="topbar-item"><span class="topbar-label">Cell</span><a href="tel:8605145335">(860)-514-5335</a></span>
-          <span class="topbar-item location"><span class="topbar-label">Ledyard</span><span>CT</span></span>
-        </div>
-      </div>
-    </div>
+<body class="about-page">
+  <header class="site-header home-header sitewide-unified-header" id="top">
+    <div class="home-header-inner">
+      <a class="home-brand" href="index.html" aria-label="Connecticut House Painters homepage">
+        <img class="home-brand-mascot" src="images/WillieTheWhale.png" alt="" />
+        <img class="home-brand-logo" src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters Power Washing" />
+      </a>
 
-    <header>
-      <div class="container header-grid">
-        <a href="index.html" class="brand" aria-label="Connecticut House Painters home">
-          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing Logo" />
-        </a>
-
-        <nav aria-label="Primary navigation">
-          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu"><span></span></button>
-          <ul class="nav-menu" id="navMenu">
+      <nav class="home-nav" aria-label="Primary navigation">
+        <button class="home-menu-toggle menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+        </button>
+        <ul class="nav-menu home-nav-menu" id="navMenu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="galleries.html">Galleries</a></li>
-          <li><a href="interior.html">Interior Painting</a></li>
-          <li><a href="exterior.html">Exterior Painting</a></li>
-          <li><a href="commercial.html">Commercial Painting</a></li>
-          <li><a href="powerwash.html">Power Washing</a></li>
-          <li class="has-dropdown">
-            <a href="#service-areas" class="dropdown-trigger">Service Area</a>
-            <ul class="service-area-menu" aria-label="Service area pages">
-              <li><a href="#service-areas">Waterford CT House Painters</a></li>
-              <li><a href="#service-areas">Mystic CT House Painters</a></li>
-              <li><a href="#service-areas">Pawcatuck CT House Painters</a></li>
-              <li><a href="#service-areas">Essex CT House Painters</a></li>
-              <li><a href="#service-areas">Montville CT House Painters</a></li>
-              <li><a href="#service-areas">Uncasville CT House Painters</a></li>
-              <li><a href="#service-areas">Colchester CT House Painters</a></li>
-              <li><a href="#service-areas">North Stonington CT House Painters</a></li>
-              <li><a href="#service-areas">Ledyard CT House Painters</a></li>
-              <li><a href="#service-areas">Groton CT House Painters</a></li>
-              <li><a href="#service-areas">East Lyme CT House Painters</a></li>
-              <li><a href="#service-areas">Old Saybrook CT House Painters</a></li>
-              <li><a href="#service-areas">Old Lyme CT House Painters</a></li>
-              <li><a href="#service-areas">Griswold CT House Painters</a></li>
-              <li><a href="#service-areas">New London CT House Painters</a></li>
-              <li><a href="#service-areas">Stonington CT House Painters</a></li>
-              <li><a href="#service-areas">Salem CT House Painters</a></li>
-              <li><a href="#service-areas">Bozrah CT House Painters</a></li>
+          <li><a class="active" href="about.html" aria-current="page">About Us</a></li>
+          <li class="has-dropdown home-nav-dropdown">
+            <button class="home-services-toggle dropdown-trigger" type="button" aria-expanded="false">Services</button>
+            <ul class="home-dropdown-menu service-area-menu" aria-label="Services">
+              <li><a href="interior.html">Interior Painting</a></li>
+              <li><a href="exterior.html">Exterior Painting</a></li>
+              <li><a href="cabinet.html">Cabinet Painting</a></li>
+              <li><a href="deck-staining.html">Deck Staining</a></li>
+              <li><a href="powerwash.html">Power Washing</a></li>
+              <li><a href="commercial.html">Commercial Painting</a></li>
             </ul>
           </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </div>
+          <li><a href="galleries.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="service.html">Service Areas</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="home-header-cta sitewide-header-estimate" href="contact.html">Get a Free Estimate</a>
+    </div>
+  </header>
 
   <main>
     <section class="about-hero">
@@ -1083,7 +1890,7 @@
 
     <section class="proof-row" aria-label="Company highlights">
       <div class="proof-item">
-        <strong>Since 2001</strong>
+        <strong>Since 2010</strong>
         <p>Serving Connecticut residents with quality painting service.</p>
       </div>
       <div class="proof-item">
@@ -1116,7 +1923,7 @@
           <h2>From small beginnings to a trusted Connecticut painting company.</h2>
           <p>
             Javier Santos, owner of Connecticut House Painters LLC, has been serving Connecticut
-            residents with quality painting service since 2001. The business started small, without
+            residents with quality painting service since 2010. The business started small, without
             a company name, but with a clear focus on doing painting work the right way.
           </p>
           <p>
@@ -1131,24 +1938,19 @@
             and related painting work for properties of many sizes.
           </p>
 
+        </div>
+
+        <div class="story-milestones">
           <div class="quote-strip">
             We do more than brush or roll paint on walls. We focus on high-quality painting, careful prep,
             clean job sites, and affordable service customers can feel confident about.
           </div>
-
           <div class="timeline">
-            <article class="timeline-item">
-              <span class="timeline-year">2001</span>
-              <div>
-                <h3>Quality painting service begins</h3>
-                <p>Javier starts serving Connecticut residents with careful, dependable painting work.</p>
-              </div>
-            </article>
             <article class="timeline-item">
               <span class="timeline-year">2010</span>
               <div>
                 <h3>Masters Touch Painting and Remodeling LLC</h3>
-                <p>The business grows through New England and Florida while continuing to build experience and resources.</p>
+                <p>The business grows through New England and Florida while continuing to build experience and resources. Serving Connecticut residents with careful, dependable painting work.</p>
               </div>
             </article>
             <article class="timeline-item">
@@ -1195,7 +1997,7 @@
       </div>
     </section>
 
-    <section class="section service-summary" id="service-areas">
+    <section class="section service-summary" id="services-overview">
       <div class="container">
         <div class="service-head">
           <div class="eyebrow">What we do</div>
@@ -1235,55 +2037,200 @@
       </div>
     </section>
 
-    <section class="cta-band">
-      <div class="container cta-grid">
-        <div>
-          <strong>Ready to talk about your project?</strong>
-          <span>Request a free estimate and work with a family-owned painting company that cares about the finish.</span>
+    <section class="section about-service-areas" id="service-areas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Serving Connecticut</span>
+          <h2>Painting and power washing across Connecticut.</h2>
+          <p>Explore our service counties and town groups without overwhelming the page.</p>
         </div>
-        <a href="contact.html" class="btn btn-primary">Sign Up for a Free Estimate</a>
+
+        <div class="about-county-grid">
+          <span>Painting Services New London County, CT</span>
+          <span>Painting Services Middlesex County, CT</span>
+          <span>Painting Services Windham County, CT</span>
+          <span>Painting Services Litchfield County, CT</span>
+          <span>Painting Services Hartford County, CT</span>
+          <span>Painting Services New Haven County, CT</span>
+          <span>Painting Services Tolland County, CT</span>
+          <span>Painting Services Fairfield County, CT</span>
+        </div>
+
+        <div class="about-area-cta">
+          <div>
+            <strong>Do you see your town listed?</strong>
+            <p>We help Connecticut homeowners and businesses with painting, staining, prep, and power washing. Call to confirm scheduling in your area.</p>
+          </div>
+          <a href="tel:8608798222" class="btn">Call (860) 879-8222</a>
+        </div>
+
+        <details open>
+          <summary>Popular Connecticut service towns</summary>
+          <p class="about-town-note">Our most frequently requested painting and power washing locations.</p>
+          <div class="about-town-cloud">
+            <span>Ledyard, CT</span><span>New London, CT</span><span>Groton, CT</span>
+            <span>Waterford, CT</span><span>Mystic, CT</span><span>East Lyme, CT</span>
+            <span>Old Lyme, CT</span><span>Old Saybrook, CT</span><span>Stonington, CT</span>
+            <span>Norwich, CT</span><span>Montville, CT</span><span>Preston, CT</span>
+            <span>Salem, CT</span><span>Bozrah, CT</span><span>Colchester, CT</span>
+            <span>Griswold, CT</span><span>Lisbon, CT</span><span>North Stonington, CT</span>
+            <span>Lyme, CT</span><span>Voluntown, CT</span><span>Sprague, CT</span>
+            <span>Franklin, CT</span><span>Lebanon, CT</span><span>Killingworth, CT</span>
+          </div>
+        </details>
+
+        <details>
+          <summary>A-C Connecticut service towns</summary>
+          <p class="about-town-note">Painting and property-care services are available across these Connecticut locations.</p>
+          <div class="about-town-cloud">
+            <span>Andover, CT</span><span>Ansonia, CT</span><span>Ashford, CT</span>
+            <span>Avon, CT</span><span>Berlin, CT</span><span>Bethany, CT</span>
+            <span>Bethel, CT</span><span>Bloomfield, CT</span><span>Branford, CT</span>
+            <span>Bridgeport, CT</span><span>Bristol, CT</span><span>Brookfield, CT</span>
+            <span>Brooklyn, CT</span><span>Canterbury, CT</span><span>Cheshire, CT</span>
+            <span>Chester, CT</span><span>Clinton, CT</span><span>Columbia, CT</span>
+            <span>Coventry, CT</span><span>Cromwell, CT</span>
+          </div>
+        </details>
+
+        <details>
+          <summary>D-H Connecticut service towns</summary>
+          <p class="about-town-note">Painting and property-care services are available across these Connecticut locations.</p>
+          <div class="about-town-cloud">
+            <span>Danbury, CT</span><span>Darien, CT</span><span>Deep River, CT</span>
+            <span>Derby, CT</span><span>Durham, CT</span><span>East Haddam, CT</span>
+            <span>East Hampton, CT</span><span>East Hartford, CT</span><span>East Haven, CT</span>
+            <span>Enfield, CT</span><span>Essex, CT</span><span>Fairfield, CT</span>
+            <span>Farmington, CT</span><span>Glastonbury, CT</span><span>Greenwich, CT</span>
+            <span>Guilford, CT</span><span>Haddam, CT</span><span>Hamden, CT</span>
+            <span>Hartford, CT</span><span>Hebron, CT</span>
+          </div>
+        </details>
+
+        <details>
+          <summary>K-N Connecticut service towns</summary>
+          <p class="about-town-note">Painting and property-care services are available across these Connecticut locations.</p>
+          <div class="about-town-cloud">
+            <span>Kent, CT</span><span>Killingly, CT</span><span>Litchfield, CT</span>
+            <span>Madison, CT</span><span>Manchester, CT</span><span>Mansfield, CT</span>
+            <span>Meriden, CT</span><span>Middletown, CT</span><span>Milford, CT</span>
+            <span>Monroe, CT</span><span>Naugatuck, CT</span><span>New Britain, CT</span>
+            <span>New Canaan, CT</span><span>New Haven, CT</span><span>New Milford, CT</span>
+            <span>Newington, CT</span><span>Newtown, CT</span><span>North Haven, CT</span>
+            <span>Norwalk, CT</span>
+          </div>
+        </details>
+
+        <details>
+          <summary>O-W Connecticut service towns</summary>
+          <p class="about-town-note">Painting and property-care services are available across these Connecticut locations.</p>
+          <div class="about-town-cloud">
+            <span>Orange, CT</span><span>Oxford, CT</span><span>Plainfield, CT</span>
+            <span>Plainville, CT</span><span>Putnam, CT</span><span>Ridgefield, CT</span>
+            <span>Rocky Hill, CT</span><span>Seymour, CT</span><span>Shelton, CT</span>
+            <span>Simsbury, CT</span><span>South Windsor, CT</span><span>Southbury, CT</span>
+            <span>Southington, CT</span><span>Stamford, CT</span><span>Stratford, CT</span>
+            <span>Tolland, CT</span><span>Torrington, CT</span><span>Trumbull, CT</span>
+            <span>Vernon, CT</span><span>Wallingford, CT</span><span>Waterbury, CT</span>
+            <span>West Hartford, CT</span><span>West Haven, CT</span><span>Westbrook, CT</span>
+            <span>Westport, CT</span><span>Wethersfield, CT</span><span>Wilton, CT</span>
+            <span>Windham, CT</span><span>Windsor, CT</span><span>Woodstock, CT</span>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="about-bottom-cta" aria-labelledby="about-ready-title">
+      <div class="container about-bottom-grid">
+        <div class="about-bottom-copy">
+          <h2 id="about-ready-title">Ready to get started?</h2>
+          <p>Call us today or request your free painting or power washing estimate online.</p>
+          <a href="contact.html" class="btn btn-primary">Get Your Free Estimate</a>
+          <img class="about-bottom-logo" src="images/Mainlogo.png" alt="" />
+        </div>
+
+        <div class="about-map" aria-label="Connecticut service area map">
+          <iframe
+            title="Connecticut House Painters map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=919%20Colonel%20Ledyard%20Hwy%2C%20Ledyard%2C%20CT%2006339&output=embed">
+          </iframe>
+          <aside class="about-serving-panel">
+            <h3>Proudly Serving All of Connecticut</h3>
+            <ul>
+              <li>✓ Groton</li>
+              <li>✓ Mystic</li>
+              <li>✓ Waterford</li>
+              <li>✓ New London</li>
+              <li>✓ Ledyard</li>
+              <li>✓ And More!</li>
+            </ul>
+            <a href="#service-areas">View Full Service Area</a>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <span class="footer-logo-frame">
-          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters Logo" class="footer-logo" />
-        </span>
-        <p>Family-owned painting and power washing services throughout Southeastern Connecticut.</p>
+  <footer class="about-home-footer">
+    <div class="container">
+      <div class="about-footer-grid">
+        <div class="about-footer-about">
+          <div class="about-footer-brand">
+            <img src="images/WillieTheWhale.png" alt="" />
+            <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters Power Washing" />
+          </div>
+          <p>Professional painting and power washing services you can count on. We protect what matters most: your home or business.</p>
+          <div class="about-footer-social" aria-label="Social links">
+            <a href="https://www.facebook.com/connecticuthousepainters" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/connecticut_house_painters" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://x.com/CThousepainters" target="_blank" rel="noopener" aria-label="Twitter">T</a>
+            <a href="https://www.youtube.com/@Connecticuthousepainters/" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+            <a data-google-profile-link href="https://www.google.com/search?q=Connecticut+House+Painters+LLC+Ledyard+CT+Google+reviews" target="_blank" rel="noopener" aria-label="Google reviews">G</a>
+          </div>
+        </div>
+
+        <div class="about-footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="galleries.html">Gallery</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="about-footer-col">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="interior.html">Interior Painting</a></li>
+            <li><a href="exterior.html">Exterior Painting</a></li>
+            <li><a href="interior2.html">Cabinet Painting</a></li>
+            <li><a href="exterior2.html">Deck Staining</a></li>
+            <li><a href="powerwash.html">Power Washing</a></li>
+            <li><a href="commercial.html">Commercial Painting</a></li>
+          </ul>
+        </div>
+
+        <div class="about-footer-col">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><a href="tel:18608798222">(860) 879-8222</a></li>
+            <li><a href="mailto:connecticuthousepainters@gmail.com">connecticuthousepainters@gmail.com</a></li>
+            <li>Serving all of Connecticut</li>
+            <li>Mon - Sat: 7AM - 6PM<br />Sunday: Closed</li>
+          </ul>
+        </div>
+
+        <div class="about-footer-badge">Licensed<br />Insured<br />and Bonded</div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="interior.html">Interior Painting</a></li>
-          <li><a href="exterior.html">Exterior Painting</a></li>
-          <li><a href="powerwash.html">Power Washing</a></li>
-          <li><a href="commercial.html">Commercial Painting</a></li>
-        </ul>
+
+      <div class="about-footer-bottom">
+        <p>&copy; 2026 Connecticut House Painters LLC. All Rights Reserved.</p>
+        <p><a href="contact.html">Privacy Policy</a> <span aria-hidden="true">|</span> <a href="contact.html">Terms of Service</a></p>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="galleries.html">Galleries</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Request Estimate</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li>919 Colonel Ledyard Hwy</li>
-          <li>Ledyard, CT 06339</li>
-          <li><a href="tel:8608798222">Office: (860) 879-8222</a></li>
-          <li><a href="tel:8605145335">Cell: (860)-514-5335</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Connecticut House Painters LLC. All Rights Reserved.</p>
     </div>
   </footer>
 

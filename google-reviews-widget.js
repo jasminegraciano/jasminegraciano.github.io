@@ -6,7 +6,7 @@
   const isLocalPreview = ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
   const FALLBACK_PLACE = {
     rating: 4.8,
-    userRatingCount: 82,
+    userRatingCount: 83,
     googleMapsUri: FALLBACK_GOOGLE_URL,
     reviews: [
       {
@@ -215,8 +215,12 @@
   if (!document.querySelector("[data-google-reviews]")) return;
 
   async function loadHostedGoogleReviews() {
-    const response = await fetch(NETLIFY_REVIEWS_ENDPOINT, {
-      headers: { Accept: "application/json" }
+    const response = await fetch(`${NETLIFY_REVIEWS_ENDPOINT}?t=${Date.now()}`, {
+      cache: "no-store",
+      headers: {
+        Accept: "application/json",
+        "Cache-Control": "no-cache"
+      }
     });
 
     if (!response.ok) {

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="site-enhancements.css" />
+  <link rel="stylesheet" href="site-enhancements.css?v=20260730i" />
   <style>
     :root {
       --navy: #00152f;
@@ -3219,7 +3219,7 @@
       }
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1040px) {
       .home-page .home-header-inner {
         width: min(100% - 24px, 760px) !important;
         height: 80px !important;
@@ -4786,6 +4786,73 @@
 }
 
 /* Respect visitors who turn animations off */
+/* Final homepage brand spacing: keep Willie beside the logo, never on top of it. */
+.home-page .home-brand {
+  column-gap: clamp(24px, 1.6vw, 32px) !important;
+}
+
+.home-page .home-brand-mascot,
+.home-page .home-brand-logo {
+  transform: none !important;
+}
+
+@media (min-width: 1101px) {
+  .home-page .home-brand {
+    grid-template-columns: clamp(66px, 4.5vw, 86px) minmax(0, 1fr) !important;
+  }
+
+  .home-page .home-brand-mascot {
+    width: clamp(66px, 4.5vw, 86px) !important;
+    height: 88px !important;
+  }
+
+  .home-page .home-brand-logo {
+    max-width: 305px !important;
+    max-height: 88px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-page .home-brand {
+    grid-template-columns: 62px 210px !important;
+    width: 294px !important;
+    max-width: 294px !important;
+    column-gap: 22px !important;
+    overflow: visible !important;
+  }
+
+  .home-page .home-brand-mascot {
+    width: 62px !important;
+    height: 70px !important;
+    object-fit: contain !important;
+  }
+
+  .home-page .home-brand-logo {
+    width: 210px !important;
+    max-width: 210px !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-page .home-brand {
+    grid-template-columns: 48px 166px !important;
+    width: 232px !important;
+    max-width: 232px !important;
+    column-gap: 24px !important;
+  }
+
+  .home-page .home-brand-mascot {
+    width: 48px !important;
+    height: 58px !important;
+  }
+
+  .home-page .home-brand-logo {
+    width: 166px !important;
+    max-width: 166px !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-page .home-service-tile,
   .home-page .project-shot,
@@ -5679,7 +5746,7 @@ body.home-page {
 
   object-fit: cover !important;
 
-  /* Shows more of the left side of the living room */
+  /* Shows more of the left side of the living room of banner image */
   object-position: 39.9% center !important;
 
   transform: none !important;
@@ -5734,6 +5801,360 @@ body.home-page {
   }
 }
 </style>
+<style>
+/* Homepage photo service widgets */
+.home-page .home-services-strip {
+  padding: clamp(28px, 3vw, 42px) 0;
+  background:
+    linear-gradient(90deg, rgba(51, 207, 255, 0.08), transparent 34%),
+    linear-gradient(270deg, rgba(222, 7, 3, 0.05), transparent 32%),
+    #f4f8fd;
+  border-top: 1px solid rgba(15, 53, 109, 0.12);
+  border-bottom: 1px solid rgba(15, 53, 109, 0.12);
+}
+
+.home-page .home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.5vw, 22px);
+}
+
+.home-page .home-service-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: #ffffff;
+  text-decoration: none;
+  background: #082456;
+  border: 1px solid rgba(15, 53, 109, 0.18);
+  border-top: 4px solid var(--sky);
+  box-shadow: 0 16px 34px rgba(6, 23, 47, 0.16);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.home-page .home-service-card:nth-child(3n + 2) {
+  border-top-color: var(--red);
+}
+
+.home-page .home-service-card:nth-child(3n) {
+  border-top-color: var(--blue);
+}
+
+.home-page .home-service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(3, 17, 38, 0.04) 28%, rgba(3, 17, 38, 0.92) 100%);
+}
+
+.home-page .home-service-card::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  left: 18px;
+  z-index: 2;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), var(--sky), var(--blue));
+  transform: scaleX(0.25);
+  transform-origin: left center;
+  transition: transform 300ms ease;
+}
+
+.home-page .home-service-card img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.home-page .home-service-card:hover,
+.home-page .home-service-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 46px rgba(6, 23, 47, 0.24);
+}
+
+.home-page .home-service-card:hover img,
+.home-page .home-service-card:focus-visible img {
+  transform: scale(1.05);
+}
+
+.home-page .home-service-card:hover::before,
+.home-page .home-service-card:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.home-page .home-service-card:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 3px;
+}
+
+.home-page .home-service-content {
+  position: absolute;
+  right: clamp(16px, 2vw, 24px);
+  bottom: clamp(16px, 2vw, 24px);
+  left: clamp(16px, 2vw, 24px);
+  z-index: 1;
+  display: grid;
+  gap: 3px;
+}
+
+.home-page .home-service-kicker {
+  color: var(--sky);
+  font-size: clamp(0.68rem, 0.8vw, 0.8rem);
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-page .home-service-content strong {
+  color: #ffffff;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: clamp(1.55rem, 2.3vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 1.02;
+}
+
+.home-page .home-service-content small {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.home-page .home-about-text .home-blue-cta::after {
+  display: none;
+}
+
+.home-page .home-bottom-copy .home-red-cta::after {
+  display: none;
+}
+
+.home-page #markate-widget-contact {
+  --markate-scale: 0.78;
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.home-page #markate-widget-contact-iframe {
+  display: block;
+  width: calc(100% / var(--markate-scale)) !important;
+  max-width: none !important;
+  min-height: 0;
+  transform: scale(var(--markate-scale));
+  transform-origin: top left;
+}
+
+.home-page .markate-widget-loading,
+.home-page .markate-widget-fallback {
+  margin: 0;
+  color: #53667b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.home-page .home-footer-social .home-social-x {
+  color: #ffffff;
+  background: #111111;
+}
+
+.home-page .home-footer-social .home-social-youtube {
+  color: #ffffff;
+  background: #ff0000;
+}
+
+.home-page .home-footer-social .home-social-google {
+  color: var(--blue);
+  background: #ffffff;
+}
+
+@media (max-width: 940px) {
+  .home-page .home-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  .home-page .home-proof-contact > .mockup-container {
+    width: min(1560px, calc(100% - 64px));
+  }
+
+  .home-page .home-proof-grid {
+    grid-template-columns: minmax(0, 760px) minmax(620px, 720px) !important;
+    gap: clamp(38px, 3vw, 54px) !important;
+  }
+
+  .home-page .home-contact-panel {
+    width: 100%;
+    max-width: none !important;
+    grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-page .home-services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home-page #markate-widget-contact {
+    --markate-scale: 0.88;
+  }
+
+  .home-page .home-service-card {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .home-service-card,
+  .home-page .home-service-card img {
+    transition: none !important;
+  }
+
+  .home-page .home-service-card:hover,
+  .home-page .home-service-card:focus-visible,
+  .home-page .home-service-card:hover img,
+  .home-page .home-service-card:focus-visible img {
+    transform: none !important;
+  }
+}
+</style>
+  <style>
+    /* Final mobile navigation layer: keeps every option visible and tappable. */
+    @media (max-width: 960px) {
+      .home-page .home-header,
+      .home-page .home-header-inner,
+      .home-page .home-nav {
+        overflow: visible !important;
+      }
+
+      .home-page .home-menu-toggle {
+        position: relative !important;
+        z-index: 10002 !important;
+        display: grid !important;
+      }
+
+      .home-page .home-nav-menu {
+        position: fixed !important;
+        z-index: 10001 !important;
+        top: 82px !important;
+        right: 10px !important;
+        left: 10px !important;
+        width: auto !important;
+        max-height: calc(100dvh - 96px) !important;
+        display: none !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 4px !important;
+        padding: 12px !important;
+        overflow-y: auto !important;
+        background: #031126 !important;
+        border: 1px solid rgba(51, 207, 255, .55) !important;
+        border-top: 4px solid #30cfff !important;
+        box-shadow: 0 22px 46px rgba(0, 0, 0, .38) !important;
+      }
+
+      .home-page .home-nav-menu.is-open,
+      .home-page .home-nav-menu.open {
+        display: flex !important;
+      }
+
+      .home-page .home-nav-menu > li,
+      .home-page .home-nav-menu > li > a,
+      .home-page .home-services-toggle {
+        width: 100% !important;
+      }
+
+      .home-page .home-nav-menu > li > a,
+      .home-page .home-services-toggle {
+        display: flex !important;
+        min-height: 48px !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 12px 13px !important;
+        color: #fff !important;
+        background: rgba(255, 255, 255, .05) !important;
+        border: 1px solid rgba(255, 255, 255, .1) !important;
+        text-align: left !important;
+      }
+
+      .home-page .home-dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        display: none !important;
+        margin: 4px 0 0 !important;
+        padding: 6px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: #092d62 !important;
+      }
+
+      .home-page .home-nav-dropdown.is-open > .home-dropdown-menu {
+        display: grid !important;
+      }
+
+      .home-page .home-nav-dropdown.open > .home-dropdown-menu {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+        pointer-events: auto !important;
+      }
+
+      .home-page .home-dropdown-menu > li,
+      .home-page .home-dropdown-menu a {
+        width: 100% !important;
+      }
+
+      .home-page .home-dropdown-menu a {
+        display: flex !important;
+        min-height: 44px !important;
+        align-items: center !important;
+        padding: 10px 12px !important;
+        color: #fff !important;
+        background: rgba(255, 255, 255, .06) !important;
+      }
+    }
+  </style>
+  <style>
+/* FINAL FIX: MOVE LOGO AWAY FROM WHALE */
+
+/* Desktop */
+.home-page .home-brand-logo {
+  margin-left: 30px !important;
+  width: calc(100% - 22px) !important;
+  transform: none !important;
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 1100px) {
+  .home-page .home-brand-logo {
+    margin-left: 16px !important;
+    width: 194px !important;
+    max-width: 194px !important;
+  }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  .home-page .home-brand-logo {
+    margin-left: 12px !important;
+    width: 154px !important;
+    max-width: 154px !important;
+  }
+}
+</style>
 </head>
 <body class="home-page">
   <header class="site-header home-header sitewide-unified-header" id="top">
@@ -5744,18 +6165,18 @@ body.home-page {
       </a>
 
       <nav class="home-nav" aria-label="Primary navigation">
-        <button class="home-menu-toggle menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="home-menu-toggle menu-toggle sitewide-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
           <span class="home-menu-bars" aria-hidden="true"></span>
         </button>        <ul class="nav-menu home-nav-menu">
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li class="home-nav-dropdown">
-            <button class="home-services-toggle" type="button" aria-expanded="false">Services</button>
-            <ul class="home-dropdown-menu" aria-label="Services">
+          <li class="home-nav-dropdown has-dropdown">
+            <button class="home-services-toggle dropdown-trigger" type="button" aria-expanded="false">Services</button>
+            <ul class="home-dropdown-menu service-area-menu" aria-label="Services">
               <li><a href="interior.html">Interior Painting</a></li>
               <li><a href="exterior.html">Exterior Painting</a></li>
-              <li><a href="interior2.html">Cabinet Painting</a></li>
-              <li><a href="exterior2.html">Deck Staining</a></li>
+              <li><a href="cabinet.html">Cabinet Painting</a></li>
+              <li><a href="deck-staining.html">Deck Staining</a></li>
               <li><a href="powerwash.html">Power Washing</a></li>
               <li><a href="commercial.html">Commercial Painting</a></li>
             </ul>
@@ -5799,42 +6220,60 @@ body.home-page {
               Local &amp; Trusted
             </span>
           </div>
-          <a class="home-hero-estimate" href="contact.html">Get Your Free Estimate <span aria-hidden="true">-&gt;</span></a>
+          <a class="home-hero-estimate" href="contact.html">Get Your Free Estimate</a>
         </div>
       </div>
     </section>
 
     <section class="home-services-strip" id="services" aria-label="Main services">
       <div class="mockup-container home-services-grid">
-        <a class="home-service-tile" href="interior.html">
-          <span class="home-service-icon"><img src="MainServicesIcons/ServicesIcons/Interior Painting Icon.png" alt="" /></span>
-          <h3>Interior Painting</h3>
-          <p>Transform your living spaces.</p>
+        <a class="home-service-card" href="interior.html">
+          <img src="ServicePhotos/Inteior Painting Service. Connecticut. After.png" alt="Finished living room after professional interior painting" />
+          <span class="home-service-content">
+            <span class="home-service-kicker">Inside finish</span>
+            <strong>Interior Painting</strong>
+            <small>View details</small>
+          </span>
         </a>
-        <a class="home-service-tile" href="exterior.html">
-          <span class="home-service-icon"><img src="MainServicesIcons/ServicesIcons/Exterior Painting Icon.png" alt="" /></span>
-          <h3>Exterior Painting</h3>
-          <p>Protect and beautify your home exterior.</p>
+        <a class="home-service-card" href="exterior.html">
+          <img src="ServicePhotos/Exterior Painting service Connecticut. After.png" alt="Blue Connecticut home after professional exterior painting" />
+          <span class="home-service-content">
+            <span class="home-service-kicker">Outdoor finish</span>
+            <strong>Exterior Painting</strong>
+            <small>View details</small>
+          </span>
         </a>
-        <a class="home-service-tile" href="interior2.html">
-          <span class="home-service-icon"><img src="MainServicesIcons/ServicesIcons/Cabinet Painting.png" alt="" /></span>
-          <h3>Cabinet Painting</h3>
-          <p>Factory-finish look, expertly done.</p>
+        <a class="home-service-card" href="interior2.html">
+          <img src="ServicePhotos/Cabinet Painting service in Connecticut. after.png" alt="Kitchen with professionally painted navy cabinets" />
+          <span class="home-service-content">
+            <span class="home-service-kicker">Kitchen renewal</span>
+            <strong>Cabinet Painting</strong>
+            <small>View details</small>
+          </span>
         </a>
-        <a class="home-service-tile" href="exterior2.html">
-          <span class="home-service-icon"><img src="MainServicesIcons/ServicesIcons/Deck Staining.png" alt="" /></span>
-          <h3>Deck Staining</h3>
-          <p>Restore and protect your deck.</p>
+        <a class="home-service-card" href="exterior2.html">
+          <img src="ServicePhotos/Ipe deck Staining Staining, Connecticut. After.png" alt="Restored wood deck after professional staining" />
+          <span class="home-service-content">
+            <span class="home-service-kicker">Wood protection</span>
+            <strong>Deck Staining</strong>
+            <small>View details</small>
+          </span>
         </a>
-        <a class="home-service-tile" href="powerwash.html">
-          <span class="home-service-icon"><img src="MainServicesIcons/ServicesIcons/Pressure Washing Icon.png" alt="" /></span>
-          <h3>Power Washing</h3>
-          <p>Remove dirt, mold, and grime.</p>
+        <a class="home-service-card" href="powerwash.html">
+          <img src="photos/Soft washing a boathouse in Stonington CT.png" alt="Technician power washing a Connecticut boathouse" />
+          <span class="home-service-content">
+            <span class="home-service-kicker">Exterior cleaning</span>
+            <strong>Power Washing</strong>
+            <small>View details</small>
+          </span>
         </a>
-        <a class="home-service-tile" href="commercial.html">
-          <span class="home-service-icon"><img src="MainServicesIcons/ServicesIcons/Commercial Painting Icon.png" alt="" /></span>
-          <h3>Commercial Painting</h3>
-          <p>Professional results for your business.</p>
+        <a class="home-service-card" href="commercial.html">
+          <img src="ServicePhotos/Commercial painting services in Connecticut. After..png" alt="Completed commercial interior painting project" />
+          <span class="home-service-content">
+            <span class="home-service-kicker">Business spaces</span>
+            <strong>Commercial Painting</strong>
+            <small>View details</small>
+          </span>
         </a>
       </div>
     </section>
@@ -5951,7 +6390,7 @@ body.home-page {
                   <path d="m4 7 8 6 8-6" />
                 </svg>
               </span>
-              <p><strong>Email</strong><a href="mailto:connecticuthousepainters@gmail.com">cthousepainters.com</a></p>
+              <p><strong>Email</strong><a href="mailto:connecticuthousepainters@gmail.com">connecticuthousepainters@gmail.com</a></p>
             </div>
             <div class="home-contact-item">
               <span class="home-contact-icon" aria-hidden="true">
@@ -5975,24 +6414,12 @@ body.home-page {
 
           <div class="home-estimate-form">
             <h3>Request a Free Estimate</h3>
-            <form id="home-estimate-form">
-              <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" />
-              <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" />
-              <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" />
-              <select name="service" aria-label="Service">
-                <option value="">What service are you interested in?</option>
-                <option>Interior Painting</option>
-                <option>Exterior Painting</option>
-                <option>Cabinet Painting</option>
-                <option>Deck Staining</option>
-                <option>Power Washing</option>
-                <option>Commercial Painting</option>
-              </select>
-              <input type="text" name="address" placeholder="Project Address" aria-label="Project Address" />
-              <textarea name="message" placeholder="Tell us about your project..." aria-label="Project Details"></textarea>
-              <button class="home-submit" type="submit">Send Request</button>
-              <p class="home-form-note" id="home-form-note">Thanks. Please call or text Javier at 860-514-5335 to finish the estimate request.</p>
-            </form>
+            <div id="markate-widget-contact" aria-label="Markate estimate request form">
+              <p class="markate-widget-loading">Loading the secure estimate request form...</p>
+            </div>
+            <noscript>
+              <p class="markate-widget-fallback">Please call <a href="tel:18608798222">(860) 879-8222</a> to request an estimate.</p>
+            </noscript>
           </div>
         </div>
       </div>
@@ -6045,7 +6472,9 @@ body.home-page {
           <div class="home-footer-social" aria-label="Social links">
             <a href="https://www.facebook.com/connecticuthousepainters?mibextid=wwXIfr&rdid=7ResKtqcpbShjk02&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BfkBU2T57%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener" aria-label="Facebook">f</a>
             <a href="https://www.instagram.com/connecticut_house_painters" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
-            <a data-google-profile-link href="https://www.google.com/search?q=Connecticut+House+Painters+LLC+Ledyard+CT+Google+reviews" target="_blank" rel="noopener" aria-label="Google reviews">G</a>
+            <a class="home-social-x" href="https://x.com/CThousepainters" target="_blank" rel="noopener noreferrer" aria-label="Twitter">T</a>
+            <a class="home-social-youtube" href="https://www.youtube.com/@Connecticuthousepainters/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">&#9654;</a>
+            <a class="home-social-google" data-google-profile-link href="https://www.google.com/search?q=Connecticut+House+Painters+LLC+Ledyard+CT+Google+reviews" target="_blank" rel="noopener" aria-label="Google reviews">G</a>
           </div>
         </div>
 
@@ -6076,7 +6505,7 @@ body.home-page {
           <h3>Contact Info</h3>
           <ul>
             <li><a href="tel:18608798222">(860) 879-8222</a></li>
-            <li><a href="mailto:connecticuthousepainters@gmail.com">cthousepainters.com</a></li>
+            <li><a href="mailto:connecticuthousepainters@gmail.com">connecticuthousepainters@gmail.com</a></li>
             <li>Serving all of Connecticut</li>
             <li>Mon - Sat: 7AM - 6PM<br />Sunday: Closed</li>
           </ul>
@@ -6094,26 +6523,83 @@ body.home-page {
 
   <button class="home-scroll-top" type="button" aria-label="Back to top"></button>
 
-  <script src="site-enhancements.js" defer></script>
-  <script src="google-reviews-widget.js?v=20260716" defer></script>
+  <script src="site-enhancements.js?v=20260730i" defer></script>
+  <script src="google-reviews-widget.js?v=20260729o" defer></script>
+  <script>
+    (function () {
+      function loadMarkateWidget() {
+        const widget = document.getElementById("markate-widget-contact");
+        if (!widget || document.querySelector('script[data-markate-contact-widget]')) return;
+
+        function compactMarkateWidget() {
+          const iframe = document.getElementById("markate-widget-contact-iframe");
+          if (!iframe) return;
+
+          function syncWidgetHeight() {
+            const scale = parseFloat(
+              getComputedStyle(widget).getPropertyValue("--markate-scale")
+            ) || 1;
+            const unscaledHeight = parseFloat(iframe.style.height) || iframe.offsetHeight;
+            if (unscaledHeight > 0) {
+              widget.style.height = Math.ceil(unscaledHeight * scale) + "px";
+            }
+          }
+
+          const heightObserver = new MutationObserver(syncWidgetHeight);
+          heightObserver.observe(iframe, {
+            attributes: true,
+            attributeFilter: ["style", "height"]
+          });
+          window.addEventListener("resize", syncWidgetHeight, { passive: true });
+          requestAnimationFrame(syncWidgetHeight);
+          setTimeout(syncWidgetHeight, 500);
+        }
+
+        const script = document.createElement("script");
+        const widgetId = "bb8c26aeb9c0ca599f30da6b0885265e:30573:fac4bb38";
+        script.type = "text/javascript";
+        script.async = true;
+        script.dataset.markateContactWidget = "true";
+        script.addEventListener("load", compactMarkateWidget, { once: true });
+        script.src = "https://www.markate.com/public/widget/contact/js?id=" +
+          encodeURIComponent(widgetId) +
+          "&ref=" + encodeURIComponent(window.location.href) +
+          "&t=" + Date.now();
+        widget.parentNode.insertBefore(script, widget);
+      }
+
+      if (document.readyState === "complete") {
+        loadMarkateWidget();
+      } else {
+        window.addEventListener("load", loadMarkateWidget, { once: true });
+      }
+    })();
+  </script>
   <script>
     (function () {
       const menuToggle = document.querySelector(".home-menu-toggle");
       const menu = document.querySelector(".home-nav-menu");
       const serviceToggle = document.querySelector(".home-services-toggle");
       const dropdown = document.querySelector(".home-nav-dropdown");
-      const form = document.getElementById("home-estimate-form");
-      const formNote = document.getElementById("home-form-note");
       const scrollTop = document.querySelector(".home-scroll-top");
 
-      if (menuToggle && menu) {
+      if (menuToggle && menu && !menuToggle.classList.contains("sitewide-menu-toggle")) {
         menuToggle.addEventListener("click", function () {
           const isOpen = menu.classList.toggle("is-open");
           menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open menu");
+          });
         });
       }
 
-      if (serviceToggle && dropdown) {
+      if (serviceToggle && dropdown && !serviceToggle.classList.contains("dropdown-trigger")) {
         serviceToggle.addEventListener("click", function (event) {
           event.preventDefault();
           const isOpen = dropdown.classList.toggle("is-open");
@@ -6123,17 +6609,22 @@ body.home-page {
 
       document.addEventListener("click", function (event) {
         if (dropdown && !dropdown.contains(event.target)) {
-          dropdown.classList.remove("is-open");
+          dropdown.classList.remove("is-open", "open", "hover-open");
           if (serviceToggle) serviceToggle.setAttribute("aria-expanded", "false");
         }
       });
 
-      if (form && formNote) {
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-          formNote.style.display = "block";
-        });
-      }
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") return;
+        if (menu) menu.classList.remove("is-open");
+        if (dropdown) dropdown.classList.remove("is-open", "open", "hover-open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open menu");
+          menuToggle.focus();
+        }
+        if (serviceToggle) serviceToggle.setAttribute("aria-expanded", "false");
+      });
 
       const revealItems = document.querySelectorAll(".home-reveal");
       if ("IntersectionObserver" in window) {

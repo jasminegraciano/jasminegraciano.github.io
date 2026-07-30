@@ -704,12 +704,13 @@
     }
 
     .quote-card img {
-      width: 132px;
-      height: 132px;
+      width: 170px;
+      height: 170px;
       object-fit: contain;
       margin-bottom: 18px;
-      background: var(--paper);
-      border: 1px solid rgba(255, 255, 255, 0.32);
+      background: transparent;
+      border: 0;
+      filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.24));
     }
 
     .quote-card h3 {
@@ -800,6 +801,18 @@
       height: 100%;
       object-fit: cover;
       transition: transform 450ms ease, filter 450ms ease;
+    }
+
+    .video-link iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-link:has(iframe)::before,
+    .video-link:has(iframe)::after {
+      display: none;
     }
 
     .video-link::before {
@@ -1397,9 +1410,9 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css" />
-  <script src="site-enhancements.js" defer></script>
-  <script src="google-reviews-widget.js" defer></script>
+  <link rel="stylesheet" href="site-enhancements.css?v=20260730i" />
+  <script src="site-enhancements.js?v=20260730i" defer></script>
+  <script src="google-reviews-widget.js?v=20260729y" defer></script>
 </head>
 
 <body>
@@ -1479,7 +1492,7 @@
         </div>
 
         <aside class="hero-proof" aria-label="Exterior painting project proof">
-          <img src="images/WilliTheCTHousePaintersWhale.png" alt="Connecticut House Painters brand badge" />
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters brand badge" />
           <h2>Family owned. Local. Careful workmanship.</h2>
           <p>From protecting landscaping to helping customers choose the right finish, the crew keeps the outside painting process clear and professional.</p>
         </aside>
@@ -1522,7 +1535,7 @@
             <span class="eyebrow">Recent work in view</span>
             <h2 id="project-orbit-title">Preparation, access, and exterior finish.</h2>
           </div>
-          <p>A moving project montage gives customers a quick visual sense of the surfaces, equipment, and care involved before they request an estimate.</p>
+          <img src="images/ConnecticutHousePaintersLLCLogo.png" alt="Connecticut House Painters brand badge" />
         </div>
         <div class="orbit-stage" aria-label="Exterior project photograph montage">
           <figure class="orbit-photo orbit-photo--one" data-label="Residential exterior">
@@ -1543,11 +1556,11 @@
         <article class="intro-panel">
           <span class="eyebrow">Exterior painting</span>
           <h2>Connecticut House Painters, LLC</h2>
-          <p><strong>64 Dell Ave, New London, CT 06320</strong></p>
+          <p><strong>919 Colonel Ledyard Hwy, Ledyard, CT 06339</strong></p>
           <p><a href="tel:8608798222" style="color: var(--blue);">(860)-879-8222</a></p>
           <p>
-            We are a full service "Exterior House Painting" Company. We have the resources and experience necessary
-            to meet all of your "Outdoor residential painting" needs. I am highly motivated and looking forward to
+            We are a full service Exterior House Painting Company. We have the resources and experience necessary
+            to meet all of your Outdoor residential painting needs. I am highly motivated and looking forward to
             working with you on your upcoming outside paint projects. Please review our services and take a look at
             some of our recent exterior projects.
           </p>
@@ -1555,7 +1568,7 @@
         </article>
 
         <aside class="quote-card">
-          <img src="images/Mainlogo.png" alt="Connecticut House Painters logo" />
+          <img src="images/WillieTheWhale.png" alt="Connecticut House Painters mascot" />
           <h3>Exterior house painters with a cleaner plan.</h3>
           <p>Request a free estimate, review the prep plan, and get a finish built for Connecticut weather.</p>
           <ul class="quote-list">
@@ -1573,8 +1586,8 @@
           <span class="eyebrow">Watch the work</span>
           <h2>Project videos that show the finish.</h2>
           <p>
-            The client had two videos on the exterior painting page. This new layout gives them a stronger stage,
-            with the main exterior video featured first and a second project video ready underneath.
+            Watch a real Connecticut exterior painting project and see the preparation, workmanship,
+            and finished result behind a professional transformation.
           </p>
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">Book Exterior Estimate</a>
@@ -1583,18 +1596,15 @@
         </div>
         <div class="video-stack">
           <article class="video-card featured">
-            <a class="video-link" href="https://www.youtube.com/watch?v=zK-DSQ8uocE&t=1s" target="_blank" rel="noopener" aria-label="Watch Connecticut House Painters exterior painting video on YouTube">
-              <img src="photos/Exterior Painting service. Before and after of a house we painted in Stonington CT.png" alt="Exterior painting project in Stonington video preview" />
-              <span class="video-badge">Watch on YouTube</span>
-            </a>
-            <div class="video-caption"><strong>Quality exterior painting</strong><span>Main video</span></div>
-          </article>
-          <article class="video-card">
-            <a class="video-link" href="https://www.youtube.com/watch?v=72IlkIfOmzc" target="_blank" rel="noopener" aria-label="Watch exterior prep and washing process video on YouTube">
-              <img src="photos/House washing in East Lyme Connecticut. Before and after.png" alt="Exterior house washing before and after video preview" />
-              <span class="video-badge">Watch on YouTube</span>
-            </a>
-            <div class="video-caption"><strong>Exterior prep and washing process</strong><span>Project proof</span></div>
+            <div class="video-link">
+              <iframe
+                src="https://www.youtube.com/embed/72IlkIfOmzc?autoplay=1&mute=1&loop=1&playlist=72IlkIfOmzc&controls=1&rel=0"
+                title="Connecticut House Painters exterior painting project video"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-caption"><strong>Quality exterior painting</strong><span>Playing automatically</span></div>
           </article>
         </div>
       </div>
@@ -1603,24 +1613,15 @@
     <section class="section section-alt">
       <div class="container story-grid">
         <div class="story-copy">
-          <span class="eyebrow">Why qualified painters matter</span>
+          <span class="eyebrow">The Value of Qualified Painters</span>
           <h2>Exterior house painters who protect the value of the property.</h2>
           <p><strong>Javier Santos owner of Connecticut House Painters LLC</strong></p>
           <p>
-            Our profession of painting houses and buildings can add value that brings benefit to your business or home
-            that you're looking to get painted. Hire the services of a qualified paint company in Connecticut for best
-            results.
+            Your home or business deserves more than the lowest price quote, it deserves lasting quality. Experienced exterior painters use proper preparation, professional materials, and proven techniques to protect your property from weather damage while improving its appearance and value.
           </p>
-          <p>
-            One mistake home owners and business owners make is going with the cheapest estimate from a painting
-            contractor bid, which at times can result in a very poor quality of painting that the home owner won't be
-            satisfied with. I am not declaring that bottom bid is a nasty way to go, but whenever they under bid at
-            times it informs you that the painting contractor might not have a qualified experience.
+          <p>At Connecticut House Painters LLC, we focus on careful workmanship, clean results, and a finish built to last. Choose a qualified painting company that delivers the quality your property deserves.
           </p>
-          <p>
-            So before choosing a contractor in Connecticut, be sure to do your homework. Be sure the painter is
-            qualified and is a professional so you get best results for what you pay for.
-          </p>
+
         </div>
 
         <aside class="image-stack">
