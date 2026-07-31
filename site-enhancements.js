@@ -35,7 +35,8 @@
     x: "https://x.com/CThousepainters",
     youtube: "https://www.youtube.com/@Connecticuthousepainters/"
   };
-  const iconRoot = "MainservicesIcons/web";
+  const iconRoot = "./MainServicesIcons/web";
+  
   const icons = {
     experience: `${iconRoot}/InfoIcons/20 plus years pain and experience.png`,
     call: `${iconRoot}/InfoIcons/Call Now Icon.png`,
