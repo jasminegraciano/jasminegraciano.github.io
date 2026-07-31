@@ -1273,70 +1273,106 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css?v=20260731a" />
+  <link rel="stylesheet" href="site-enhancements.css?v=20260731c" />
   <script src="site-enhancements.js?v=20260731a" defer></script>
   <script src="google-reviews-widget.js?v=20260729y" defer></script>
 </head>
 
 <body>
-  <div class="site-header">
-    <div class="topbar">
-      <div class="container topbar-grid">
-        <div class="topbar-brand">Connecticut House Painters LLC and Power Washing</div>
-        <div class="topbar-contact" aria-label="Contact information">
-          <span class="topbar-item"><span class="topbar-label">Office</span><a href="tel:8608798222">(860) 879-8222</a></span>
-          <span class="topbar-item"><span class="topbar-label">Cell</span><a href="tel:8605145335">(860)-514-5335</a></span>
-          <span class="topbar-item location"><span class="topbar-label">Ledyard</span><span>CT</span></span>
-        </div>
-      </div>
-    </div>
+  <header class="site-header home-header sitewide-unified-header" id="top">
+  <div class="home-header-inner">
 
-    <header>
-      <div class="container header-grid">
-        <a href="index.html" class="brand" aria-label="Connecticut House Painters home">
-          <img src="images/Mainlogo.png" alt="Connecticut House Painters Power Washing Logo" />
-        </a>
+    <a
+      class="home-brand"
+      href="index.html"
+      aria-label="Connecticut House Painters homepage"
+    >
+      <img
+        class="home-brand-mascot"
+        src="images/WillieTheWhale.png"
+        alt=""
+      >
 
-        <nav aria-label="Primary navigation">
-          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu"><span></span></button>
-          <ul class="nav-menu" id="primary-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="galleries.html">Galleries</a></li>
+      <img
+        class="home-brand-logo"
+        src="images/ConnecticutHousePaintersLLCLogo.png"
+        alt="Connecticut House Painters Power Washing"
+      >
+    </a>
+
+    <nav class="home-nav" aria-label="Primary navigation">
+      <button
+        class="menu-toggle sitewide-menu-toggle home-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="sitewide-primary-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+      </button>
+
+      <ul
+        class="nav-menu home-nav-menu"
+        id="sitewide-primary-menu"
+      >
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html">About Us</a>
+        </li>
+
+        <li class="has-dropdown home-nav-dropdown sitewide-services-dropdown">
+          <button
+            class="home-services-toggle dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Services
+          </button>
+
+          <ul
+            class="home-dropdown-menu service-area-menu sitewide-services-menu"
+            aria-label="Painting and power washing services"
+          >
             <li><a href="interior.html">Interior Painting</a></li>
             <li><a href="exterior.html">Exterior Painting</a></li>
-            <li><a href="commercial.html" class="active">Commercial Painting</a></li>
+            <li><a href="cabinet.html">Cabinet Painting</a></li>
+            <li><a href="deck-staining.html">Deck Staining</a></li>
             <li><a href="powerwash.html">Power Washing</a></li>
-            <li class="has-dropdown">
-              <a href="#service-areas" class="dropdown-trigger">Service Area</a>
-              <ul class="service-area-menu" aria-label="Service area pages">
-                <li><a href="#service-areas">Waterford CT House Painters</a></li>
-                <li><a href="#service-areas">Mystic CT House Painters</a></li>
-                <li><a href="#service-areas">Pawcatuck CT House Painters</a></li>
-                <li><a href="#service-areas">Essex CT House Painters</a></li>
-                <li><a href="#service-areas">Montville CT House Painters</a></li>
-                <li><a href="#service-areas">Uncasville CT House Painters</a></li>
-                <li><a href="#service-areas">Colchester CT House Painters</a></li>
-                <li><a href="#service-areas">North Stonington CT House Painters</a></li>
-                <li><a href="#service-areas">Ledyard CT House Painters</a></li>
-                <li><a href="#service-areas">Groton CT House Painters</a></li>
-                <li><a href="#service-areas">East Lyme CT House Painters</a></li>
-                <li><a href="#service-areas">Old Saybrook CT House Painters</a></li>
-                <li><a href="#service-areas">Old Lyme CT House Painters</a></li>
-                <li><a href="#service-areas">Griswold CT House Painters</a></li>
-                <li><a href="#service-areas">New London CT House Painters</a></li>
-                <li><a href="#service-areas">Stonington CT House Painters</a></li>
-                <li><a href="#service-areas">Salem CT House Painters</a></li>
-                <li><a href="#service-areas">Bozrah CT House Painters</a></li>
-              </ul>
-            </li>
+            <li><a href="commercial.html">Commercial Painting</a></li>
           </ul>
-        </nav>
-      </div>
-    </header>
+        </li>
+
+        <li>
+          <a href="galleries.html">Gallery</a>
+        </li>
+
+        <li>
+          <a href="testimonials.html">Reviews</a>
+        </li>
+
+        <li>
+          <a href="service.html">Service Areas</a>
+        </li>
+
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a
+      class="sitewide-header-estimate sitewide-nav-estimate home-header-cta"
+      href="contact.html#estimate-request"
+    >
+      Get a Free Estimate
+    </a>
+
   </div>
+</header>
 
   <main>
     <section class="hero" id="top">
