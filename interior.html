@@ -1544,8 +1544,8 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css?v=20260731c" />
-  <script src="site-enhancements.js?v=20260731a" defer></script>
+  <link rel="stylesheet" href="site-enhancements.css?v=20260802a" />
+  <script src="site-enhancements.js?v=20260802a" defer></script>
   <script src="google-reviews-widget.js?v=20260729y" defer></script>
 </head>
 
@@ -2205,24 +2205,6 @@
   </div>
 
   <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("#primary-menu");
-    const dropdown = document.querySelector(".has-dropdown");
-    const dropdownTrigger = document.querySelector(".dropdown-trigger");
-
-    toggle?.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-    });
-
-    dropdownTrigger?.addEventListener("click", (event) => {
-      if (window.matchMedia("(max-width: 1060px)").matches) {
-        event.preventDefault();
-        dropdown.classList.toggle("open");
-      }
-    });
-
     document.querySelectorAll(".tilt-card").forEach((card) => {
       card.addEventListener("pointermove", (event) => {
         const rect = card.getBoundingClientRect();
