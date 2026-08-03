@@ -13,6 +13,34 @@
   <link rel="stylesheet" href="gallery.css" />
   <link rel="stylesheet" href="service-area.css" />
   <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
+  <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
+
+<style>
+  /* Service Areas page: reduce space above mobile hero heading */
+  @media (max-width: 700px) {
+    body .area-hero {
+      min-height: 0 !important;
+      padding-top: 36px !important;
+    }
+
+    body .area-hero-inner {
+      min-height: 0 !important;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      align-items: start !important;
+    }
+
+    body .area-hero-inner > div:first-child {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    body .area-hero .eyebrow {
+      margin-top: 0 !important;
+    }
+  }
+</style>
+
   <script src="site-enhancements.js?v=20260803a" defer></script>
   <script src="service-area.js" defer></script>
 </head>
