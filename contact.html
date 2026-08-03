@@ -145,8 +145,18 @@
     .contact-hero {
       padding: 84px 0;
       color: var(--paper);
-      background: var(--navy);
-      border-bottom: 8px solid var(--red);
+      background:
+        radial-gradient(
+          circle at 82% 0,
+          rgba(39, 199, 244, 0.2),
+          transparent 32%
+        ),
+        linear-gradient(
+          120deg,
+          #03172f,
+          #0b356d
+        );      
+        border-bottom: 8px solid var(--red);
     }
 
     .contact-hero-grid {
@@ -325,7 +335,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
+  <link rel="stylesheet" href="site-enhancements.css?v=20260803b" />
   <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
 
 <style>

@@ -1414,7 +1414,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
+  <link rel="stylesheet" href="site-enhancements.css?v=20260803b" />
   <style>
     /* Keep this final so the About page's closing section matches the homepage. */
     .about-bottom-cta > .about-bottom-grid,
@@ -1425,7 +1425,17 @@
     }
 
     .about-hero {
-      background: #183363;
+      background:
+        radial-gradient(
+          circle at 82% 0,
+          rgba(39, 199, 244, 0.2),
+          transparent 32%
+        ),
+        linear-gradient(
+          120deg,
+          #03172f,
+          #0b356d
+        );
     }
 
     .about-page .site-header.home-header {

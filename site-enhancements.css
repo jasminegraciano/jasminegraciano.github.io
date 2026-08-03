@@ -2668,17 +2668,35 @@ footer .footer-brand img {
   .deck-comparison figcaption { align-items: flex-start; flex-direction: column; gap: 4px; }
 }
 
-/* Solid company-navy banners across primary service and directory pages */
+/* =====================================================
+   TESTIMONIALS-STYLE BANNERS
+   Commercial, Exterior, Interior, Power Washing,
+   Gallery, and Service Areas
+===================================================== */
+
 .sitewide-page-commercial .hero,
 .sitewide-page-exterior .hero,
 .sitewide-page-interior .hero,
 .sitewide-page-powerwash .hero,
 .sitewide-page-galleries .gallery-hero,
 .sitewide-page-service .area-hero {
-  background: #183363 !important;
-  background-image: none !important;
+  color: #ffffff !important;
+
+  background:
+    radial-gradient(
+      circle at 82% 0,
+      rgba(39, 199, 244, 0.20),
+      transparent 32%
+    ),
+    linear-gradient(
+      120deg,
+      #03172f,
+      #0b356d
+    ) !important;
 }
 
+
+/* Remove the old decorative shapes and hero photographs */
 .sitewide-page-commercial .hero::before,
 .sitewide-page-commercial .hero::after,
 .sitewide-page-exterior .hero::before,
@@ -2695,24 +2713,33 @@ footer .footer-brand img {
   background: none !important;
 }
 
+
+/* Main hero headings */
 .sitewide-page-commercial .hero h1,
 .sitewide-page-exterior .hero h1,
 .sitewide-page-interior .hero h1,
 .sitewide-page-powerwash .hero h1,
 .sitewide-page-galleries .gallery-hero h1,
 .sitewide-page-service .area-hero h1 {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
-.sitewide-page-commercial .hero p,
-.sitewide-page-exterior .hero p,
-.sitewide-page-interior .hero p,
-.sitewide-page-powerwash .hero p,
-.sitewide-page-galleries .gallery-hero p,
-.sitewide-page-service .area-hero p {
-  color: rgba(255,255,255,.82) !important;
+
+/* Only the main hero descriptions should be light */
+.sitewide-page-commercial .hero .hero-copy,
+.sitewide-page-exterior .hero .hero-copy,
+.sitewide-page-interior .hero .hero-copy,
+.sitewide-page-powerwash .hero .hero-copy,
+.sitewide-page-service
+.area-hero
+.area-hero-inner
+> div:first-child
+> p {
+  color: rgba(255, 255, 255, 0.84) !important;
 }
 
+
+/* Small blue headings */
 .sitewide-page-commercial .hero .eyebrow,
 .sitewide-page-exterior .hero .eyebrow,
 .sitewide-page-interior .hero .eyebrow,
@@ -2720,6 +2747,38 @@ footer .footer-brand img {
 .sitewide-page-galleries .gallery-hero .eyebrow,
 .sitewide-page-service .area-hero .eyebrow {
   color: #27c7f4 !important;
+}
+
+
+/* Commercial white information card */
+.sitewide-page-commercial .hero .bid-card {
+  color: #102b54 !important;
+}
+
+.sitewide-page-commercial .hero .bid-card h2 {
+  color: #0f356d !important;
+}
+
+.sitewide-page-commercial .hero .bid-card p {
+  color: #53616f !important;
+}
+
+.sitewide-page-commercial .hero .bid-card li {
+  color: #0f356d !important;
+}
+
+
+/* Exterior white information card */
+.sitewide-page-exterior .hero .hero-proof {
+  color: #102b54 !important;
+}
+
+.sitewide-page-exterior .hero .hero-proof h2 {
+  color: #0f356d !important;
+}
+
+.sitewide-page-exterior .hero .hero-proof p {
+  color: #53616f !important;
 }
 
 /* Reliable mobile navigation across every shared site header */
