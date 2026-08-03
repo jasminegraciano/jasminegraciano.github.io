@@ -15,7 +15,7 @@
   const serviceWidgetPages = new Set([
     "interior.html", "exterior.html", "commercial.html", "powerwash.html",
     "interior2.html", "exterior2.html", "cabinet.html", "deck-staining.html",
-    "galleries.html", "testimonials.html"
+    "galleries.html", "testimonials.html", "about.html", "service.html"
   ]);
   const conversionPages = new Set([
     "interior.html", "exterior.html", "commercial.html", "commercial2.html",

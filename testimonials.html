@@ -1335,8 +1335,8 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="site-enhancements.css?v=20260802a" />
-  <script src="site-enhancements.js?v=20260802a" defer></script>
+  <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
+  <script src="site-enhancements.js?v=20260803a" defer></script>
 </head>
 
 <body>
@@ -1814,23 +1814,6 @@
       googleReviewStatus.classList.toggle("success", type === "success");
     }
 
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("#primary-menu");
-    const dropdown = document.querySelector(".has-dropdown");
-    const dropdownTrigger = document.querySelector(".dropdown-trigger");
-
-    toggle?.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-    });
-
-    dropdownTrigger?.addEventListener("click", (event) => {
-      if (window.matchMedia("(max-width: 1060px)").matches) {
-        event.preventDefault();
-        dropdown.classList.toggle("open");
-      }
-    });
 
     function setupTiltCards() {
       document.querySelectorAll(".tilt-card").forEach((card) => {

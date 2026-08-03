@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="site-enhancements.css?v=20260802a" />
+  <link rel="stylesheet" href="site-enhancements.css?v=20260803a" />
   <style>
     :root {
       --navy: #00152f;
@@ -6127,6 +6127,107 @@ body.home-page {
       }
     }
   </style>
+  <style>
+  /* =====================================================
+     FINAL HOMEPAGE MOBILE SIX-WIDGET FIX!!!!!!!!!!!!!!!!!!!!
+  ===================================================== */
+
+  @media (max-width: 620px) {
+    .home-page .home-services-strip {
+      display: block !important;
+
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+
+      padding: 28px 0 !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+      overflow: visible !important;
+    }
+
+    .home-page .home-services-grid {
+      width: calc(100% - 28px) !important;
+      max-width: 560px !important;
+
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) !important;
+      grid-auto-rows: auto !important;
+
+      gap: 14px !important;
+      margin: 0 auto !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .home-page .home-service-card,
+    .home-page .home-service-card.motion-reveal,
+    .home-page .home-service-card.motion-pop {
+      position: relative !important;
+
+      display: block !important;
+
+      width: 100% !important;
+      min-width: 0 !important;
+
+      height: 220px !important;
+      min-height: 220px !important;
+      max-height: none !important;
+
+      aspect-ratio: auto !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+
+      overflow: hidden !important;
+      isolation: isolate !important;
+
+      transform: none !important;
+    }
+
+    .home-page .home-service-card img {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+
+      display: block !important;
+
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 220px !important;
+      max-width: none !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+
+      object-fit: cover !important;
+      transform: none !important;
+    }
+
+    .home-page .home-service-card::after {
+      z-index: 1 !important;
+    }
+
+    .home-page .home-service-card::before {
+      z-index: 3 !important;
+    }
+
+    .home-page .home-service-content {
+      position: absolute !important;
+      z-index: 2 !important;
+
+      display: grid !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+
+      transform: none !important;
+    }
+  }
+</style>
+
 </head>
 <body class="home-page">
   <header class="site-header home-header sitewide-unified-header" id="top">
@@ -6495,7 +6596,7 @@ body.home-page {
 
   <button class="home-scroll-top" type="button" aria-label="Back to top"></button>
 
-  <script src="site-enhancements.js?v=20260802a" defer></script>
+  <script src="site-enhancements.js?v=20260803a" defer></script>
   <script src="google-reviews-widget.js?v=20260729o" defer></script>
   <script>
     (function () {
